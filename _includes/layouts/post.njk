@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+---
+<article class="grid grid-rows-2 grid-cols-3 gap-10" style="grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;">
+    <header 
+        class="col-span-3" 
+    >
+        <figure class="relative">
+            <img src="/img/dev.jpg" alt="" style="height: 250px; width: 100%; object-fit: cover;" />
+            <figcaption class="absolute bottom-0 right-0 p-2">
+                <span>Photo by {% link hero.photographer.url, hero.photographer.name, true %} on {% link hero.distributor.url, hero.distributor.name, true %}</span>
+            </figcaption>
+        </figure>
+        <br />
+        <h1>{{ title }}</h1>
+        <p class="text-xs">
+            {% if date %}
+                {{date.toLocaleDateString()}}
+            {% endif %}
+            (approx. {{readTime}} min read)
+        </p>
+        <br />
+        <hr />
+    </header>
+
+    <div class="col-span-2">
+        {{ content | safe }}
+
+        <footer class="rounded overflow-hidden shadow-lg bg-gray-800 p-4 mt-6">
+            <p><span class="mr-2">🎉</span>You made it to the end - thanks for reading! If you enjoyed this post, found it useful and/or have any feedback on how it can be improved, please feel free to get in touch on {% link 'https://twitter.com/ryanmaffey?lang=en', 'Twitter (@ryanmaffey)', true %}.
+        </footer>
+    </div>
+    <div>
+    <aside style="position: sticky; top: 2.5rem;">
+        <h2>Contents</h2>
+        {{ content | toc | safe }}
+    </aside>
+    </div>
+</article>

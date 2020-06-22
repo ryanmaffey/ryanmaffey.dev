@@ -1,0 +1,7 @@
+<ol reversed class="grid gap-4 grid-cols-1">
+    {% for post in postsList | reverse %}
+        <li class="rounded overflow-hidden shadow-lg bg-gray-800 p-4">
+            {% include "post-link.njk" %}
+        </li>
+    {% endfor %}
+</ol>

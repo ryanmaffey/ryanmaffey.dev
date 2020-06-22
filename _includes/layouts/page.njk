@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+---
+<br>
+<article>
+    <header>
+        <h1>{{ title }}</h1>
+    </header>
+
+    {% include 'table-of-contents.njk' %}
+
+    {{ content | safe }}
+</article>

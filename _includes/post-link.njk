@@ -1,0 +1,14 @@
+<a href="{{post.url | url}}" class="mb-4 block">
+    <h3 class="text-xl">{{post.data.title}}</h3>
+    <div class="mb-2">
+        <time class="text-xs" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        <span class="text-xs">(approx. {{post.data.readTime}} min read)</span>
+    </div>
+    <p>{{post.data.description}}</p>
+</a>
+{% for tag in post.data.tags %}
+    {%- if collections.tagList.indexOf(tag) != -1 -%}
+    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+    {% tag tagUrl | url , tag %}
+    {%- endif -%}
+{% endfor %}

@@ -1,0 +1,23 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+layout: layouts/page.njk
+renderData:
+  title: Posts tagged "{{ tag }}"'
+permalink: /tags/{{ tag }}/
+---
+<h1 class="mb-4">Posts tagged "{{ tag }}"</h1>
+<p class="mb-4">
+  {% link '/tags/' | url, "See all tags"%}
+</p>
+{% set postsList = collections[ tag ] %}
+{% include "posts-list.njk" %}

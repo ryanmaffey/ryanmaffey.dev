@@ -1,0 +1,20 @@
+---
+layout: layouts/home.njk
+---
+<section>
+  <h1 class="mb-4">Hey, welcome!</h1>
+  <p class="mb-4">I'm Ryan, a Front-End Web Developer / Software Engineer working in Bournemouth, UK. I write about some of the knowledge and experience I've gathered over my years of programming for the web.</p>
+  <p>Hopefully you can find something here which will interest/excite/inspire you - and if you do, feel free to {% link 'https://twitter.com/ryanmaffey?lang=en', 'get in touch with me via Twitter', true %} to let me know how I'm doing!</p>
+</section>
+<br>
+<section>
+    <h2 class="mb-4">Latest Posts</h2>
+    {% set postsList = collections.posts | head(-3) %}
+    {% include "posts-list.njk" %}
+
+    <aside class="mt-4">
+      <p>
+        {% link '/posts/' | url, "See more posts" %}
+      </p>
+    <aside>
+</section>

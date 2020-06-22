@@ -1,0 +1,10 @@
+---
+permalink: /tags/
+layout: layouts/page.njk
+title: Tags
+---
+
+{% for tag in collections.tagList %}
+  {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+  {% tag tagUrl | url, tag %}
+{% endfor %}
