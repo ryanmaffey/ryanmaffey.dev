@@ -5,6 +5,9 @@ date: 2020-06-20
 readTime: 3
 layout: layouts/post.njk
 hero:
+    img:
+        full: /img/dev.jpg
+        thumb: /img/dev.jpg
     distributor:
         name: Unsplash
         url: https://unsplash.com/

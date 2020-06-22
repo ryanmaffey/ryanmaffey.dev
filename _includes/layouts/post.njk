@@ -1,40 +1,80 @@
 ---
 layout: layouts/base.njk
 ---
-<article class="grid grid-rows-2 grid-cols-3 gap-10" style="grid-template-columns: 1fr 1fr;
+<article class="" xxx-style="grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr auto;">
-    <header 
-        class="col-span-3" 
-    >
-        <figure class="relative">
-            <img src="/img/dev.jpg" alt="" style="height: 250px; width: 100%; object-fit: cover;" />
-            <figcaption class="absolute bottom-0 right-0 p-2">
-                <span>Photo by {% link hero.photographer.url, hero.photographer.name, true %} on {% link hero.distributor.url, hero.distributor.name, true %}</span>
-            </figcaption>
-        </figure>
-        <br />
-        <h1>{{ title }}</h1>
-        <p class="text-xs">
-            {% if date %}
-                {{date.toLocaleDateString()}}
-            {% endif %}
-            (approx. {{readTime}} min read)
-        </p>
-        <br />
-        <hr />
+    <header class="col-span-3">
+        <div class="hidden md:block container">
+            <figure class="relative">
+                <img src="/img/dev.jpg" alt="" style="height: 250px; width: 100%; object-fit: cover;"/>
+                <figcaption class="absolute bottom-0 right-0 p-2">
+                    <span>Photo by
+                        {% link hero.photographer.url,
+                        hero.photographer.name,
+                        true %}
+                        on
+                        {% link hero.distributor.url,
+                        hero.distributor.name,
+                        true %}</span>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="md:hidden">
+            <figure class="relative">
+                <img src="/img/dev.jpg" alt="" style="height: 250px; width: 100%; object-fit: cover;"/>
+                <figcaption class="absolute bottom-0 right-0 p-2">
+                    <span>Photo by
+                        {% link hero.photographer.url,
+                        hero.photographer.name,
+                        true %}
+                        on
+                        {% link hero.distributor.url,
+                        hero.distributor.name,
+                        true %}</span>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="container">
+            <br/>
+            <h1>{{ title }}</h1>
+            <p class="text-xs">
+                {% if date %}
+                    {{date.toLocaleDateString()}}
+                {% endif %}
+                (approx.
+                {{readTime}}
+                min read)
+            </p>
+            <br/>
+            <hr/>
+            <br/>
+        </div>
     </header>
+    <div class="container">
+        <div class="grid grid-rows-1 grid-cols-3 gap-10">
+            <div class="col-span-3 md:hidden">
+                <aside>
+                    <h2>Contents</h2>
+                    {{ content | toc | safe }}
+                </aside>
+            </div>
+            <div class="col-span-3 md:col-span-2">
+                {{ content | safe }}
 
-    <div class="col-span-2">
-        {{ content | safe }}
-
-        <footer class="rounded overflow-hidden shadow-lg bg-gray-800 p-4 mt-6">
-            <p><span class="mr-2">🎉</span>You made it to the end - thanks for reading! If you enjoyed this post, found it useful and/or have any feedback on how it can be improved, please feel free to get in touch on {% link 'https://twitter.com/ryanmaffey?lang=en', 'Twitter (@ryanmaffey)', true %}.
-        </footer>
-    </div>
-    <div>
-    <aside style="position: sticky; top: 2.5rem;">
-        <h2>Contents</h2>
-        {{ content | toc | safe }}
-    </aside>
-    </div>
-</article>
+                <footer class="rounded overflow-hidden shadow-lg bg-gray-800 p-4 mt-6">
+                    <p>
+                        <span class="mr-2">🎉</span>You made it to the end - thanks for reading! If you enjoyed this post, found it useful and/or have any feedback on how it can be improved, please feel free to
+                        {% link 'https://twitter.com/ryanmaffey?lang=en',
+                        'get in touch on Twitter (@ryanmaffey)',
+                        true %}.
+                    </footer>
+                </div>
+                <div class="hidden md:block">
+                    <aside style="position: sticky; top: 2.5rem;">
+                        <h2>Contents</h2>
+                        {{ content | toc | safe }}
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </article>
