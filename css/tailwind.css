@@ -40,7 +40,7 @@ pre {
     @apply ml-4;
 }
 .toc a {
-    @apply underline py-1 inline-block;
+    @apply mb-2 inline-block text-sm;
 }
 
 /**

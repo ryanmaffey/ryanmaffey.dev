@@ -1,9 +1,8 @@
 ---
 layout: layouts/base.njk
 ---
-<article class="" xxx-style="grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr auto;">
-    <header class="col-span-3">
+<article>
+    <header class="col-span-4">
         <div class="hidden md:block container">
             <figure class="relative">
                 <img src="/img/dev.jpg" alt="" style="height: 250px; width: 100%; object-fit: cover;"/>
@@ -51,14 +50,14 @@ layout: layouts/base.njk
         </div>
     </header>
     <div class="container">
-        <div class="grid grid-rows-1 grid-cols-3 gap-10">
+        <div class="grid grid-cols-4 gap-10">
             <div class="col-span-3 md:hidden">
                 <aside>
                     <h2>Contents</h2>
                     {{ content | toc | safe }}
                 </aside>
             </div>
-            <div class="col-span-3 md:col-span-2">
+            <div class="col-span-4 md:col-span-3">
                 {{ content | safe }}
 
                 <footer class="rounded overflow-hidden shadow-lg bg-gray-800 p-4 mt-6">

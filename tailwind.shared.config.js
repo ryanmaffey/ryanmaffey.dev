@@ -30,10 +30,10 @@ module.exports = {
                         maxWidth: "768px",
                     },
                     "@screen lg": {
-                        maxWidth: "800px",
+                        maxWidth: "900px",
                     },
                     "@screen xl": {
-                        maxWidth: "800px",
+                        maxWidth: "900px",
                     },
                 },
             });
