@@ -57,7 +57,7 @@ layout: layouts/base.njk
                     {{ content | toc | safe }}
                 </aside>
             </div>
-            <div class="col-span-4 md:col-span-3">
+            <div class="post col-span-4 md:col-span-3">
                 {{ content | safe }}
 
                 <footer class="rounded overflow-hidden shadow-lg bg-gray-800 p-4 mt-6">
@@ -66,14 +66,31 @@ layout: layouts/base.njk
                         {% link 'https://twitter.com/ryanmaffey?lang=en',
                         'get in touch on Twitter (@ryanmaffey)',
                         true %}.
-                    </footer>
-                </div>
-                <div class="hidden md:block">
-                    <aside style="position: sticky; top: 2.5rem;">
-                        <h2>Contents</h2>
-                        {{ content | toc | safe }}
-                    </aside>
-                </div>
+                    </p>
+                </footer>
             </div>
+            <div class="hidden md:block">
+                <aside style="position: sticky; top: 2.5rem;">
+                    <h2>Contents</h2>
+                    {{ content | toc | safe }}
+                </aside>
+            </div>
+        </div>
+        {% if sources and sources.length > 0 %}
+            <aside class="mt-6">
+                <header>
+                    <h2 id="links">Links</h2>
+                </header>
+                <ol class="pl-4 list-decimal">
+                    <li>
+                        {% for source in sources %}
+                            {% link source.url,
+                            source.name,
+                            true %}
+                            {%endfor%}
+                        </li>
+                    </ol>
+                </aside>
+            {% endif %}
         </div>
     </article>

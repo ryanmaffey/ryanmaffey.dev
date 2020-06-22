@@ -1,6 +1,10 @@
 /* purgecss start ignore */
 @tailwind base;
 
+html {
+    font-size: 18px;
+}
+
 h1 {
     @apply text-4xl;
 }
