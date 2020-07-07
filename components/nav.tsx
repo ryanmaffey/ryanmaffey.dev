@@ -20,7 +20,10 @@ export const Nav: React.FunctionComponent = () => {
             <nav className="flex items-center justify-between flex-wrap bg-gray-800 py-3 mb-5">
                 <div className="container flex sm:content-between">
                     <div className="flex items-center flex-grow sm:flex-grow md:flex-grow-0 md:justify-between text-white mr-6">
-                        <Anchor href="/" className="flex">
+                        <Anchor
+                            href="/"
+                            className="flex hover:text-teal-400 focus:text-teal-400"
+                        >
                             <img
                                 src="/img/ryanmaffey.webp"
                                 alt=""
