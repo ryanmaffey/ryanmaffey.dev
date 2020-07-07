@@ -32,13 +32,13 @@ const Home: React.StatelessComponent<IProps> = (props) => {
                         </p>
                         <picture className="my-5 md:my-0 md:ml-5 w-full max-w-md md:max-w-10 flex justify-center">
                             <source
-                                media="(max-width: 767px)"
-                                srcSet="/img/ryanmaffey-lg.webp"
+                                media="(max-width: 768px)"
+                                srcSet="/img/ryanmaffey-md.webp"
                                 type="image/webp"
                             />
                             <source
-                                media="(max-width: 767px)"
-                                srcSet="/img/ryanmaffey-lg.jpg"
+                                media="(max-width: 768px)"
+                                srcSet="/img/ryanmaffey-md.jpg"
                                 type="image/jpeg"
                             />
                             <source
@@ -54,7 +54,9 @@ const Home: React.StatelessComponent<IProps> = (props) => {
                             <img
                                 src="/img/ryanmaffey-lg.jpg"
                                 alt=""
-                                className="rounded"
+                                className="rounded w-auto"
+                                width="448"
+                                height="448"
                             />
                         </picture>
                     </div>
