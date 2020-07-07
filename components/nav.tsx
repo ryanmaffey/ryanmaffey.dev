@@ -24,13 +24,20 @@ export const Nav: React.FunctionComponent = () => {
                             href="/"
                             className="flex hover:text-teal-400 focus:text-teal-400"
                         >
-                            <img
-                                src="/img/ryanmaffey.webp"
-                                alt=""
-                                className="rounded-full mr-3 border-2 border-teal-400"
-                                width="30"
-                                height="30"
-                            />
+                            <picture>
+                                <source
+                                    srcSet="/img/ryanmaffey.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="/img/ryanmaffey.jpg"
+                                    alt=""
+                                    className="rounded-full mr-3 border-2 border-teal-400"
+                                    width="30"
+                                    height="30"
+                                />
+                            </picture>
+
                             <span className="text-xl tracking-tight">
                                 ryanmaffey.dev
                             </span>
