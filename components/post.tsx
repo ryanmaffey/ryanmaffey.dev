@@ -87,11 +87,11 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
 
                         <footer className="rounded overflow-hidden shadow-lg bg-gray-800 p-5 mt-6">
                             <p>
-                                <span className="mr-2">🎉</span>You made it to
-                                the end - thanks for reading! If you enjoyed
-                                this post, found it useful and/or have any
-                                feedback on how it can be improved, please feel
-                                free to{" "}
+                                <span className="mr-2">🎉</span>Hooray, you made
+                                it to the end...thanks for reading! If you
+                                enjoyed this post, found it useful and/or have
+                                any feedback on how it can be improved please
+                                feel free to{" "}
                                 <Anchor
                                     href="https://twitter.com/ryanmaffey?lang=en"
                                     isExternalLink
