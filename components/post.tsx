@@ -36,8 +36,16 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
                     <header className="col-span-3 bg-gray-800 p-5 rounded">
                         <h1>{props.post.meta.title}</h1>
                         <p className="text-xs">
-                            {props.post.meta.date} &nbsp; (approx.{" "}
-                            {props.post.meta.readTime} min read)
+                            <time
+                                className="text-xs"
+                                dateTime={props.post.meta.date
+                                    .split("/")
+                                    .reverse()
+                                    .join("-")}
+                            >
+                                {props.post.meta.date}
+                            </time>{" "}
+                            &nbsp; (approx. {props.post.meta.readTime} min read)
                         </p>
                     </header>
 

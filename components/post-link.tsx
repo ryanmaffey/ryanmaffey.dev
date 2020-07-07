@@ -18,8 +18,13 @@ export const PostLink: React.StatelessComponent<IProps> = (props) => (
                 <h3 className="text-xl">{props.post.meta.title}</h3>
             )}
             <div className="mb-2">
-                {/* TODO: datetime */}
-                <time className="text-xs" dateTime="">
+                <time
+                    className="text-xs"
+                    dateTime={props.post.meta.date
+                        .split("/")
+                        .reverse()
+                        .join("-")}
+                >
                     {props.post.meta.date}
                 </time>
                 &nbsp;
