@@ -1,22 +1,9 @@
 ---
-title: Why Do I Want to Start a Blog?
+title: Why do I want to start a blog?
 description: An explanation of the rationale behind wanting to create and write on my own personal blog and an idea of what I'm trying to achieve for myself and my readers.
-date: 2020-06-20
+date: "20/06/2020"
 readTime: 3
-layout: layouts/post.njk
-hero:
-    img:
-        full: /img/dev.jpg
-        thumb: /img/dev.jpg
-    distributor:
-        name: Unsplash
-        url: https://unsplash.com/
-    photographer:
-        name: Fabian Grohs
-        url: https://unsplash.com/@grohsfabian
-sources:
-    - name: Learning by teaching others is extremely effective – a new study tested a key reason why
-      url: https://digest.bps.org.uk/2018/05/04/learning-by-teaching-others-is-extremely-effective-a-new-study-tested-a-key-reason-why/
+containsCodeBlocks: false
 ---
 
 It makes sense to kick off this blog by explaining why I want to start a blog at all!
@@ -45,7 +32,7 @@ As much as all the above is completely true, I can’t pretend like there aren�
 
 ### Learning and Growth
 
-A great way to learn something is to teach it <sup>[[1]](#links)</sup>. Having the ability to teach a subject requires you to understand it well enough to be able to communicate the details effectively to a learner. It's a technique which I intend on taking advantage of in order to help me grow my own knowledge and experience.
+I'm a strong believer that a great way to learn something is to try to teach it. Having the ability to teach a subject requires you to understand it well enough to be able to communicate the details effectively to a learner. It's a technique which I intend on taking advantage of in order to help me grow my own knowledge and experience.
 
 ### Communication
 

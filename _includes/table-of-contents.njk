@@ -1,8 +1,0 @@
-{% set _toc = content | toc%}
-{% if _toc !== '<nav class="toc"></nav>'%}
-    <aside>
-        <h2>Contents</h2>
-        {{ _toc | safe }}
-    </article>
-    <br>
-{% endif %}
