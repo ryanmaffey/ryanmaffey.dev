@@ -14,7 +14,15 @@ export class Footer extends React.PureComponent {
                                     href="https://twitter.com/ryanmaffey?lang=en"
                                     isExternalLink
                                 >
-                                    Get in touch on Twitter (@ryanmaffey)
+                                    Twitter (@ryanmaffey)
+                                </Anchor>
+                            </li>
+                            <li className="mb-5">
+                                <Anchor
+                                    href="https://github.com/ryanmaffey"
+                                    isExternalLink
+                                >
+                                    GitHub (ryanmaffey)
                                 </Anchor>
                             </li>
                         </ul>

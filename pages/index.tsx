@@ -60,11 +60,11 @@ const Home: React.StatelessComponent<IProps> = (props) => {
                             />
                         </picture>
                     </div>
-                    {/* <div className="mt-2">
+                    <div className="mt-2">
                         <LinkButton href="/about" className="text-lg">
                             Read more about me
                         </LinkButton>
-                    </div> */}
+                    </div>
                 </div>
             </section>
             <section className="container">

@@ -15,22 +15,28 @@ h2 {
 h3 {
     @apply text-2xl;
 }
+h4 {
+    @apply text-xl;
+}
 h1,
 h2,
-h3 {
+h3,
+h4 {
     @apply mb-3 leading-tight relative py-2;
     padding-left: 1.5rem;
 }
 h1::before,
 h2::before,
-h3::before {
+h3::before,
+h4::before {
     @apply bottom-0 top-0 left-0 block absolute bg-teal-500;
     content: "";
     width: 0.5rem;
 }
 p + h1,
 p + h2,
-p + h3 {
+p + h3,
+p + h4 {
     @apply mt-6;
 }
 p + p {
