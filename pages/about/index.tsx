@@ -22,71 +22,42 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                 </div>
                 <div className="bg-gray-800 mb-5 p-5 rounded">
                     <h2>How Did I Get into Web Development?</h2>
+                    <p>Kind of by chance/accident!</p>
                     <p>
-                        Honestly, kind of by chance/accident! Back in the late
-                        2000's I was in secondary school making simple websites
-                        in IT classes. My friend Sam knew how to build websites
-                        already because he'd taught himself at home so he helped
-                        me get to grips with the basics.
+                        In secondary school it was part of the syllabus to make
+                        some simple websites in IT class, that was the first
+                        time I'd been exposed to any kind of coding. Looking
+                        back, I had no idea what I was doing, but I loved it
+                        nonetheless!
                     </p>
                     <p>
-                        Sam also offered to teach me some Visual Basic (VB) and
-                        we ended up building a little RGB/Hex colour picker. It
-                        was nothing special but it was my first taste of using a
-                        programming language that didn't involve DOM
-                        manipulation in JavaScript. It was great fun and a good
-                        learning experience.
-                    </p>
-                    <p>
-                        We ended up really doing well in class and got an offer
-                        to make a website for one of the staff members at the
-                        school. I was intended to advertise the new AstroTurf
-                        football pitch and help facilitate bookings etc. It was
-                        our first experience of dealing with a real-life client
-                        which was pretty cool! We worked on that site for hours
-                        after school days and during lunchtimes. Sadly, after
-                        all the effort we put into it, the site never went live.
-                        Nevertheless, it helped me develop my knowledge even
-                        more and made me think it's something that I could
-                        happily do for a living. Up until that point I'd wanted
-                        to go into teaching Chemistry (it's funny how things
-                        change!).
+                        A friend of mine taught me some Visual Basic (VB) and we
+                        ended up building a little RGB/Hex colour picker
+                        together for fun. We also worked together on a website
+                        for one of the staff members at the school. The more I
+                        practiced the more it made me think it's something that
+                        I could happily do for a living.
                     </p>
                     <h2>University</h2>
                     <p>
                         When it got to the point of applying for University I
-                        didn't know what I wanted. I didn't know whether I could
-                        "make it" in the real world as a software developer. nor
-                        did I know whether I was still going to enjoy it by the
-                        time I'd spent 4 years studying and practicing at
-                        University. All I knew is that it is something I enjoyed
-                        at the time and everyone's advice was (and still is) "do
-                        what you love". So I went for it!
-                    </p>
-                    <p>
-                        I applied to a range of Universities and eventually
-                        managed to get in to{" "}
+                        didn't know what I wanted, but I knew what I enjoyed so
+                        that was the next best thing! I applied for anything web
+                        development related and eventually I was thrilled to get
+                        accepted into{" "}
                         <Anchor href="https://www.lboro.ac.uk/" isExternalLink>
                             Loughborough University
                         </Anchor>
-                        . I was thrilled, it was (and still is) a fantastic
-                        university and I was lucky to get in there with my
-                        disappointing A Level grades (but that's a story another
-                        time).
+                        's Web Development and Design course.
                     </p>
                     <h3>Placement Year</h3>
                     <p>
-                        One of the best things I've ever done is take a
-                        placement year (a.k.a. year in industry). I got offered
-                        a place at{" "}
+                        I accepted a placement year at{" "}
                         <Anchor href="https://www.redweb.com/" isExternalLink>
                             Redweb
                         </Anchor>{" "}
-                        where I got the opportunity to spend the first half of
-                        the year as a back-end developer and the second half as
-                        a front-end developer (which was really good of them
-                        because it's the first time they'd let someone do
-                        both!).
+                        where I got the opportunity to split my time 50/50
+                        working as both a back-end and front-end developer.
                     </p>
                     <h4>Part 1: Back-End Developer Experience</h4>
                     <p>
@@ -95,133 +66,110 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                         <Anchor href="https://umbraco.com/" isExternalLink>
                             Umbraco
                         </Anchor>{" "}
-                        v6 (a content management system that Redweb used for
-                        some projects). It gave me a really good chance to get
-                        my bearings writing a C# .NET WebForms, learn all about
-                        oAuth and get to grips with Facebook and Twitter's APIs.
-                        By the end of the 6 months I'd managed to create an
-                        installable Umbraco extension which let you sign in to
-                        multiple Facebook and Twitter accounts and post to any
-                        number of them simultaneously. It looked like trash but
-                        it was very functional!
+                        v6 (a content management system). It gave me a really
+                        good chance to get my bearings writing C# .NET WebForms
+                        applications and enabled me to learn all about{" "}
+                        <Anchor href="https://oauth.net/" isExternalLink>
+                            OAuth
+                        </Anchor>{" "}
+                        and get to grips with Facebook and Twitter's APIs.
+                    </p>
+                    <p>
+                        By the end of my time as a back-end developer at Redweb
+                        I'd managed to create an extension which let you sign in
+                        to multiple Facebook and Twitter accounts and post to
+                        any number of them simultaneously. It was a bit rough
+                        around the edges but it met the specification!
                     </p>
                     <h4>Part 2: Front-End Developer Experience</h4>
                     <p>
                         Rather than one big project I was given all sorts of
-                        tasks to do. So many in fact that I've forgotten most of
-                        them! The one I remember most clearly was crating a
-                        JavaScript library to geo-fence an area and inform you
-                        whether you were in or out of the geo-fenced area using
-                        the browser's{" "}
+                        tasks to do. The one I enjoyed the most was creating a
+                        JavaScript library to create one or more geo-fences and
+                        tell you whether you were inside or outside of the
+                        geo-fenced area using the browser's{" "}
                         <Anchor
                             href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API"
                             isExternalLink
                         >
                             Geolocation API
                         </Anchor>
-                        . It was really good fun to build and worked really
-                        well! The idea was that we could use it on client work
-                        to vary the content on a website depending on whether
-                        the user was in certain places (e.g. if the client had
-                        physical stores we could show content to the customer
-                        when they entered/left a store).
-                    </p>
-                    <p>
-                        I really enjoyed my time as a front-end developer and
-                        decided that's what I wanted to focus my efforts on
-                        going forward.
+                        . It was really good fun to build and worked pretty
+                        well!
                     </p>
                     <h4>The Job Offer</h4>
                     <p>
-                        I was totally thrilled to get a job offer from Redweb
-                        before my placement year was done. I'd loved my time
-                        there and couldn't wait to finish university so I could
-                        get back to work!
+                        I was very pleased to get a job offer from Redweb; I got
+                        the choice of job role and decided to come back as a
+                        Front-End Developer after graduation. I really loved my
+                        time there and couldn't wait to finish university so I
+                        could get back to work!
                     </p>
-                    <h3>Final Year</h3>
-                    <p>
-                        It was tough. So much tougher than the first 2 years. I
-                        worked incredibly hard, especially on my Final Year
-                        Project.
-                    </p>
+                    <h3>Final Year Project</h3>
                     <p>
                         My project was inspired by an issue that the Redweb
-                        front-end developers faced almost daily; the test
-                        devices kept going missing! There was no way to know
-                        who'd taken a device so you'd have to wonder round the
-                        whole office trying to find it. My solution was to
-                        create a system of checking the devices in and out so
-                        that we'd always know which devices were free, and if
-                        they weren't free, who had taken them.
+                        front-end developers faced all the time; test devices
+                        kept going missing! The solution: create a system to
+                        people to check the devices in and out.
                     </p>
                     <p>
                         I used{" "}
                         <Anchor href="https://angularjs.org/" isExternalLink>
                             Angular v1
                         </Anchor>{" "}
-                        to power the UI and{" "}
+                        to power the web application and{" "}
                         <Anchor href="https://socket.io/" isExternalLink>
                             Socket.io
                         </Anchor>{" "}
-                        to keep the UI up-to-date. it was the first time I'd
-                        built anything using WebSockets and Socket.io made it an
-                        absolute breeze. Writing some software was cool but I
-                        wanted my project to stand out, and I was inspired by
-                        some of the people at Redweb to incorporate some
-                        hardware. I'd seen some of the things that they'd
-                        managed to build with and{" "}
+                        to keep everything in sync in real-time. I was inspired
+                        by some people at Redweb to incorporate a hardware
+                        element to my project. I'd seen some of the things that
+                        they'd managed to build using an{" "}
                         <Anchor href="https://www.arduino.cc/" isExternalLink>
                             Arduino
                         </Anchor>{" "}
-                        and it was awesome. If I could add that into my project
-                        it could really set it apart from the others.
+                        and it was awesome. I knew if I could include something
+                        like that into my project it could really help set it
+                        apart from the rest.
                     </p>
                     <p>
-                        Knowing nothing about electronics I was impressed that I
-                        managed to solder my Arduino board together and get an
-                        LED to blink on and off...so far so good! My end-goal
-                        was to use photoresistors (light sensors) and an RFID
-                        reader to make the act of checking out a device as easy
-                        as possible. The general idea was that each device sits
-                        on its own dedicated stand, onto which I could attach a
-                        photoresistor. When there's no light hitting the sensor
-                        the device is on its stand, otherwise it has been taken
-                        off its stand. After the state of a photoresistor
-                        changes from "no light" to "light" the person picking up
-                        the device swipes their staff pass on the RFID reader.
-                        So we know that Staff Member X has checked out Device Y.
-                        And of course, when the photoresistor senses a change of
-                        "light" to "no light" it would update the system to tell
-                        people that the Device Y is now free again. How hard
-                        could that be!?
+                        The idea was that each device sits on its own dedicated
+                        stand, onto which I could attach a photoresistor (light
+                        sensor). I know whether a device is on it''s stand or
+                        not by how much light is reaching the sensor (light =
+                        device checked-out, dark = device checked-in). When
+                        someone picks up a device and swipes their staff card on
+                        the RFID reader it registers the individual as
+                        checking-out the device. Equally, when the the device is
+                        returned, the system would register the device as
+                        checked-in. Whenever the state of any of the devices
+                        changed, the web application would be instantly updated.
+                        Pretty neat!
                     </p>
                     <p>
-                        It was an absolute nightmare. I had no idea what I was
-                        doing. I didn't think I was going to be able to have
-                        something worth showing at my project presentation
-                        because I'd bitten off more than I could chew! But
-                        finally, by some miracle, I managed to get a proof of
-                        concept working in time. Fortunately everything went
-                        really smoothly during the demo and the lecturers
-                        absolutely loved the use of the Arduino.
+                        It was a lot of hard work building an application like
+                        that using tech I was really unfamiliar with.
+                        Nevertheless, I managed to get working a proof of
+                        concept to show to my lecturers on presentation day.
+                        Fortunately the demo went really smoothly and the
+                        lecturers absolutely loved it.
                     </p>
+                    <h3>Graduation</h3>
                     <p>
-                        After all that, I had proudly achieved a First Class
-                        Honours Degree in Web Development and Design. Even today
-                        I am still so pleased with what I managed to achieve.
+                        After all my hard work I proudly achieved my First Class
+                        Honours Degree. Even today I am still incredibly pleased
+                        with what I managed to accomplish.
                     </p>
                     <h2>Work</h2>
                     <h3>Redweb (2015 - 2017)</h3>
                     <p>
-                        I began working for Redweb as a Front-End Developer
-                        shortly after graduating from university. As a
-                        relatively junior member of the team I was mostly
-                        responsible for creating the components for large sites
-                        built on top of{" "}
+                        And so I was back! I was mostly responsible for creating
+                        the visual components, forms, search pages, etc. for
+                        large sites built on top of{" "}
                         <Anchor href="https://www.sitecore.com/" isExternalLink>
                             Sitecore
                         </Anchor>{" "}
-                        (a content management system).
+                        (another content management system).
                     </p>
                     <p>
                         During my time here I was able to really progress my CSS
@@ -249,16 +197,10 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                     </p>
                     <h3>Amigo Loans (2017 - Present)</h3>
                     <p>
-                        I can honestly say I have massively grown as a developer
-                        as a result of working here. Although my job title is
-                        Front-End Software Engineer I have essentially become a
-                        full-stack developer...because I can! Their stance is
-                        "If you know you can do the job, get it done! Otherwise,
-                        feel free to ask the help of someone who can." which is
-                        a lot more freedom than I had in my previous job.
-                    </p>
-                    <p>
-                        Working here I have learned a lot about building .NET /{" "}
+                        I have massively grown as a developer as a result of
+                        working at Amigo. Although my job title is Front-End
+                        Software Engineer I have essentially become a full-stack
+                        developer. I've learned a lot about building .NET /{" "}
                         <Anchor
                             href="https://docs.microsoft.com/en-gb/dotnet/core/"
                             isExternalLink
@@ -287,6 +229,12 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                         </Anchor>{" "}
                         and more. All of this knowledge has completely
                         transformed my ability and confidence as a developer.
+                    </p>
+                    <p>
+                        I also look after all of the Engineering placement
+                        students when they first join the team. I help them get
+                        set up, settled in and generally be there whenever they
+                        have any questions, technical or otherwise.
                     </p>
                     <p>
                         If you're interested in joining the team{" "}
