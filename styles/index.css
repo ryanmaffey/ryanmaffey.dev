@@ -22,7 +22,7 @@ h1,
 h2,
 h3,
 h4 {
-    @apply mb-3 leading-tight relative py-2;
+    @apply mb-3 leading-tight relative py-2 font-bold;
     padding-left: 1.5rem;
 }
 h1::before,
