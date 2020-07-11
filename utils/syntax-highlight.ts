@@ -1,6 +1,5 @@
 import prismjs from "prismjs";
 import jsdom from "jsdom";
-const { JSDOM } = jsdom;
 
 /**
  * Processes an html document to create the markup needed for syntax highlighted
@@ -9,8 +8,7 @@ const { JSDOM } = jsdom;
  * @param {string} html  A full html document.
  * @returns {string} The full html document with syntax highlighted code blocks.
  */
-export const syntaxHighlightCodeBlocks = (html: string): string => {
-    const dom = new JSDOM(html.toString());
+export const syntaxHighlightCodeBlocks = (dom: jsdom.JSDOM): jsdom.JSDOM => {
     const codeBlocks: NodeList = dom.window.document.querySelectorAll("code");
 
     for (let i = 0; i < codeBlocks.length; i++) {
@@ -46,7 +44,7 @@ export const syntaxHighlightCodeBlocks = (html: string): string => {
         block.innerHTML = prismCode;
         block.parentElement?.classList.add(`language-${language}`);
     }
-    return dom.serialize();
+    return dom;
 };
 
 const ts = (Prism: any) => {

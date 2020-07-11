@@ -19,7 +19,7 @@ export const Nav: React.FunctionComponent = () => {
 
             <nav className="flex items-center justify-between flex-wrap bg-gray-800 py-3 mb-5">
                 <div className="container flex sm:content-between">
-                    <div className="flex items-center flex-grow sm:flex-grow md:flex-grow-0 md:justify-between text-white mr-6">
+                    <div className="flex items-center flex-grow sm:flex-grow md:flex-grow-0 md:justify-between mr-6">
                         <Anchor href="/" className="flex">
                             <picture>
                                 <source
@@ -47,7 +47,7 @@ export const Nav: React.FunctionComponent = () => {
                                 (state.isNavOpen ? "Close" : "Open") +
                                 " the navigation"
                             }
-                            className="flex items-center px-3 py-2 text-white"
+                            className="flex items-center px-3 py-2"
                             onClick={() =>
                                 setState({
                                     ...state,
@@ -69,7 +69,7 @@ export const Nav: React.FunctionComponent = () => {
                         <div className="text-sm md:flex-grow">
                             <Anchor
                                 href="/about"
-                                className={`block md:inline-block text-white mx-2 px-3 py-2 rounded outline-none hover:bg-gray-900 focus:bg-gray-900 ${
+                                className={`block md:inline-block mx-2 px-3 py-2 rounded outline-none hover:bg-gray-900 focus:bg-gray-900 ${
                                     router.pathname === "/about"
                                         ? "bg-gray-900"
                                         : ""
@@ -79,7 +79,7 @@ export const Nav: React.FunctionComponent = () => {
                             </Anchor>
                             <Anchor
                                 href="/posts"
-                                className={`block md:inline-block text-white mx-2 px-3 py-2 rounded outline-none hover:bg-gray-900 focus:bg-gray-900 ${
+                                className={`block md:inline-block mx-2 px-3 py-2 rounded outline-none hover:bg-gray-900 focus:bg-gray-900 ${
                                     router.pathname === "/posts"
                                         ? "bg-gray-900"
                                         : ""
@@ -95,13 +95,13 @@ export const Nav: React.FunctionComponent = () => {
                         <div className="text-sm w-full">
                             <Anchor
                                 href="/about"
-                                className="block mt-2 text-white px-3 py-2 rounded outline-none hover:bg-gray-900 focus:bg-gray-900"
+                                className="block mt-2 px-3 py-2 rounded outline-none hover:bg-gray-900 focus:bg-gray-900"
                             >
                                 About Me
                             </Anchor>
                             <Anchor
                                 href="/posts"
-                                className="block mt-2 text-white px-3 py-2 rounded outline-none hover:bg-gray-900 focus:bg-gray-900"
+                                className="block mt-2 px-3 py-2 rounded outline-none hover:bg-gray-900 focus:bg-gray-900"
                             >
                                 Posts
                             </Anchor>

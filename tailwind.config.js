@@ -1,9 +1,14 @@
 module.exports = {
-    purge: ["./components/**/*.{ts,tsx}", "./pages/**/*.{ts,tsx}"],
+    purge: [
+        "./components/**/*.{ts,tsx}",
+        "./utils/**/*.{ts,tsx}",
+        "./pages/**/*.{ts,tsx}",
+    ],
     theme: {
         extend: {
             colors: {
                 gray: {
+                    "100": "#f7fafc",
                     "700": "#34495e",
                     "800": "#282C34",
                     "900": "#1D1F23",
@@ -34,10 +39,10 @@ module.exports = {
                         maxWidth: "768px",
                     },
                     "@screen lg": {
-                        maxWidth: "920px",
+                        maxWidth: "1000px",
                     },
                     "@screen xl": {
-                        maxWidth: "920px",
+                        maxWidth: "1000px",
                     },
                 },
             });

@@ -35,9 +35,9 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
                 >
                     <header className="col-span-3 bg-gray-800 p-5 rounded">
                         <h1>{props.post.meta.title}</h1>
-                        <p className="text-xs">
+                        <p className="text-sm">
                             <time
-                                className="text-xs"
+                                className="text-sm"
                                 dateTime={props.post.meta.date
                                     .split("/")
                                     .reverse()
@@ -70,8 +70,10 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
                                 </button>
                             </div>
                             {contentsVisible && (
-                                <TableOfContents
-                                    data={props.post.tableOfContents}
+                                <div
+                                    dangerouslySetInnerHTML={{
+                                        __html: props.post.tableOfContents,
+                                    }}
                                 />
                             )}
                         </div>

@@ -1,7 +1,7 @@
 export interface IPost {
     id: string;
     html: string;
-    tableOfContents: ITableOfContents;
+    tableOfContents: string;
     meta: IPostMeta;
 }
 
