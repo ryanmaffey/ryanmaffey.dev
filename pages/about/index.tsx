@@ -22,7 +22,6 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                 </div>
                 <div className="bg-gray-800 mb-5 p-5 rounded">
                     <h2>How Did I Get into Web Development?</h2>
-                    <p>Kind of by chance/accident!</p>
                     <p>
                         In secondary school it was part of the syllabus to make
                         some simple websites in IT class, that was the first
@@ -32,19 +31,19 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                     </p>
                     <p>
                         A friend of mine taught me some Visual Basic (VB) and we
-                        ended up building a little RGB/Hex colour picker
-                        together for fun. We also worked together on a website
-                        for one of the staff members at the school. The more I
-                        practiced the more it made me think it's something that
-                        I could happily do for a living.
+                        ended up building an RGB/Hex colour picker for fun. We
+                        also built on a website for one of the staff members at
+                        the school. The more I practiced the more it made me
+                        think it's something that I could happily do for a
+                        living.
                     </p>
                     <h2>University</h2>
                     <p>
                         When it got to the point of applying for University I
-                        didn't know what I wanted, but I knew what I enjoyed so
-                        that was the next best thing! I applied for anything web
-                        development related and eventually I was thrilled to get
-                        accepted into{" "}
+                        didn't know what I wanted, but I knew what I enjoyed,
+                        and that was the next best thing! I applied for anything
+                        web development related and eventually I was thrilled to
+                        get accepted into{" "}
                         <Anchor href="https://www.lboro.ac.uk/" isExternalLink>
                             Loughborough University
                         </Anchor>
@@ -56,38 +55,34 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                         <Anchor href="https://www.redweb.com/" isExternalLink>
                             Redweb
                         </Anchor>{" "}
-                        where I got the opportunity to split my time 50/50
-                        working as both a back-end and front-end developer.
+                        where I got the opportunity to split my time between
+                        working as a back-end and front-end developer.
                     </p>
                     <h4>Part 1: Back-End Developer Experience</h4>
                     <p>
-                        I was tasked with making a social media management
-                        extension for{" "}
+                        I made a social media management extension for{" "}
                         <Anchor href="https://umbraco.com/" isExternalLink>
                             Umbraco
                         </Anchor>{" "}
-                        v6 (a content management system). It gave me a really
-                        good chance to get my bearings writing C# .NET WebForms
-                        applications and enabled me to learn all about{" "}
+                        (a content management system). It gave me a good chance
+                        to get my bearings writing C# .NET WebForms applications
+                        and enabled me to learn all about{" "}
                         <Anchor href="https://oauth.net/" isExternalLink>
                             OAuth
                         </Anchor>{" "}
-                        and get to grips with Facebook and Twitter's APIs.
-                    </p>
-                    <p>
-                        By the end of my time as a back-end developer at Redweb
-                        I'd managed to create an extension which let you sign in
-                        to multiple Facebook and Twitter accounts and post to
-                        any number of them simultaneously. It was a bit rough
-                        around the edges but it met the specification!
+                        and get to grips with Facebook and Twitter's APIs. The
+                        extension let you sign in to multiple Facebook/Twitter
+                        accounts and post to any number of them simultaneously.
+                        It was a bit rough around the edges but it met the
+                        specification!
                     </p>
                     <h4>Part 2: Front-End Developer Experience</h4>
                     <p>
-                        Rather than one big project I was given all sorts of
-                        tasks to do. The one I enjoyed the most was creating a
+                        I was given all sorts of fun jobs as a front-end
+                        developer. The one I enjoyed the most was creating a
                         JavaScript library to create one or more geo-fences and
-                        tell you whether you were inside or outside of the
-                        geo-fenced area using the browser's{" "}
+                        tell you whether you were inside or outside of any
+                        geo-fenced areas using the browser's{" "}
                         <Anchor
                             href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API"
                             isExternalLink
@@ -110,7 +105,7 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                         My project was inspired by an issue that the Redweb
                         front-end developers faced all the time; test devices
                         kept going missing! The solution: create a system to
-                        people to check the devices in and out.
+                        allow people to check the devices in and out.
                     </p>
                     <p>
                         I used{" "}
@@ -162,6 +157,7 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                     </p>
                     <h2>Work</h2>
                     <h3>Redweb (2015 - 2017)</h3>
+                    <p className="font-bold">Front-End Developer</p>
                     <p>
                         And so I was back! I was mostly responsible for creating
                         the visual components, forms, search pages, etc. for
@@ -196,19 +192,20 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                         job and the people.
                     </p>
                     <h3>Amigo Loans (2017 - Present)</h3>
+                    <p className="font-bold">Front-End Software Engineer</p>
                     <p>
                         I have massively grown as a developer as a result of
-                        working at Amigo. Although my job title is Front-End
-                        Software Engineer I have essentially become a full-stack
-                        developer. I've learned a lot about building .NET /{" "}
+                        working at Amigo. Despite my job title I have
+                        essentially become a full-stack developer. I've learned
+                        a lot about building .NET /{" "}
                         <Anchor
                             href="https://docs.microsoft.com/en-gb/dotnet/core/"
                             isExternalLink
                         >
                             .NET Core
                         </Anchor>{" "}
-                        MVC applications and services. As for front-end
-                        technologies, I've also learned about{" "}
+                        MVC applications and services, and building front-ends
+                        using{" "}
                         <Anchor href="https://reactjs.org/" isExternalLink>
                             React
                         </Anchor>
