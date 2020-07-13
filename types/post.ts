@@ -12,17 +12,3 @@ export interface IPostMeta {
     description: string;
     containsCodeBlocks: boolean;
 }
-
-export interface ITableOfContentsItemInfo {
-    content: string;
-    slug: string;
-    lvl: number;
-    id: number;
-}
-
-export interface ITableOfContentsItem {
-    item: ITableOfContentsItemInfo;
-    children: ITableOfContentsItem[];
-}
-
-export type ITableOfContents = ITableOfContentsItem[];

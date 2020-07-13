@@ -8,7 +8,7 @@ import jsdom from "jsdom";
  * @param {string} html  A full html document.
  * @returns {string} The full html document with syntax highlighted code blocks.
  */
-export const syntaxHighlightCodeBlocks = (dom: jsdom.JSDOM): jsdom.JSDOM => {
+export const syntaxHighlightCodeBlocks = (dom: jsdom.JSDOM) => {
     const codeBlocks: NodeList = dom.window.document.querySelectorAll("code");
 
     for (let i = 0; i < codeBlocks.length; i++) {
@@ -44,7 +44,7 @@ export const syntaxHighlightCodeBlocks = (dom: jsdom.JSDOM): jsdom.JSDOM => {
         block.innerHTML = prismCode;
         block.parentElement?.classList.add(`language-${language}`);
     }
-    return dom;
+    // return dom;
 };
 
 const ts = (Prism: any) => {

@@ -5,7 +5,6 @@ import { siteTitle } from "./layout";
 import { loadCssAsync } from "../utils";
 import { Anchor } from "./anchor";
 import { IPost } from "../types/post";
-import { TableOfContents } from "./table-of-contents";
 
 export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
     React.useEffect(() => {

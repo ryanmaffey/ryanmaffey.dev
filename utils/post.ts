@@ -1,23 +1,6 @@
 import jsdom from "jsdom";
-const { JSDOM } = jsdom;
 
-type IParts = {
-    dom: jsdom.JSDOM;
-    headings: NodeListOf<Element>;
-};
-
-export const getParts = async (
-    htmlFromMarkdownDocument: string
-): Promise<IParts> => {
-    const dom = new JSDOM(htmlFromMarkdownDocument);
-    const headings = dom.window.document.querySelectorAll("h2, h3, h4");
-    return Promise.resolve({ dom, headings });
-};
-
-export const addHeadingNumbers = async ({
-    dom,
-    headings,
-}: IParts): Promise<IParts> => {
+export const addHeadingNumbers = (dom: jsdom.JSDOM) => {
     const elements = dom.window.document.querySelectorAll("*");
     let level2 = 0,
         level3 = 0,
@@ -57,8 +40,6 @@ export const addHeadingNumbers = async ({
             e.classList.add("flex", "flex-col", "md:flex-row");
         }
     }
-
-    return Promise.resolve({ dom, headings });
 };
 
 export const getTableOfContents = (headings: NodeListOf<Element>) => {
@@ -75,6 +56,8 @@ export const getTableOfContents = (headings: NodeListOf<Element>) => {
                     return "ml-2";
                 case 2:
                     return "ml-4";
+                default:
+                    return "";
             }
         })()} hover:text-teal-400 focus:text-teal-400 block mb-2 flex">${
             e.innerHTML

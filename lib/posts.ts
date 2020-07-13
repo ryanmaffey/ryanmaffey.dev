@@ -1,15 +1,14 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import remark from "remark";
-// @ts-ignore - no types available
-import remarkHtml from "remark-html";
-// @ts-ignore - no types available
-import slug from "remark-slug";
+import jsdom from "jsdom";
 
 import { IPost, IPostMeta } from "../types";
 import { syntaxHighlightCodeBlocks } from "../utils/syntax-highlight";
-import { getParts, addHeadingNumbers, getTableOfContents } from "../utils/post";
+import { addHeadingNumbers, getTableOfContents } from "../utils/post";
+import { getHtmlFromMarkdown } from "../utils/markdown";
+
+const { JSDOM } = jsdom;
 
 export const getAllPostIds = async () => {
     const fileNames = fs.readdirSync("posts");
@@ -22,30 +21,23 @@ export const getAllPostIds = async () => {
     });
 };
 
-export const getPostData = async (id: string): Promise<IPost> => {
-    const fullPath = path.join("posts", `${id}.md`);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const matterResult = matter(fileContents);
-    const htmlFromMarkdownDocument = (
-        await remark().use(slug).use(remarkHtml).process(matterResult.content)
-    ).toString();
+export const getPost = async (id: string): Promise<IPost> => {
+    const htmlFromMarkdownResult = await getHtmlFromMarkdown(
+        "posts",
+        `${id}.md`
+    );
+    const dom = new JSDOM(htmlFromMarkdownResult.html.toString());
+    const headings = dom.window.document.querySelectorAll("h2, h3, h4");
 
-    const postData = await getParts(htmlFromMarkdownDocument)
-        .then(addHeadingNumbers)
-        .then((parts) => ({
-            ...parts,
-            dom: syntaxHighlightCodeBlocks(parts.dom),
-        }))
-        .then((parts) => {
-            return Promise.resolve({
-                id,
-                html: parts.dom.serialize(),
-                tableOfContents: getTableOfContents(parts.headings),
-                meta: matterResult.data as IPostMeta,
-            });
-        });
+    addHeadingNumbers(dom);
+    syntaxHighlightCodeBlocks(dom);
 
-    return postData;
+    return {
+        id,
+        html: dom.serialize(),
+        tableOfContents: getTableOfContents(headings),
+        meta: htmlFromMarkdownResult.grayMatter.data as IPostMeta,
+    };
 };
 
 export const getLatestPostsData = async (): Promise<IPost[]> => {

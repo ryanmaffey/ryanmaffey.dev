@@ -62,14 +62,3 @@ pre {
 .skip-to-content-link:focus {
     transform: translateY(0%);
 }
-
-/**
- * Table of contents.
- */
-
-.toc ol ol {
-    @apply ml-5;
-}
-.toc a {
-    @apply inline-block py-1;
-}

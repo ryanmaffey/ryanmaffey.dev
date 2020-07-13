@@ -1,6 +1,6 @@
 import React from "react";
 
-import { getAllPostIds, getPostData } from "../../lib/posts";
+import { getAllPostIds, getPost } from "../../lib/posts";
 import { Post } from "../../components/post";
 import Layout from "../../components/layout";
 import { IPost } from "../../types";
@@ -24,7 +24,7 @@ export const getStaticProps = async ({
 }: {
     params: { id: string };
 }): Promise<{ props: IProps }> => {
-    const post = await getPostData(params.id);
+    const post = await getPost(params.id);
     return {
         props: {
             post,
