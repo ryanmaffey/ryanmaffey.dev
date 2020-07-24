@@ -154,8 +154,6 @@ All of the logic is nicely contained inside the class' public methods and we can
 
 There are a couple of things to be aware of when thinking about introducing a new abstraction into your code; over-abstraction and the wrong abstraction.
 
-More on this coming soon...
-
 ### Over-Abstraction
 
 So abstraction is great, we should use it all the time for everything, right!? Well...not exactly.
