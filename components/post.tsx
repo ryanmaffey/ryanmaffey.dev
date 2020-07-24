@@ -51,7 +51,12 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
                     <section className="col-span-3 md:col-span-1">
                         <div
                             className="bg-gray-800 p-5 rounded"
-                            style={{ position: "sticky", top: "1.25rem" }}
+                            style={{
+                                position: "sticky",
+                                top: "1.25rem",
+                                maxHeight: "calc(100vh - 3rem)",
+                                overflow: "scroll",
+                            }}
                         >
                             <div
                                 className={`flex justify-between ${

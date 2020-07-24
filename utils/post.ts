@@ -43,23 +43,25 @@ export const addHeadingNumbers = (dom: jsdom.JSDOM) => {
 };
 
 export const getTableOfContents = (headings: NodeListOf<Element>) => {
-    let list = "<ul>";
+    const getClassName = (num: number) => {
+        switch (num) {
+            case 1:
+                return "ml-3";
+            case 2:
+                return "ml-6";
+            default:
+                return "";
+        }
+    };
+
+    let list = "<ul class='toc'>";
     for (let i = 0; i < headings.length; i++) {
         let e = headings[i];
         let num = parseInt(e.nodeName[1]) - 2;
         let firstChildClassList = e.children[0].classList;
         firstChildClassList.add("mr-2", "md:mr-2");
         firstChildClassList.remove("md:mr-3");
-        list += `<li><a href="#${e.id}" class="${(() => {
-            switch (num) {
-                case 1:
-                    return "ml-2";
-                case 2:
-                    return "ml-4";
-                default:
-                    return "";
-            }
-        })()} hover:text-teal-400 focus:text-teal-400 block mb-2 flex">${
+        list += `<li><a href="#${e.id}" class="${getClassName(num)}">${
             e.innerHTML
         }</a></li>`;
     }

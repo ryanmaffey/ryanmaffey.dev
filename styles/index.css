@@ -25,10 +25,10 @@ h4 {
     @apply mb-3 leading-tight relative py-2 font-bold;
     padding-left: 1.5rem;
 }
-h1::before,
-h2::before,
-h3::before,
-h4::before {
+#content h1::before,
+#content h2::before,
+#content h3::before,
+#content h4::before {
     @apply bottom-0 top-0 left-0 block absolute bg-teal-500;
     content: "";
     width: 0.5rem;
@@ -61,4 +61,22 @@ pre {
 
 .skip-to-content-link:focus {
     transform: translateY(0%);
+}
+
+/**
+ * Table of contents.
+ */
+
+.toc a {
+    @apply flex mb-2;
+}
+
+.toc li:last-of-type a {
+    @apply flex mb-0;
+}
+
+.toc a:active,
+.toc a:focus,
+.toc a:hover {
+    @apply text-teal-400;
 }
