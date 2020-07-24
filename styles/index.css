@@ -74,6 +74,15 @@ p + p {
     @apply my-2;
 }
 
+.post a {
+    @apply underline;
+}
+
+.post a:focus,
+.post a:hover {
+    @apply text-teal-400;
+}
+
 @tailwind components;
 @tailwind utilities;
 
