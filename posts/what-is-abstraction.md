@@ -17,10 +17,10 @@ Programmers often use the word "abstraction" when talking about their code but i
 
 I don't know about you, but I don't find this definition particularly helpful. Let's try and make it a bit easier to digest.
 
-## My Definition
+## My Alternative Definition
 
 <blockquote>
-    Providing a label to a piece of code that accurately describes the purpose and actions of that logic.
+    "Providing a label to a piece of code that accurately describes the purpose and actions of that logic."
 </blockquote>
 
 I think that's a bit easier to understand. It's also a bit more specific to our use case: programming.

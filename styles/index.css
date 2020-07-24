@@ -49,7 +49,7 @@ p + p {
 }
 
 .post blockquote {
-    @apply py-4 px-8 text-lg;
+    @apply p-4 my-4 text-lg border rounded;
 }
 
 .post blockquote footer {
