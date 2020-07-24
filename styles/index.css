@@ -42,9 +42,36 @@ p + h4 {
 p + p {
     @apply mt-3;
 }
-pre {
-    @apply rounded my-6;
+
+.post pre[class*="language-"] {
+    @apply rounded my-6 border;
     font-size: 0.8rem !important;
+}
+
+.post blockquote {
+    @apply py-4 px-8 text-lg;
+}
+
+.post blockquote footer {
+    @apply text-gray-100 mt-2 text-base;
+}
+
+.post ol,
+.post ul {
+    @apply pl-8;
+}
+
+.post ol {
+    @apply list-decimal;
+}
+
+.post ul {
+    @apply list-disc;
+}
+
+.post ol li,
+.post ul li {
+    @apply my-2;
 }
 
 @tailwind components;

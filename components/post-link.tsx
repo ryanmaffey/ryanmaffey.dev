@@ -10,7 +10,7 @@ interface IProps {
 
 export const PostLink: React.StatelessComponent<IProps> = (props) => (
     <Link href={`/post/[id]`} as={`/post/${props.post.id}`}>
-        <a className="block p-5 rounded border border-transparent border-solid hover:border-teal-400 focus:border-teal-400 outline-none">
+        <a className="block h-full p-5 rounded border border-transparent border-solid hover:border-teal-400 focus:border-teal-400 outline-none">
             {props.headingSize === 2 && (
                 <h2 className="text-xl">{props.post.meta.title}</h2>
             )}
