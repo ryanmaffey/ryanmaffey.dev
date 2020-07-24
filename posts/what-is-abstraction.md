@@ -2,7 +2,7 @@
 title: What is Abstraction?
 description: Defining the meaning of "abstraction" in relation to programming with examples of how you're already abstracting without even knowing it!
 date: "24/07/2020"
-readTime: 6
+readTime: 7
 containsCodeBlocks: true
 ---
 
@@ -152,34 +152,36 @@ All of the logic is nicely contained inside the class' public methods and we can
 
 ## Abstract with Caution!
 
-There are a couple of things to be aware of when thinking about introducing a new abstraction into your code; over-abstraction and thw wrong abstraction.
+There are a couple of things to be aware of when thinking about introducing a new abstraction into your code; over-abstraction and the wrong abstraction.
 
 More on this coming soon...
 
-<!-- ### Over-Abstraction
+### Over-Abstraction
 
 So abstraction is great, we should use it all the time for everything, right!? Well...not exactly.
 
-Sometimes it's easy to take things too far. Lets take a really basic example:
+It's easy to go overboard and over-abstract in an attempt to make code super generic and re-usable. You end up losing clarity on the feature you're building because you try to make it work for every possible use case and not the one(s) that you've been presented with. It makes it difficult for anyone else to understand what you've done and why.
 
-```ts
-function increment(num: number) {
-    return number + 1;
-}
-```
-
-There is no point in this abstraction. It doesn't bring any benefit over just using _+ 1_ as and where you need it. However, this particular example doesn't do any harm, so it's not the end of the world to do something like this.
-
-TODO: come up with a good example of this...
-
-The problems come when you're working on a feature and you want to make it as generic and flexible as possible. You try to make sure every piece of code is reusable in some way so that it could be helpful in the future. Sounds great, right!? Well now you've just got a bunch of generic functions which don't look like they go together all being used collectively to make your feature work. You en up with:
-
--   a loss of the declarative value you had in the first version
--   more function code in v2 than v1 for the same result
--   more code to call the functions in v2 than in v1 for the same result
+This topic is a whole article in itself which I hope to write someday.
 
 ### The Wrong Abstraction
 
-This has to be one of the biggest causes of confusing code which ends up being difficult to work with and can ultimately seriously detriment the state of your codebase.
+Creating the wrong abstractions results in code which is difficult to understand and even more difficult to work with.
 
-TODO: come up with a good example of this... -->
+The common scenario is that you have two pieces of code which are doing similar things in multiple different places and, because you want clean code, you merge them together into a generic method which takes a bunch of arguments to make sure it does the right thing depending on there the method is called.
+
+Abstraction complete. Sounds fine, right? But now one of a few things could happen:
+
+1. New requirement: do something exactly the same in a different place
+2. New requirement: do something mostly similar in a different place
+3. New requirement: change the way it works for some of the places but not others
+
+Now you might be able to spot some problems:
+
+1. There's no problem here, but in my experience it's not often you'll get asked to do something which is a carbon copy of something else.
+2. So you need to modify your abstraction and pass it more arguments so that it'll do what you need it to do in this new case. That's going to make it look messy and confusing as you keep adding things into that method.
+3. So you need to modify your abstraction whilst making sure you don't introduce any issues with the other existing code. That's always easier said than done.
+
+So there is an argument here that the logic should not have been abstracted together in the first place, it would have been better to have isolated duplicate code which means it's easy to modify without causing issues with existing code.
+
+It's almost impossible to foresee changes in the future so you can't plan for everything, but just try to ask yourself whether the abstraction makes logical sense - don't just do it to keep your code <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" rel="noopener" target="_blank">DRY</a>.
