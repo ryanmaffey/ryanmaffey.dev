@@ -25,7 +25,7 @@ I don't know about you, but I don't find this definition particularly helpful. L
 
 I think that's a bit easier to understand. It's also a bit more specific to our use case: programming.
 
-The first thing you might think to yourself is "That just sounds like the description of a variables, functions, classes, etc."...and you would be right! These are all forms of abstraction. We'll have a look at each of these a bit later.
+The first thing you might think to yourself is "That just sounds like the description of a variables, functions, classes, etc."...and you would be right! These can all be forms of abstraction. We'll have a look at each of these a bit later.
 
 ## Why Do We Want/Need to Abstract Anything?
 

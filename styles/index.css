@@ -44,7 +44,7 @@ p + p {
 }
 
 .post pre[class*="language-"] {
-    @apply rounded my-6 border;
+    @apply rounded my-6 border border-teal-400;
     font-size: 0.8rem !important;
 }
 
