@@ -45,7 +45,7 @@ const getAllPostIds = async () => {
 
         // End sitemap stream
         smStream.end();
-        console.log("=========== HELLO ===========");
+
         // XML sitemap string
         const sitemapOutput = (await streamToPromise(smStream)).toString();
 
