@@ -1,11 +1,16 @@
-import { SitemapStream, streamToPromise } from "sitemap";
-import { getAllPostIds } from "../../lib/posts";
+const fs = require("fs");
+const SitemapStream = require("sitemap").SitemapStream;
+const streamToPromise = require("sitemap").streamToPromise;
 
-export default async (req: any, res: any) => {
+const getAllPostIds = async () => {
+    const fileNames = fs.readdirSync("posts");
+    return fileNames.map((fileName) => fileName.replace(/\.md$/, ""));
+};
+
+(async () => {
     try {
         const smStream = new SitemapStream({
-            hostname: `https://${req.headers.host}`,
-            cacheTime: 600000,
+            hostname: `https://ryanmaffey.dev`,
         });
 
         smStream.write({
@@ -27,7 +32,7 @@ export default async (req: any, res: any) => {
         });
 
         // List of posts
-        const posts = (await getAllPostIds()).map((p) => p.params.id);
+        const posts = await getAllPostIds();
 
         // Create each URL row
         posts.forEach((post) => {
@@ -40,19 +45,12 @@ export default async (req: any, res: any) => {
 
         // End sitemap stream
         smStream.end();
-
+        console.log("=========== HELLO ===========");
         // XML sitemap string
         const sitemapOutput = (await streamToPromise(smStream)).toString();
 
-        // Change headers
-        res.writeHead(200, {
-            "Content-Type": "application/xml",
-        });
-
-        // Display output to user
-        res.end(sitemapOutput);
+        fs.writeFileSync("out/sitemap.xml", sitemapOutput);
     } catch (e) {
         console.log(e);
-        res.send(JSON.stringify(e));
     }
-};
+})();

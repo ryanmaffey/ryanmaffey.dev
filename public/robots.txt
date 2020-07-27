@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ryanmaffey.dev/api/sitemap
+Sitemap: https://ryanmaffey.dev/sitemap.xml
