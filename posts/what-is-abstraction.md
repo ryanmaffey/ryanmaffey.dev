@@ -183,3 +183,9 @@ Now you might be able to spot some problems:
 So there is an argument here that the logic should not have been abstracted together in the first place, it would have been better to have isolated duplicate code which means it's easy to modify without causing issues with existing code.
 
 It's almost impossible to foresee changes in the future so you can't plan for everything, but just try to ask yourself whether the abstraction makes logical sense - don't just do it to keep your code <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" rel="noopener" target="_blank">DRY</a>.
+
+<br />
+<hr />
+<br />
+
+**Update (27/07/2020):** I recently came across <a href="https://www.deconstructconf.com/2019/dan-abramov-the-wet-codebase" rel="noopener" target="_blank">The WET Codebase</a>: a talk by <a href="https://twitter.com/dan_abramov" rel="noopener" target="_blank">Dan Abramov</a> via <a href="https://overreacted.io/the-wet-codebase/" rel="noopener" target="_blank">a post on his blog</a>. The talk explains a lot if what I've written above very well with some nice clear visuals; it's worth a watch! Also, if you're a fan of <a href="https://reactjs.org/" rel="noopener" target="_blank">React</a> you'll love the rest of his blog!
