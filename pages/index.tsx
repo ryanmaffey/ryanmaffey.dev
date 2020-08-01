@@ -21,17 +21,16 @@ const Home: React.StatelessComponent<IProps> = (props) => {
             <section className="container py-10">
                 <h1>Hey, welcome!</h1>
                 <div className="block md:flex items-center">
-                    <p className="md:mb-0">
-                        My name is Ryan, I'm a professional Front-End Web
-                        Developer / Software Engineer working in Bournemouth,
-                        UK. I love creating applications for the web and
-                        teaching / sharing my knowledge with other developers.
-                        To that end, I like write about my thoughts, experiences
-                        and things I've learned so that I can chare them with
-                        the world!
+                    {/* <p className="md:mb-0"> */}
+                    <p>
+                        I'm Ryan, a professional Front-End Web Developer /
+                        Software Engineer working in Bournemouth, UK. I love
+                        creating applications for the web and teaching others
+                        how to do the same. That's why I decided to share my
+                        thoughts, experiences and things I've learned here on
+                        this blog. I hope you find something useful!
                     </p>
-                    {/* <picture className="my-5 md:my-0 md:ml-20 w-full max-w-md md:max-w-10"> */}
-                    <picture className="hidden md:flex w-full md:ml-10">
+                    {/* <picture className="hidden md:flex w-full md:ml-10">
                         <source
                             media="(max-width: 768px)"
                             srcSet="/img/ryanmaffey-md.webp"
@@ -59,9 +58,9 @@ const Home: React.StatelessComponent<IProps> = (props) => {
                             width="448"
                             height="448"
                         />
-                    </picture>
+                    </picture> */}
                 </div>
-                <LinkButton href="/about">Read more</LinkButton>
+                <LinkButton href="/about">Read more about me</LinkButton>
             </section>
             <section className="container">
                 <h2 className="u-underline-orange-500">Latest Posts</h2>
