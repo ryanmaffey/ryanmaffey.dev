@@ -17,7 +17,7 @@ export const Nav: React.FunctionComponent = () => {
                 Skip to content
             </a>
 
-            <nav className="flex items-center justify-between flex-wrap py-10">
+            <nav className="flex items-center justify-between flex-wrap py-5 md:py-10">
                 <div className="container flex sm:content-between">
                     <div className="flex items-center flex-grow sm:flex-grow md:flex-grow-0 md:justify-between mr-6">
                         <Anchor
