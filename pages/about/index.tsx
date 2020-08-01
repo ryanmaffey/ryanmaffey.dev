@@ -10,7 +10,7 @@ interface IProps {
     latestPosts: IPost[];
 }
 
-const PostsPage: React.StatelessComponent<IProps> = (props) => {
+const AboutPage: React.StatelessComponent<IProps> = (props) => {
     return (
         <Layout>
             <Head>
@@ -248,13 +248,4 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
     );
 };
 
-export const getStaticProps = async (): Promise<{ props: IProps }> => {
-    const latestPosts = await getLatestPostsData();
-    return {
-        props: {
-            latestPosts,
-        },
-    };
-};
-
-export default PostsPage;
+export default AboutPage;

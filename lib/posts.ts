@@ -5,7 +5,7 @@ import jsdom from "jsdom";
 
 import { IPost, IPostMeta } from "../types";
 import { syntaxHighlightCodeBlocks } from "../utils/syntax-highlight";
-import { addHeadingNumbers, getTableOfContents } from "../utils/post";
+import { getTableOfContents } from "../utils/post";
 import { getHtmlFromMarkdown } from "../utils/markdown";
 
 const { JSDOM } = jsdom;
