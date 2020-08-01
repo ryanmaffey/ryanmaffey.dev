@@ -1,23 +1,25 @@
 ---
 title: What is Abstraction?
-description: Defining the meaning of "abstraction" in relation to programming with examples of how you're already abstracting without even knowing it!
+description: You might have seen or heard developers using the word "abstraction" and not really understand what it means. When I first heard someone use it I thought they were just trying to make themselves sound smarter! But abstraction isn't as much of a complicated concept as you might think. Especially because you already abstract every day without even knowing it!
 date: "24/07/2020"
 readTime: 7
 containsCodeBlocks: true
 ---
 
+## Defining Abstraction
+
 Programmers often use the word "abstraction" when talking about their code but it's not a term new programmers are likely to have come across and understand.
 
-## Dictionary Definition
+### The Dictionary Definition
 
 <blockquote>
     "The act of considering something as a general quality or characteristic, apart from concrete realities, specific objects, or actual instances."
-    <footer><cite><a href="https://www.dictionary.com/browse/abstraction" rel="noopener" target="_blank">from dictionary.com</a></cite></footer>
+    <footer><cite><a href="https://www.dictionary.com/browse/abstraction" rel="noopener" target="_blank">dictionary.com</a></cite></footer>
 </blockquote>
 
 I don't know about you, but I don't find this definition particularly helpful. Let's try and make it a bit easier to digest.
 
-## My Alternative Definition
+### My Alternative Definition
 
 <blockquote>
     "Providing a label to a piece of code that accurately describes the purpose and actions of that logic."

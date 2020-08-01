@@ -29,7 +29,7 @@ export const getPost = async (id: string): Promise<IPost> => {
     const dom = new JSDOM(htmlFromMarkdownResult.html.toString());
     const headings = dom.window.document.querySelectorAll("h2, h3, h4");
 
-    addHeadingNumbers(dom);
+    // addHeadingNumbers(dom);
     syntaxHighlightCodeBlocks(dom);
 
     return {
@@ -40,7 +40,9 @@ export const getPost = async (id: string): Promise<IPost> => {
     };
 };
 
-export const getLatestPostsData = async (): Promise<IPost[]> => {
+export const getLatestPostsData = async (
+    numberOfPosts: number
+): Promise<IPost[]> => {
     const fileNames = fs.readdirSync("posts");
     return fileNames
         .map((f) => {
@@ -63,5 +65,5 @@ export const getLatestPostsData = async (): Promise<IPost[]> => {
                 new Date(b.meta.date).getTime() -
                 new Date(a.meta.date).getTime()
         )
-        .slice(0, 3);
+        .slice(0, numberOfPosts);
 };

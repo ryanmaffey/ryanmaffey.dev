@@ -6,20 +6,20 @@ import { IPost } from "../types";
 interface IProps {
     post: IPost;
     headingSize: 2 | 3;
+    classNames?: string;
 }
 
 export const PostLink: React.StatelessComponent<IProps> = (props) => (
     <Link href={`/post/[id]`} as={`/post/${props.post.id}`}>
-        <a className="block h-full p-5 rounded border border-transparent border-solid hover:border-teal-400 focus:border-teal-400 outline-none">
+        <a className={`c-post-link ${props.classNames || ""}`}>
             {props.headingSize === 2 && (
                 <h2 className="text-xl">{props.post.meta.title}</h2>
             )}
             {props.headingSize === 3 && (
                 <h3 className="text-xl">{props.post.meta.title}</h3>
             )}
-            <div className="mb-2">
+            <div className="mb-4 text-gray-500 font-bold text-sm">
                 <time
-                    className="text-sm"
                     dateTime={props.post.meta.date
                         .split("/")
                         .reverse()
@@ -28,18 +28,10 @@ export const PostLink: React.StatelessComponent<IProps> = (props) => (
                     {props.post.meta.date}
                 </time>
                 &nbsp;
-                <span className="text-sm">
-                    (approx. {props.post.meta.readTime} min read)
-                </span>
+                <span>(approx. {props.post.meta.readTime} min read)</span>
             </div>
             <p>{props.post.meta.description}</p>
+            <p className="c-post-link__read-more font-bold mb-0">Read more</p>
         </a>
     </Link>
 );
-
-// {% for tag in post.data.tags %}
-//     {%- if collections.tagList.indexOf(tag) != -1 -%}
-//     {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-//     {% tag tagUrl | url , tag %}
-//     {%- endif -%}
-// {% endfor %}

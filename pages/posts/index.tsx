@@ -16,10 +16,8 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
             <Head>
                 <title>Posts | {siteTitle}</title>
             </Head>
-            <div className="container">
-                <div className="bg-gray-800 mb-5 p-5 rounded">
-                    <h1 className="m-0">Posts</h1>
-                </div>
+            <div className="py-20 text-center">
+                <h1 className="m-0">All Posts</h1>
             </div>
             <div className="container">
                 <PostList posts={props.latestPosts} headingSize={2} />
@@ -29,7 +27,7 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
 };
 
 export const getStaticProps = async (): Promise<{ props: IProps }> => {
-    const latestPosts = await getLatestPostsData();
+    const latestPosts = await getLatestPostsData(20);
     return {
         props: {
             latestPosts,

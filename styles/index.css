@@ -3,53 +3,60 @@
 html,
 body,
 #__next {
-    @apply bg-gray-900 w-full h-full;
+    @apply bg-gray-900;
 }
 
 h1 {
     @apply text-4xl;
 }
 h2 {
-    @apply text-3xl;
-}
-h3 {
     @apply text-2xl;
 }
-h4 {
+h3 {
     @apply text-xl;
 }
 h1,
 h2,
 h3,
 h4 {
-    @apply mb-3 leading-tight relative py-2 font-bold;
-    padding-left: 1.5rem;
+    @apply mb-5 font-bold;
 }
-#content h1::before,
-#content h2::before,
-#content h3::before,
-#content h4::before {
-    @apply bottom-0 top-0 left-0 block absolute bg-teal-500;
-    content: "";
-    width: 0.5rem;
+
+p {
+    @apply mb-5;
 }
 p + h1,
 p + h2,
 p + h3,
 p + h4 {
-    @apply mt-6;
+    @apply mt-10;
 }
-p + p {
-    @apply mt-3;
+
+.page h2,
+.post h2,
+.u-underline-orange-500 {
+    @apply underline;
+    text-decoration-color: #ed8936;
+}
+.u-underline-blue-500 {
+    @apply underline;
+    text-decoration-color: #4299e1;
 }
 
 .post pre[class*="language-"] {
-    @apply rounded my-6 border border-teal-400;
+    @apply rounded mb-6 bg-gray-800;
     font-size: 0.8rem !important;
 }
 
 .post blockquote {
-    @apply p-4 my-4 text-lg border rounded;
+    @apply pl-6 py-2 mb-5 relative;
+}
+
+.post blockquote::before {
+    @apply bottom-0 top-0 left-0 block absolute bg-gray-800;
+    content: "";
+    width: 0.5rem;
+    height: 100%;
 }
 
 .post blockquote footer {
@@ -58,7 +65,7 @@ p + p {
 
 .post ol,
 .post ul {
-    @apply pl-8;
+    @apply pl-8 mb-5;
 }
 
 .post ol {
@@ -71,16 +78,18 @@ p + p {
 
 .post ol li,
 .post ul li {
-    @apply my-2;
+    @apply mb-2;
 }
 
+.page a,
 .post a {
-    @apply underline;
+    @apply text-blue-500;
+    text-decoration: none;
 }
 
 .post a:focus,
 .post a:hover {
-    @apply text-teal-400;
+    @apply text-orange-500;
 }
 
 @tailwind components;
@@ -114,5 +123,25 @@ p + p {
 .toc a:active,
 .toc a:focus,
 .toc a:hover {
-    @apply text-teal-400;
+    @apply text-orange-500;
+}
+
+/**
+ * Post Link
+ */
+
+.c-post-link {
+    @apply block p-5 bg-gray-800 rounded h-full border-l-4 border-blue-500;
+}
+
+.c-post-link:active h2,
+.c-post-link:focus h2,
+.c-post-link:hover h2,
+.c-post-link:active h3,
+.c-post-link:focus h3,
+.c-post-link:hover h3,
+.c-post-link__read-more:active,
+.c-post-link__read-more:focus,
+.c-post-link__read-more:hover {
+    @apply text-orange-500;
 }

@@ -16,17 +16,12 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
             <Head>
                 <title>About Me | {siteTitle}</title>
             </Head>
-            <div className="container">
-                <div className="bg-gray-800 mb-5 p-5 rounded">
-                    <h1 className="m-0">About Me</h1>
-                </div>
-                <div className="bg-gray-800 mb-5 p-5 rounded">
-                    <h2 className="flex flex-col md:flex-row">
-                        <span className="text-teal-400 mb-2 md:mr-3 md:mb-0">
-                            1.
-                        </span>{" "}
-                        How Did I Get into Web Development?
-                    </h2>
+            <div className="py-20 mb-10 bg-gray-800 text-center">
+                <h1 className="m-0">About Me</h1>
+            </div>
+            <div className="container page">
+                <div className="mb-10">
+                    <h2>How Did I Get into Web Development?</h2>
                     <p>
                         In secondary school it was part of the syllabus to make
                         some simple websites in IT class, that was the first
@@ -42,12 +37,7 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                         think it's something that I could happily do for a
                         living.
                     </p>
-                    <h2 className="flex flex-col md:flex-row">
-                        <span className="text-teal-400 mb-2 md:mr-3 md:mb-0">
-                            2.
-                        </span>{" "}
-                        University
-                    </h2>
+                    <h2>University</h2>
                     <p>
                         When it got to the point of applying for University I
                         didn't know what I wanted, but I knew what I enjoyed,
@@ -59,12 +49,7 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                         </Anchor>
                         's Web Development and Design course.
                     </p>
-                    <h3 className="flex flex-col md:flex-row">
-                        <span className="text-teal-400 mb-2 md:mr-3 md:mb-0">
-                            2.1.
-                        </span>{" "}
-                        Placement Year
-                    </h3>
+                    <h3>Placement Year</h3>
                     <p>
                         I accepted a placement year at{" "}
                         <Anchor href="https://www.redweb.com/" isExternalLink>
@@ -73,12 +58,7 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                         where I got the opportunity to split my time between
                         working as a back-end and front-end developer.
                     </p>
-                    <h4 className="flex flex-col md:flex-row">
-                        <span className="text-teal-400 mb-2 md:mr-3 md:mb-0">
-                            2.1.1.
-                        </span>{" "}
-                        Part 1: Back-End Developer Experience
-                    </h4>
+                    <h4>Part 1: Back-End Developer Experience</h4>
                     <p>
                         I made a social media management extension for{" "}
                         <Anchor href="https://umbraco.com/" isExternalLink>
@@ -96,12 +76,7 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                         It was a bit rough around the edges but it met the
                         specification!
                     </p>
-                    <h4 className="flex flex-col md:flex-row">
-                        <span className="text-teal-400 mb-2 md:mr-3 md:mb-0">
-                            2.1.2.
-                        </span>{" "}
-                        Part 2: Front-End Developer Experience
-                    </h4>
+                    <h4>Part 2: Front-End Developer Experience</h4>
                     <p>
                         I was given all sorts of fun jobs as a front-end
                         developer. The one I enjoyed the most was creating a
@@ -117,12 +92,7 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                         . It was really good fun to build and worked pretty
                         well!
                     </p>
-                    <h4 className="flex flex-col md:flex-row">
-                        <span className="text-teal-400 mb-2 md:mr-3 md:mb-0">
-                            2.1.3.
-                        </span>{" "}
-                        The Job Offer
-                    </h4>
+                    <h4>The Job Offer</h4>
                     <p>
                         I was very pleased to get a job offer from Redweb; I got
                         the choice of job role and decided to come back as a
@@ -130,12 +100,7 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                         time there and couldn't wait to finish university so I
                         could get back to work!
                     </p>
-                    <h3 className="flex flex-col md:flex-row">
-                        <span className="text-teal-400 mb-2 md:mr-3 md:mb-0">
-                            2.2.
-                        </span>{" "}
-                        Final Year Project
-                    </h3>
+                    <h3>Final Year Project</h3>
                     <p>
                         My project was inspired by an issue that the Redweb
                         front-end developers faced all the time; test devices
@@ -184,29 +149,14 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                         Fortunately the demo went really smoothly and the
                         lecturers absolutely loved it.
                     </p>
-                    <h3 className="flex flex-col md:flex-row">
-                        <span className="text-teal-400 mb-2 md:mr-3 md:mb-0">
-                            2.3.
-                        </span>{" "}
-                        Graduation
-                    </h3>
+                    <h3>Graduation</h3>
                     <p>
                         After all my hard work I proudly achieved my First Class
                         Honours Degree. Even today I am still incredibly pleased
                         with what I managed to accomplish.
                     </p>
-                    <h2 className="flex flex-col md:flex-row">
-                        <span className="text-teal-400 mb-2 md:mr-3 md:mb-0">
-                            3.
-                        </span>{" "}
-                        Work
-                    </h2>
-                    <h3 className="flex flex-col md:flex-row">
-                        <span className="text-teal-400 mb-2 md:mr-3 md:mb-0">
-                            3.1.
-                        </span>{" "}
-                        Redweb (2015 - 2017)
-                    </h3>
+                    <h2>Work</h2>
+                    <h3>Redweb (2015 - 2017)</h3>
                     <p className="font-bold">Front-End Developer</p>
                     <p>
                         And so I was back! I was mostly responsible for creating
@@ -241,12 +191,7 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
                         memories of my time there and I learned a lot from the
                         job and the people.
                     </p>
-                    <h3 className="flex flex-col md:flex-row">
-                        <span className="text-teal-400 mb-2 md:mr-3 md:mb-0">
-                            3.2.
-                        </span>{" "}
-                        Amigo Loans (2017 - Present)
-                    </h3>
+                    <h3>Amigo Loans (2017 - Present)</h3>
                     <p className="font-bold">Front-End Software Engineer</p>
                     <p>
                         I have massively grown as a developer as a result of

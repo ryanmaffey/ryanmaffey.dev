@@ -13,7 +13,7 @@ export class LinkButton extends React.PureComponent<IProps> {
             <Anchor
                 href={this.props.href}
                 className={
-                    "border border-teal-400 hover:text-teal-400 focus:text-teal-400 rounded mt-2 py-2 px-3 inline-block outline-none " +
+                    "font-bold hover:text-orange-500 focus:text-orange-500" +
                         this.props.className ?? ""
                 }
             >

@@ -4,8 +4,9 @@ import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import { getLatestPostsData } from "../lib/posts";
 import { IPost } from "../types";
-import { PostList } from "../components/post-list";
 import { LinkButton } from "../components/link-button";
+import { PostLink } from "../components/post-link";
+import { PostList } from "../components/post-list";
 
 interface IProps {
     latestPosts: IPost[];
@@ -17,61 +18,56 @@ const Home: React.StatelessComponent<IProps> = (props) => {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <section className="container">
-                <div className="mb-10 bg-gray-800 rounded p-5">
-                    <h1 className="mb-5">Hey, welcome!</h1>
-                    <div className="flex flex-col md:flex-row items-center">
-                        <p className="text-lg">
-                            My name is Ryan, I'm a professional Front-End Web
-                            Developer / Software Engineer working in
-                            Bournemouth, UK. I love creating applications for
-                            the web and teaching / sharing my knowledge with
-                            other developers. To that end, I like write about my
-                            thoughts, experiences and things I've learned so
-                            that I can chare them with the world!
-                        </p>
-                        <picture className="my-5 md:my-0 md:ml-5 w-full max-w-md md:max-w-10 flex justify-center">
-                            <source
-                                media="(max-width: 768px)"
-                                srcSet="/img/ryanmaffey-md.webp"
-                                type="image/webp"
-                            />
-                            <source
-                                media="(max-width: 768px)"
-                                srcSet="/img/ryanmaffey-md.jpg"
-                                type="image/jpeg"
-                            />
-                            <source
-                                media="(min-width: 768px)"
-                                srcSet="/img/ryanmaffey-sm.webp"
-                                type="image/webp"
-                            />
-                            <source
-                                media="(min-width: 768px)"
-                                srcSet="/img/ryanmaffey-sm.jpg"
-                                type="image/jpeg"
-                            />
-                            <img
-                                src="/img/ryanmaffey-lg.jpg"
-                                alt=""
-                                className="rounded w-auto"
-                                width="448"
-                                height="448"
-                            />
-                        </picture>
-                    </div>
-                    <div className="mt-2">
-                        <LinkButton href="/about" className="text-lg">
-                            Read more about me
-                        </LinkButton>
-                    </div>
+            <section className="container py-10">
+                <h1>Hey, welcome!</h1>
+                <div className="block md:flex items-center">
+                    <p className="md:mb-0">
+                        My name is Ryan, I'm a professional Front-End Web
+                        Developer / Software Engineer working in Bournemouth,
+                        UK. I love creating applications for the web and
+                        teaching / sharing my knowledge with other developers.
+                        To that end, I like write about my thoughts, experiences
+                        and things I've learned so that I can chare them with
+                        the world!
+                    </p>
+                    {/* <picture className="my-5 md:my-0 md:ml-20 w-full max-w-md md:max-w-10"> */}
+                    <picture className="hidden md:flex w-full md:ml-10">
+                        <source
+                            media="(max-width: 768px)"
+                            srcSet="/img/ryanmaffey-md.webp"
+                            type="image/webp"
+                        />
+                        <source
+                            media="(max-width: 768px)"
+                            srcSet="/img/ryanmaffey-md.jpg"
+                            type="image/jpeg"
+                        />
+                        <source
+                            media="(min-width: 768px)"
+                            srcSet="/img/ryanmaffey-sm.webp"
+                            type="image/webp"
+                        />
+                        <source
+                            media="(min-width: 768px)"
+                            srcSet="/img/ryanmaffey-sm.jpg"
+                            type="image/jpeg"
+                        />
+                        <img
+                            src="/img/ryanmaffey-lg.jpg"
+                            alt=""
+                            className="rounded-full w-auto m-auto"
+                            width="448"
+                            height="448"
+                        />
+                    </picture>
                 </div>
+                <LinkButton href="/about">Read more</LinkButton>
             </section>
             <section className="container">
-                <h2>Latest Posts</h2>
+                <h2 className="u-underline-orange-500">Latest Posts</h2>
                 <PostList posts={props.latestPosts} headingSize={3} />
-                <div className="mt-2">
-                    <LinkButton href="/posts">See all blog posts</LinkButton>
+                <div className="mt-10">
+                    <LinkButton href="/posts">See all posts</LinkButton>
                 </div>
             </section>
         </Layout>
@@ -79,7 +75,7 @@ const Home: React.StatelessComponent<IProps> = (props) => {
 };
 
 export const getStaticProps = async (): Promise<{ props: IProps }> => {
-    const latestPosts = await getLatestPostsData();
+    const latestPosts = await getLatestPostsData(3);
     return {
         props: {
             latestPosts,

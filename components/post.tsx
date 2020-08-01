@@ -17,24 +17,16 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
         );
     }, []);
 
-    const [contentsVisible, setContentsVisible] = React.useState(true);
-
     return (
         <>
             <Head>
                 <title>{props.post.meta.title + " | " + siteTitle}</title>
             </Head>
-            <div className="container">
-                <article
-                    className="grid grid-rows-2 grid-cols-3 gap-5"
-                    style={{
-                        gridTemplateColumns: "1fr 1fr 1fr",
-                        gridTemplateRows: "1fr auto",
-                    }}
-                >
-                    <header className="col-span-3 bg-gray-800 p-5 rounded">
+            <article>
+                <header className="py-20 mb-10 bg-gray-800 text-center">
+                    <div className="container">
                         <h1>{props.post.meta.title}</h1>
-                        <p className="text-sm">
+                        <p className="text-sm mb-0">
                             <time
                                 className="text-sm"
                                 dateTime={props.post.meta.date
@@ -46,69 +38,48 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
                             </time>{" "}
                             &nbsp; (approx. {props.post.meta.readTime} min read)
                         </p>
-                    </header>
-
-                    <section className="col-span-3 md:col-span-1">
-                        <div
-                            className="bg-gray-800 p-5 rounded"
-                            style={{
-                                position: "sticky",
-                                top: "1.25rem",
-                                maxHeight: "calc(100vh - 3rem)",
-                                overflow: "scroll",
-                            }}
-                        >
+                    </div>
+                </header>
+                <div className="container">
+                    <div
+                        className="grid grid-rows-1 grid-cols-3 gap-5"
+                        style={{
+                            gridTemplateColumns: "1fr 1fr 1fr",
+                            gridTemplateRows: "auto",
+                        }}
+                    >
+                        <section className="col-span-3 md:col-span-1">
                             <div
-                                className={`flex justify-between ${
-                                    contentsVisible && "mb-5"
-                                }`}
+                                className="py-5 rounded"
+                                style={{
+                                    position: "sticky",
+                                    top: "1.25rem",
+                                    maxHeight: "calc(100vh - 3rem)",
+                                    overflow: "scroll",
+                                }}
                             >
-                                <h2 className="m-0">Contents</h2>
-                                <button
-                                    className="px-5 text-3xl"
-                                    onClick={() =>
-                                        setContentsVisible(!contentsVisible)
-                                    }
-                                >
-                                    {contentsVisible ? "-" : "+"}
-                                </button>
-                            </div>
-                            {contentsVisible && (
+                                <h2 className="u-underline-blue-500">
+                                    Contents
+                                </h2>
                                 <div
                                     dangerouslySetInnerHTML={{
                                         __html: props.post.tableOfContents,
                                     }}
                                 />
-                            )}
+                            </div>
+                        </section>
+
+                        <div className="col-span-3 md:col-span-2">
+                            <section
+                                className="post pt-5 text-lg"
+                                dangerouslySetInnerHTML={{
+                                    __html: props.post.html,
+                                }}
+                            />
                         </div>
-                    </section>
-
-                    <div className="col-span-3 md:col-span-2">
-                        <section
-                            className="post bg-gray-800 p-5 rounded"
-                            dangerouslySetInnerHTML={{
-                                __html: props.post.html,
-                            }}
-                        />
-
-                        <footer className="rounded overflow-hidden shadow-lg bg-gray-800 p-5 mt-6">
-                            <p>
-                                <span className="mr-2">🎉</span>Hooray, you made
-                                it to the end...thanks for reading! If you
-                                enjoyed this post, found it useful and/or have
-                                any feedback on how it can be improved please
-                                feel free to{" "}
-                                <Anchor
-                                    href="https://twitter.com/ryanmaffey?lang=en"
-                                    isExternalLink
-                                >
-                                    get in touch on Twitter (@ryanmaffey)
-                                </Anchor>
-                            </p>
-                        </footer>
                     </div>
-                </article>
-            </div>
+                </div>
+            </article>
         </>
     );
 };

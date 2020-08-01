@@ -16,7 +16,7 @@ export class Anchor extends React.PureComponent<IProps> {
     render() {
         const className =
             this.props.className ??
-            "underline hover:text-teal-400 focus:text-teal-400";
+            "underline text-blue-500 hover:text-orange-500 focus:text-orange-500";
         if (this.props.isExternalLink) {
             return (
                 <a

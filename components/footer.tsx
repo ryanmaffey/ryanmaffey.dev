@@ -5,7 +5,7 @@ import { Anchor } from "./anchor";
 export class Footer extends React.PureComponent {
     render() {
         return (
-            <footer className="bg-gray-800 py-5 mt-6">
+            <footer className="bg-gray-800 py-10 mt-10">
                 <div className="container text-center">
                     <section>
                         <ul>
@@ -28,7 +28,7 @@ export class Footer extends React.PureComponent {
                         </ul>
                     </section>
                     <section>
-                        <p>&copy; Ryan Maffey, 2020</p>
+                        <p className="mb-0">&copy; Ryan Maffey, 2020</p>
                     </section>
                 </div>
             </footer>
