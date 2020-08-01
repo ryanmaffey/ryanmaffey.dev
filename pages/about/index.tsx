@@ -16,7 +16,7 @@ const AboutPage: React.StatelessComponent<IProps> = (props) => {
             <Head>
                 <title>About Me | {siteTitle}</title>
             </Head>
-            <div className="py-20 mb-10 bg-gray-800 text-center">
+            <div className="py-10 md:py-20 mb-10 bg-gray-800 text-center">
                 <h1 className="m-0">About Me</h1>
             </div>
             <div className="container page">

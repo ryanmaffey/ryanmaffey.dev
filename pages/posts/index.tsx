@@ -16,7 +16,7 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
             <Head>
                 <title>Posts | {siteTitle}</title>
             </Head>
-            <div className="py-20 text-center">
+            <div className="py-10 md:py-20 text-center">
                 <h1 className="m-0">All Posts</h1>
             </div>
             <div className="container">

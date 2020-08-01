@@ -23,7 +23,7 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
                 <title>{props.post.meta.title + " | " + siteTitle}</title>
             </Head>
             <article>
-                <header className="py-20 mb-10 bg-gray-800 text-center">
+                <header className="py-10 md:py-20 mb-10 bg-gray-800 text-center">
                     <div className="container">
                         <h1>{props.post.meta.title}</h1>
                         <p className="text-sm mb-0">
@@ -50,7 +50,7 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
                     >
                         <section className="col-span-3 md:col-span-1">
                             <div
-                                className="py-5 rounded"
+                                className="pb-5"
                                 style={{
                                     position: "sticky",
                                     top: "1.25rem",
