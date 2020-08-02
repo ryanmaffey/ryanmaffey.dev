@@ -71,7 +71,7 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
 
                         <div className="col-span-3 md:col-span-2">
                             <section
-                                className="post pt-5 text-lg"
+                                className="post text-lg"
                                 dangerouslySetInnerHTML={{
                                     __html: props.post.html,
                                 }}
