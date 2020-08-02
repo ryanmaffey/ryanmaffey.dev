@@ -1,7 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-
-import { Anchor } from "./anchor";
+import Link from "next/link";
 
 interface IState {
     isNavOpen: boolean;
@@ -10,6 +9,11 @@ interface IState {
 export const Nav: React.FunctionComponent = () => {
     const [state, setState] = React.useState<IState>({ isNavOpen: false });
     const router = useRouter();
+
+    const smNavLinkClass =
+        "block mt-2 px-3 py-2 hover:text-orange-500 focus:text-orange-500";
+    const mdNavLinkClass =
+        "block md:inline-block mx-2 px-3 py-2 hover:text-orange-500 focus:text-orange-500 border-b-2 border-gray-900 hover:border-orange-500 focus:border-orange-500";
 
     return (
         <header>
@@ -20,12 +24,11 @@ export const Nav: React.FunctionComponent = () => {
             <nav className="flex items-center justify-between flex-wrap py-5 md:py-10">
                 <div className="container flex sm:content-between">
                     <div className="flex items-center flex-grow sm:flex-grow md:flex-grow-0 md:justify-between mr-6">
-                        <Anchor
-                            href="/"
-                            className="text-2xl text-orange-500 font-bold"
-                        >
-                            ryanmaffey.dev
-                        </Anchor>
+                        <Link href="/">
+                            <a className="text-2xl bg-orange-500 text-black font-bold px-2">
+                                ryanmaffey.dev
+                            </a>
+                        </Link>
                     </div>
                     <div className="md:hidden">
                         <button
@@ -54,44 +57,40 @@ export const Nav: React.FunctionComponent = () => {
                     </div>
                     <div className="flex-grow hidden items-center md:flex">
                         <div className="md:flex-grow">
-                            <Anchor
-                                href="/about"
-                                className={`block md:inline-block mx-2 px-3 py-2 hover:text-orange-500 focus:text-orange-500 border-b-2 border-gray-900 hover:border-orange-500 focus:border-orange-500 ${
-                                    router.pathname === "/about"
-                                        ? "border-blue-500"
-                                        : ""
-                                }`}
-                            >
-                                About Me
-                            </Anchor>
-                            <Anchor
-                                href="/posts"
-                                className={`block md:inline-block mx-2 px-3 py-2 hover:text-orange-500 focus:text-orange-500 border-b-2 border-gray-900  hover:border-orange-500 focus:border-orange-500 ${
-                                    router.pathname === "/posts"
-                                        ? "border-blue-500"
-                                        : ""
-                                }`}
-                            >
-                                Posts
-                            </Anchor>
+                            <Link href="/about">
+                                <a
+                                    className={`${mdNavLinkClass} ${
+                                        router.pathname === "/about"
+                                            ? "border-blue-500"
+                                            : ""
+                                    }`}
+                                >
+                                    About Me
+                                </a>
+                            </Link>
+                            <Link href="/posts">
+                                <a
+                                    className={`${mdNavLinkClass} ${
+                                        router.pathname === "/posts"
+                                            ? "border-blue-500"
+                                            : ""
+                                    }`}
+                                >
+                                    Posts
+                                </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
                 {state.isNavOpen && (
                     <div className="container flex mt-5 md:hidden">
                         <div className="w-full">
-                            <Anchor
-                                href="/about"
-                                className="block mt-2 px-3 py-2 hover:text-orange-500 focus:text-orange-500"
-                            >
-                                About Me
-                            </Anchor>
-                            <Anchor
-                                href="/posts"
-                                className="block mt-2 px-3 py-2 hover:text-orange-500 focus:text-orange-500"
-                            >
-                                Posts
-                            </Anchor>
+                            <Link href="/about">
+                                <a className={smNavLinkClass}>About Me</a>
+                            </Link>
+                            <Link href="/posts">
+                                <a className={smNavLinkClass}>Posts</a>
+                            </Link>
                         </div>
                     </div>
                 )}

@@ -1,0 +1,41 @@
+.post pre[class*="language-"] {
+    @apply mb-6 bg-gray-800;
+    font-size: 0.8rem !important;
+}
+
+.post blockquote {
+    @apply pl-6 py-2 mb-5 relative;
+}
+
+.post blockquote::before {
+    @apply bottom-0 top-0 left-0 block absolute bg-gray-800;
+    content: "";
+    width: 0.5rem;
+    height: 100%;
+}
+
+.post blockquote footer {
+    @apply text-gray-100 mt-2 text-base;
+}
+
+.post ol,
+.post ul {
+    @apply pl-8 mb-5;
+}
+
+.post ol {
+    @apply list-decimal;
+}
+
+.post ul {
+    @apply list-disc;
+}
+
+.post ol li,
+.post ul li {
+    @apply mb-2;
+}
+
+.post em {
+    @apply text-orange-500;
+}

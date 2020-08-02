@@ -5,7 +5,6 @@ import Layout, { siteTitle } from "../components/layout";
 import { getLatestPostsData } from "../lib/posts";
 import { IPost } from "../types";
 import { LinkButton } from "../components/link-button";
-import { PostLink } from "../components/post-link";
 import { PostList } from "../components/post-list";
 
 interface IProps {
@@ -63,7 +62,7 @@ const Home: React.StatelessComponent<IProps> = (props) => {
                 <LinkButton href="/about">Read more about me</LinkButton>
             </section>
             <section className="container">
-                <h2 className="u-underline-orange-500">Latest Posts</h2>
+                <h2>Latest Posts</h2>
                 <PostList posts={props.latestPosts} headingSize={3} />
                 <div className="mt-10">
                     <LinkButton href="/posts">See all posts</LinkButton>

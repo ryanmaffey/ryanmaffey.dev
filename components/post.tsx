@@ -3,7 +3,6 @@ import Head from "next/head";
 
 import { siteTitle } from "./layout";
 import { loadCssAsync } from "../utils";
-import { Anchor } from "./anchor";
 import { IPost } from "../types/post";
 
 export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
@@ -58,7 +57,7 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
                                     overflow: "scroll",
                                 }}
                             >
-                                <h2 className="u-underline-blue-500">
+                                <h2 className="uppercase text-blue-500 text-base bg-transparent p-0">
                                     Contents
                                 </h2>
                                 <div

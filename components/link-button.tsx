@@ -10,13 +10,7 @@ interface IProps {
 export class LinkButton extends React.PureComponent<IProps> {
     render() {
         return (
-            <Anchor
-                href={this.props.href}
-                className={
-                    "font-bold hover:text-orange-500 focus:text-orange-500" +
-                        this.props.className ?? ""
-                }
-            >
+            <Anchor href={this.props.href} className="font-bold px-3 py-2">
                 {this.props.children}
             </Anchor>
         );

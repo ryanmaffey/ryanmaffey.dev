@@ -21,25 +21,25 @@ I don't know about you, but I don't find this definition particularly helpful. L
 
 ### My Alternative Definition
 
+Here's my attempt to redefine "abstraction" to make it simpler and more directly applicable to our use case: programming.
+
 <blockquote>
     "Providing a label to a piece of code that accurately describes the purpose and actions of that logic."
 </blockquote>
 
-I think that's a bit easier to understand. It's also a bit more specific to our use case: programming.
-
-The first thing you might think to yourself is "That just sounds like the description of a variables, functions, classes, etc."...and you would be right! These can all be forms of abstraction. We'll have a look at each of these a bit later.
+I think that's a much easier to understand. The first thing you might think to yourself is "That just sounds like a description of variables, functions, and classes"...and you would be right! These can all be forms of abstraction. We'll have a look at each of these a bit later.
 
 ## Why Do We Want/Need to Abstract Anything?
 
-Breaking-up code into smaller chunks (abstractions) helps us write clean code which is easy to read.
+Breaking-up code into smaller labelled chunks helps us write clean code which is easy to read, maintain and re-use.
 
 ### Focusing on What We Care About
 
-Abstraction helps us focus on results; we don't have to worry about _how_ something is done, we only care about getting the result.
+Abstraction helps us focus on results; we don't have to worry about _how_ something is done, we only care about _what_ the result is.
 
 ### Readable Code
 
-We reduce complexity by placing logic behind layered abstractions. This means at the top-level we only see the top-level abstractions, which ultimately makes the code much easier to read. You should be able to see what I mean when we look at some examples.
+We reduce complexity by placing logic behind layered abstractions. This means at the top-level we only see the top-level abstractions, which ultimately makes the code much easier to read. This should become a little clearer when we look at some examples.
 
 ### Reusable Code
 
@@ -154,7 +154,7 @@ All of the logic is nicely contained inside the class' public methods and we can
 
 ## Abstract with Caution!
 
-There are a couple of things to be aware of when thinking about introducing a new abstraction into your code; over-abstraction and the wrong abstraction.
+There are a couple of things to be aware of when thinking about introducing a new abstraction into your code.
 
 ### Over-Abstraction
 
@@ -162,7 +162,7 @@ So abstraction is great, we should use it all the time for everything, right!? W
 
 It's easy to go overboard and over-abstract in an attempt to make code super generic and re-usable. You end up losing clarity on the feature you're building because you try to make it work for every possible use case and not the one(s) that you've been presented with. It makes it difficult for anyone else to understand what you've done and why.
 
-This topic is a whole article in itself which I hope to write someday.
+This topic could easily be a whole blog post in itself, which I hope I'll be able to write someday.
 
 ### The Wrong Abstraction
 
