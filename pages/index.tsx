@@ -21,7 +21,7 @@ const Home: React.StatelessComponent<IProps> = (props) => {
                 <h1>Hey, welcome!</h1>
                 <div className="block md:flex items-center">
                     {/* <p className="md:mb-0"> */}
-                    <p>
+                    <p className="mb-0">
                         I'm Ryan, a professional Front-End Web Developer /
                         Software Engineer working in Bournemouth, UK. I love
                         creating applications for the web and teaching others
@@ -59,7 +59,7 @@ const Home: React.StatelessComponent<IProps> = (props) => {
                         />
                     </picture> */}
                 </div>
-                <LinkButton href="/about">Read more about me</LinkButton>
+                {/* <LinkButton href="/about">Read more about me</LinkButton> */}
             </section>
             <section className="container">
                 <h2>Latest Posts</h2>

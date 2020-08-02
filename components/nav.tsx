@@ -57,7 +57,7 @@ export const Nav: React.FunctionComponent = () => {
                     </div>
                     <div className="flex-grow hidden items-center md:flex">
                         <div className="md:flex-grow">
-                            <Link href="/about">
+                            {/* <Link href="/about">
                                 <a
                                     className={`${mdNavLinkClass} ${
                                         router.pathname === "/about"
@@ -67,7 +67,7 @@ export const Nav: React.FunctionComponent = () => {
                                 >
                                     About Me
                                 </a>
-                            </Link>
+                            </Link> */}
                             <Link href="/posts">
                                 <a
                                     className={`${mdNavLinkClass} ${
@@ -85,9 +85,9 @@ export const Nav: React.FunctionComponent = () => {
                 {state.isNavOpen && (
                     <div className="container flex mt-5 md:hidden">
                         <div className="w-full">
-                            <Link href="/about">
+                            {/* <Link href="/about">
                                 <a className={smNavLinkClass}>About Me</a>
-                            </Link>
+                            </Link> */}
                             <Link href="/posts">
                                 <a className={smNavLinkClass}>Posts</a>
                             </Link>
