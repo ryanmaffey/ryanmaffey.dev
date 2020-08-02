@@ -96,7 +96,7 @@ export const Nav: React.FunctionComponent = () => {
                     </div>
                 )}
             </nav>
-            <hr className="border-orange-500" />
+            <hr className="border-2 border-orange-500" />
         </header>
     );
 };
