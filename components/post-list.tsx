@@ -13,7 +13,7 @@ export class PostList extends React.PureComponent<IProps> {
         return (
             <ol className="grid gap-5 grid-cols-1 md:grid-cols-2">
                 {this.props.posts.map((p) => (
-                    <li key={p.id} className="overflow-hidden shadow-lg">
+                    <li key={p.id}>
                         <PostLink
                             post={p}
                             headingSize={this.props.headingSize}

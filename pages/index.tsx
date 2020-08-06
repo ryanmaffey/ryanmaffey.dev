@@ -18,9 +18,8 @@ const Home: React.StatelessComponent<IProps> = (props) => {
                 <title>{siteTitle}</title>
             </Head>
             <section className="container py-10">
-                <h1>Hey, welcome!</h1>
+                <h1>Welcome!</h1>
                 <div className="block md:flex items-center">
-                    {/* <p className="md:mb-0"> */}
                     <p>
                         I'm Ryan, a professional Front-End Web Developer /
                         Software Engineer working in Bournemouth, UK. I love

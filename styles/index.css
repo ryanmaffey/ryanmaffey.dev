@@ -12,6 +12,15 @@ h1 {
 h2 {
     @apply text-2xl;
 }
+@media only screen and (min-width: 768px) {
+    h1 {
+        @apply text-5xl;
+    }
+    h2 {
+        @apply text-3xl;
+    }
+}
+
 h3 {
     @apply text-xl;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { Anchor } from "./anchor";
 
 interface IState {
     isNavOpen: boolean;
@@ -13,7 +14,7 @@ export const Nav: React.FunctionComponent = () => {
     const smNavLinkClass =
         "block mt-2 px-3 py-2 hover:text-orange-500 focus:text-orange-500";
     const mdNavLinkClass =
-        "block md:inline-block mx-2 px-3 py-2 hover:text-orange-500 focus:text-orange-500 border-b-2 border-gray-900 hover:border-orange-500 focus:border-orange-500";
+        "block md:inline-block mx-2 px-3 py-2 border-b-2 border-gray-900 hover:border-orange-500 focus:border-orange-500";
 
     return (
         <header>
@@ -24,11 +25,9 @@ export const Nav: React.FunctionComponent = () => {
             <nav className="flex items-center justify-between flex-wrap py-5 md:py-10">
                 <div className="container flex sm:content-between">
                     <div className="flex items-center flex-grow sm:flex-grow md:flex-grow-0 md:justify-between mr-6">
-                        <Link href="/">
-                            <a className="text-2xl bg-orange-500 text-black font-bold px-2">
-                                ryanmaffey.dev
-                            </a>
-                        </Link>
+                        <Anchor href="/" isLinkButton className="text-xl">
+                            ryanmaffey.dev
+                        </Anchor>
                     </div>
                     <div className="md:hidden">
                         <button
@@ -86,16 +85,35 @@ export const Nav: React.FunctionComponent = () => {
                     <div className="container flex mt-5 md:hidden">
                         <div className="w-full">
                             <Link href="/about">
-                                <a className={smNavLinkClass}>About Me</a>
+                                <a
+                                    className={`${smNavLinkClass}  ${
+                                        router.pathname === "/"
+                                            ? "text-orange-500"
+                                            : ""
+                                    }`}
+                                >
+                                    About Me
+                                </a>
                             </Link>
                             <Link href="/posts">
-                                <a className={smNavLinkClass}>Posts</a>
+                                <a
+                                    className={`${smNavLinkClass}  ${
+                                        router.pathname === "/posts"
+                                            ? "text-orange-500"
+                                            : ""
+                                    }`}
+                                >
+                                    Posts
+                                </a>
                             </Link>
                         </div>
                     </div>
                 )}
             </nav>
-            <hr className="border-2 border-orange-500" />
+            <hr
+                className="border-2 border-orange-500 mb-1"
+                style={{ boxShadow: "0 0.25rem 0 #c05621" }}
+            />
         </header>
     );
 };

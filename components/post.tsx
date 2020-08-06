@@ -49,7 +49,7 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
                     >
                         <section className="col-span-3 md:col-span-1">
                             <div
-                                className="pb-5"
+                                className="p-1 pb-5"
                                 style={{
                                     position: "sticky",
                                     top: "1.25rem",

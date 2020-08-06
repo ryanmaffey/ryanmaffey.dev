@@ -1,3 +1,12 @@
 .c-post-link {
     @apply block p-5 bg-gray-800 h-full border-l-4 border-blue-500;
 }
+
+.c-post-link__heading {
+    @apply text-xl;
+}
+
+.c-post-link:focus,
+.c-post-link:hover {
+    @apply border-orange-500;
+}

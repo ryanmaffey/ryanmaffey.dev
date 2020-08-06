@@ -1,5 +1,5 @@
 .toc a {
-    @apply flex mb-2;
+    @apply inline-flex mb-2;
 }
 
 .toc li:last-of-type a {
