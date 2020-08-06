@@ -1,21 +1,3 @@
 .c-post-link {
     @apply block p-5 bg-gray-800 h-full border-l-4 border-blue-500;
 }
-.c-post-link__read-more {
-    @apply bg-blue-500 inline-block px-2 text-black;
-}
-
-.c-post-link:active h2,
-.c-post-link:focus h2,
-.c-post-link:hover h2,
-.c-post-link:active h3,
-.c-post-link:focus h3,
-.c-post-link:hover h3 {
-    @apply text-orange-500;
-}
-
-.c-post-link__read-more:active,
-.c-post-link__read-more:focus,
-.c-post-link__read-more:hover {
-    @apply bg-orange-500;
-}

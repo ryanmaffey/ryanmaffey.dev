@@ -1,8 +1,0 @@
-.c-anchor {
-    @apply bg-blue-500 text-black px-1;
-}
-
-.c-anchor:focus,
-.c-anchor:hover {
-    @apply bg-orange-500;
-}

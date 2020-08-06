@@ -39,3 +39,12 @@
 .post em {
     @apply text-orange-500;
 }
+
+.post a {
+    @apply border-b border-orange-500;
+}
+
+.post a:focus,
+.post a:hover {
+    @apply bg-orange-500 text-gray-900;
+}

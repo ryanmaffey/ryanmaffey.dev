@@ -3,7 +3,9 @@ import Link from "next/link";
 
 interface IProps {
     href: string;
+    as?: string;
     isExternalLink: boolean;
+    isLinkButton: boolean;
     className?: string;
 }
 
@@ -11,10 +13,13 @@ export class Anchor extends React.PureComponent<IProps> {
     public static defaultProps: IProps = {
         href: "/",
         isExternalLink: false,
+        isLinkButton: false,
     };
 
     render() {
-        const className = `c-anchor ${this.props.className}`;
+        const className = `${
+            this.props.isLinkButton ? "c-link-button" : "c-link"
+        } ${this.props.className || ""}`;
         if (this.props.isExternalLink) {
             return (
                 <a
@@ -29,7 +34,7 @@ export class Anchor extends React.PureComponent<IProps> {
         }
 
         return (
-            <Link href={this.props.href}>
+            <Link href={this.props.href} as={this.props.as}>
                 <a className={className}>{this.props.children}</a>
             </Link>
         );

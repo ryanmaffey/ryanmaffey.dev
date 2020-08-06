@@ -1,0 +1,11 @@
+.c-link {
+    @apply border-b border-orange-500;
+}
+
+.c-link:focus,
+.c-link:hover {
+    @apply bg-orange-500 text-gray-900;
+}
+
+.c-link:active {
+}

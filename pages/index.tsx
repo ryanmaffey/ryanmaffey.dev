@@ -4,7 +4,7 @@ import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import { getLatestPostsData } from "../lib/posts";
 import { IPost } from "../types";
-import { LinkButton } from "../components/link-button";
+import { Anchor } from "../components/anchor";
 import { PostList } from "../components/post-list";
 
 interface IProps {
@@ -59,13 +59,17 @@ const Home: React.StatelessComponent<IProps> = (props) => {
                         />
                     </picture> */}
                 </div>
-                <LinkButton href="/about">Read more about me</LinkButton>
+                <Anchor href="/about" isLinkButton>
+                    Read more about me
+                </Anchor>
             </section>
             <section className="container">
                 <h2>Latest Posts</h2>
                 <PostList posts={props.latestPosts} headingSize={3} />
                 <div className="mt-10">
-                    <LinkButton href="/posts">See all posts</LinkButton>
+                    <Anchor href="/posts" isLinkButton>
+                        See all posts
+                    </Anchor>
                 </div>
             </section>
         </Layout>
