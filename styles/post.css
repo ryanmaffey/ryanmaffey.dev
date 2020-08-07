@@ -46,5 +46,5 @@
 
 .post a:focus,
 .post a:hover {
-    @apply bg-orange-500 text-gray-900;
+    @apply text-orange-500;
 }
