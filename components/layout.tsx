@@ -26,7 +26,7 @@ export const Layout: React.FunctionComponent = ({ children }) => {
                 {/* <meta name="twitter:card" content="summary_large_image" /> */}
             </Head>
             <div
-                className="grid min-h-full text-gray-100"
+                className="grid min-h-full text-gray-300"
                 style={{
                     gridTemplateRows: "auto 1fr auto",
                     gridTemplateColumns: "100%",
