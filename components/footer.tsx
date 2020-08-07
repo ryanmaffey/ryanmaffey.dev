@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { Anchor } from "./anchor";
 
 export class Footer extends React.PureComponent {
     render() {
@@ -9,18 +10,20 @@ export class Footer extends React.PureComponent {
                     <section>
                         <ul>
                             <li className="mb-5">
-                                <Link href="https://twitter.com/ryanmaffey?lang=en">
-                                    <a rel="noopener" target="_Blank">
-                                        Twitter (@ryanmaffey)
-                                    </a>
-                                </Link>
+                                <Anchor
+                                    href="https://twitter.com/ryanmaffey?lang=en"
+                                    isExternalLink
+                                >
+                                    Twitter (@ryanmaffey)
+                                </Anchor>
                             </li>
                             <li className="mb-5">
-                                <Link href="https://github.com/ryanmaffey">
-                                    <a rel="noopener" target="_Blank">
-                                        GitHub (ryanmaffey)
-                                    </a>
-                                </Link>
+                                <Anchor
+                                    href="https://github.com/ryanmaffey"
+                                    isExternalLink
+                                >
+                                    GitHub (ryanmaffey)
+                                </Anchor>
                             </li>
                         </ul>
                     </section>
