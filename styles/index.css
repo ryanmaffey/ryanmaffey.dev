@@ -3,7 +3,7 @@
 html,
 body,
 #__next {
-    @apply bg-gray-900;
+    @apply bg-gray-900 text-gray-300;
 }
 
 h1 {

@@ -1,6 +1,23 @@
 .post pre[class*="language-"] {
-    @apply mb-6 bg-gray-800;
+    @apply mb-6 border-4 border-gray-800 bg-transparent;
+}
+
+.post pre[class*="language-"],
+.post pre[class*="language-"] code {
     font-size: 0.8rem !important;
+    color: #dc6a73 !important;
+}
+
+.post pre[class*="language-"] .token.function {
+    color: #61afef;
+}
+
+.post pre[class*="language-"] .token.string {
+    color: #96c078;
+}
+
+.post pre[class*="language-"] .token.comment {
+    color: #aaa;
 }
 
 .post blockquote {
