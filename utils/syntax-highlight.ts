@@ -42,7 +42,9 @@ export const syntaxHighlightCodeBlocks = (dom: jsdom.JSDOM) => {
             language
         );
         block.innerHTML = prismCode;
-        block.parentElement?.classList.add(`language-${language}`);
+        var pre = block.parentElement;
+        pre?.classList.add(`language-${language}`);
+        pre?.setAttribute("tabindex", "0");
     }
     // return dom;
 };
