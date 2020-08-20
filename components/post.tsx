@@ -41,13 +41,13 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
                 </header>
                 <div className="container">
                     <div
-                        className="grid grid-rows-1 grid-cols-3 gap-5"
+                        className="grid grid-rows-1 grid-cols-4 gap-5"
                         style={{
-                            gridTemplateColumns: "1fr 1fr 1fr",
+                            gridTemplateColumns: "1fr 1fr 1fr 1fr",
                             gridTemplateRows: "auto",
                         }}
                     >
-                        <section className="col-span-3 md:col-span-1">
+                        <section className="col-span-4 md:col-span-1">
                             <div
                                 className="p-1 pb-5"
                                 style={{
@@ -68,7 +68,7 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
                             </div>
                         </section>
 
-                        <div className="col-span-3 md:col-span-2">
+                        <div className="col-span-4 md:col-span-3">
                             <section
                                 className="post text-lg"
                                 dangerouslySetInnerHTML={{
