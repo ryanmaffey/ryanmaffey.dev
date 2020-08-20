@@ -33,7 +33,7 @@ export const PostLink: React.StatelessComponent<IProps> = (props) => (
                         {props.post.meta.date}
                     </time>
                     &nbsp;
-                    <span>(approx. {props.post.meta.readTime} min read)</span>
+                    <span>({props.post.meta.readTime} min read)</span>
                 </div>
                 <p className="mb-0">{props.post.meta.description}</p>
             </a>

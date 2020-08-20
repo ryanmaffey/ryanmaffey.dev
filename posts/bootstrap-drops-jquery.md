@@ -72,7 +72,7 @@ There are some other new features of Bootstrap 5 which include:
 -   New CSS custom properties
 -   Updated forms & form controls
 -   New utilities API
--   Enhanced grid system with a new xxl tier for really large screens
+-   Enhanced grid system with a new XXL tier for really large screens
 
 I won't go into detail about any of these, but if you're interested you can <a href="https://blog.getbootstrap.com/2020/06/16/bootstrap-5-alpha/" target="_blank" rel="noopener">head over to the Bootstrap blog to read all about them</a>.
 

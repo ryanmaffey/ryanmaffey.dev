@@ -35,7 +35,7 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
                             >
                                 {props.post.meta.date}
                             </time>{" "}
-                            &nbsp; (approx. {props.post.meta.readTime} min read)
+                            &nbsp; ({props.post.meta.readTime} min read)
                         </p>
                     </div>
                 </header>
