@@ -17,7 +17,7 @@ I would like to clarify that I don't hate jQuery.\* I think that jQuery has done
 
 So lets take a look and see what impact dropping jQuery has on Bootstrap's file size:
 
-<div class="overflow-scroll w-full">
+<div class="overflow-scroll w-full mt-5 mb-10">
     <table>
         <thead>
             <tr>
