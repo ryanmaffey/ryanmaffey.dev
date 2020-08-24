@@ -1,7 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { Anchor } from "./anchor";
 
 interface IState {
     isNavOpen: boolean;
@@ -11,10 +10,16 @@ export const Nav: React.FunctionComponent = () => {
     const [state, setState] = React.useState<IState>({ isNavOpen: false });
     const router = useRouter();
 
-    const smNavLinkClass =
-        "block mt-2 py-2 hover:text-orange-400 focus:text-orange-400";
-    const mdNavLinkClass =
-        "block md:inline-block mx-2 px-4 hover:text-orange-400 focus:text-orange-400";
+    const navItems = [
+        {
+            text: "About Me",
+            url: "/about",
+        },
+        {
+            text: "Posts",
+            url: "/posts",
+        },
+    ];
 
     return (
         <header>
@@ -38,10 +43,9 @@ export const Nav: React.FunctionComponent = () => {
                                 (state.isNavOpen ? "Close" : "Open") +
                                 " the navigation"
                             }
-                            className="flex items-center px-4 py-2"
+                            className="flex items-center px-4 py-2 mt-1"
                             onClick={() =>
                                 setState({
-                                    ...state,
                                     isNavOpen: !state.isNavOpen,
                                 })
                             }
@@ -58,64 +62,42 @@ export const Nav: React.FunctionComponent = () => {
                     </div>
                     <div className="flex-grow hidden items-center md:flex">
                         <div className="md:flex-grow">
-                            <Link href="/about">
-                                <a
-                                    className={`${mdNavLinkClass} ${
-                                        router.pathname === "/about"
-                                            ? "text-orange-400"
-                                            : ""
-                                    }`}
-                                >
-                                    About Me
-                                </a>
-                            </Link>
-                            <Link href="/posts">
-                                <a
-                                    className={`${mdNavLinkClass} ${
-                                        router.pathname === "/posts"
-                                            ? "text-orange-400"
-                                            : ""
-                                    }`}
-                                >
-                                    Posts
-                                </a>
-                            </Link>
+                            {navItems.map((item) => (
+                                <Link href={item.url}>
+                                    <a
+                                        className={`block md:inline-block mx-2 px-4 hover:text-orange-400 focus:text-orange-400 ${
+                                            router.pathname === item.url
+                                                ? "text-orange-400"
+                                                : ""
+                                        }`}
+                                    >
+                                        {item.text}
+                                    </a>
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 </div>
                 {state.isNavOpen && (
                     <div className="container flex mt-4 md:hidden">
                         <div className="w-full">
-                            <Link href="/about">
-                                <a
-                                    className={`${smNavLinkClass}  ${
-                                        router.pathname === "/"
-                                            ? "text-orange-400"
-                                            : ""
-                                    }`}
-                                >
-                                    About Me
-                                </a>
-                            </Link>
-                            <Link href="/posts">
-                                <a
-                                    className={`${smNavLinkClass}  ${
-                                        router.pathname === "/posts"
-                                            ? "text-orange-400"
-                                            : ""
-                                    }`}
-                                >
-                                    Posts
-                                </a>
-                            </Link>
+                            {navItems.map((item) => (
+                                <Link href={item.url}>
+                                    <a
+                                        className={`block mt-2 py-2 hover:text-orange-400 focus:text-orange-400 ${
+                                            router.pathname === item.url
+                                                ? "text-orange-400"
+                                                : ""
+                                        }`}
+                                    >
+                                        {item.text}
+                                    </a>
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 )}
             </nav>
-            {/* <hr
-                className="border-2 border-orange-400 mb-1"
-                style={{ boxShadow: "0 0.25rem 0 #c05621" }}
-            /> */}
         </header>
     );
 };
