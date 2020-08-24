@@ -27,10 +27,10 @@ export const Post: React.FunctionComponent<{
                 <title>{props.post.meta.title + " | " + siteTitle}</title>
             </Head>
             <article>
-                <header className="py-10 md:py-20 mb-10 bg-gray-800 text-center">
+                <header className="py-8 md:py-20 mb-8 bg-gray-900 text-center">
                     <div className="container">
                         <h1>{props.post.meta.title}</h1>
-                        <p className="text-sm mb-0">
+                        <p className="text-sm mb-0 text-gray-500">
                             <time
                                 className="text-sm"
                                 dateTime={props.post.meta.date
@@ -40,13 +40,14 @@ export const Post: React.FunctionComponent<{
                             >
                                 {props.post.meta.date}
                             </time>{" "}
-                            &nbsp; ({props.post.meta.readTime} min read)
+                            &nbsp; | &nbsp; ({props.post.meta.readTime} min
+                            read)
                         </p>
                     </div>
                 </header>
                 <div className="container">
                     <div
-                        className="grid grid-rows-1 grid-cols-4 gap-5"
+                        className="grid grid-rows-1 grid-cols-4 gap-4"
                         style={{
                             gridTemplateColumns: "1fr 1fr 1fr 1fr",
                             gridTemplateRows: "auto",
@@ -54,7 +55,7 @@ export const Post: React.FunctionComponent<{
                     >
                         <section className="col-span-4 md:col-span-1">
                             <div
-                                className="p-1 pb-5"
+                                className="p-1 pb-4"
                                 style={{
                                     position: "sticky",
                                     top: "1.25rem",
@@ -62,7 +63,7 @@ export const Post: React.FunctionComponent<{
                                     overflow: "scroll",
                                 }}
                             >
-                                <h2 className="uppercase text-blue-500 text-base bg-transparent p-0">
+                                <h2 className="uppercase text-orange-400 text-base bg-transparent p-0">
                                     Contents
                                 </h2>
                                 <div
@@ -84,13 +85,13 @@ export const Post: React.FunctionComponent<{
                     </div>
                 </div>
             </article>
-            <div className="container md:flex mt-10">
-                <div className="w-full md:w-1/2 mb-10 md:mb-0 md:mr-5">
+            <div className="container md:flex mt-8">
+                <div className="w-full md:w-1/2 mb-8 md:mb-0 md:mr-4">
                     {props.previous && (
                         <PostLink post={props.previous} headingSize={2} />
                     )}
                 </div>
-                <div className="w-full md:w-1/2 md:ml-5">
+                <div className="w-full md:w-1/2 md:ml-4">
                     {props.next && (
                         <PostLink post={props.next} headingSize={2} />
                     )}

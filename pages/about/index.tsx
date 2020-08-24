@@ -16,11 +16,41 @@ const AboutPage: React.StatelessComponent<IProps> = (props) => {
             <Head>
                 <title>About Me | {siteTitle}</title>
             </Head>
-            <div className="py-10 md:py-20 mb-10 bg-gray-800 text-center">
+            <div className="py-8 md:py-20 mb-8 bg-gray-900 text-center">
                 <h1 className="m-0">About Me</h1>
             </div>
             <div className="container page">
-                <div className="mb-10">
+                {/* <picture className="hidden md:flex w-full md:ml-8">
+                        <source
+                            media="(max-width: 768px)"
+                            srcSet="/img/ryanmaffey-md.webp"
+                            type="image/webp"
+                        />
+                        <source
+                            media="(max-width: 768px)"
+                            srcSet="/img/ryanmaffey-md.jpg"
+                            type="image/jpeg"
+                        />
+                        <source
+                            media="(min-width: 768px)"
+                            srcSet="/img/ryanmaffey-sm.webp"
+                            type="image/webp"
+                        />
+                        <source
+                            media="(min-width: 768px)"
+                            srcSet="/img/ryanmaffey-sm.jpg"
+                            type="image/jpeg"
+                        />
+                        <img
+                            src="/img/ryanmaffey-lg.jpg"
+                            alt=""
+                            className="rounded-full w-auto m-auto"
+                            width="448"
+                            height="448"
+                        />
+                    </picture> */}
+
+                <div className="mb-8">
                     {/* === SKILLS ====================================== */}
 
                     <section className="mt-16">

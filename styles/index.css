@@ -3,7 +3,7 @@
 html,
 body,
 #__next {
-    @apply bg-gray-900 text-gray-300 w-full;
+    @apply bg-gray-800 text-gray-300 w-full;
 }
 
 h1 {
@@ -27,35 +27,26 @@ h3 {
 h1,
 h2,
 h3,
-h4 {
-    @apply mb-5 font-bold;
-}
-
+h4,
 p {
-    @apply mb-5;
+    @apply mb-4;
 }
 p + h1,
 p + h2,
 p + h3,
 p + h4 {
-    @apply mt-10;
+    @apply mt-8;
 }
 
 @import "./post.css";
 
 .page h2,
-.post h2 {
-    @apply bg-orange-500 text-black px-2 inline-block;
-}
-
+.post h2,
 .page h3,
-.post h3 {
-    @apply text-orange-500;
-}
-
+.post h3,
 .page h4,
 .post h4 {
-    @apply text-blue-500;
+    @apply text-orange-400;
 }
 
 @import "./skip-to-content.css";

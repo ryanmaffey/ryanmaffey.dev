@@ -17,10 +17,10 @@ const Home: React.StatelessComponent<IProps> = (props) => {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <section className="container py-10">
-                <h1>Welcome!</h1>
-                <div className="block md:flex items-center">
-                    <p>
+            <div className="py-8 md:py-20 mb-8 bg-gray-900 text-center">
+                <section className="container">
+                    <h1>Welcome!</h1>
+                    <p className="mb-8">
                         I'm Ryan, a professional Front-End Web Developer /
                         Software Engineer working in Bournemouth, UK. I love
                         creating applications for the web and teaching others
@@ -28,44 +28,15 @@ const Home: React.StatelessComponent<IProps> = (props) => {
                         thoughts, experiences and things I've learned here on
                         this blog. I hope you find something useful!
                     </p>
-                    {/* <picture className="hidden md:flex w-full md:ml-10">
-                        <source
-                            media="(max-width: 768px)"
-                            srcSet="/img/ryanmaffey-md.webp"
-                            type="image/webp"
-                        />
-                        <source
-                            media="(max-width: 768px)"
-                            srcSet="/img/ryanmaffey-md.jpg"
-                            type="image/jpeg"
-                        />
-                        <source
-                            media="(min-width: 768px)"
-                            srcSet="/img/ryanmaffey-sm.webp"
-                            type="image/webp"
-                        />
-                        <source
-                            media="(min-width: 768px)"
-                            srcSet="/img/ryanmaffey-sm.jpg"
-                            type="image/jpeg"
-                        />
-                        <img
-                            src="/img/ryanmaffey-lg.jpg"
-                            alt=""
-                            className="rounded-full w-auto m-auto"
-                            width="448"
-                            height="448"
-                        />
-                    </picture> */}
-                </div>
-                <Anchor href="/about" isLinkButton>
-                    Read more about me
-                </Anchor>
-            </section>
+                    <Anchor href="/about" isLinkButton className="bg-gray-800">
+                        Read more about me
+                    </Anchor>
+                </section>
+            </div>
             <section className="container">
                 <h2>Latest Posts</h2>
                 <PostList posts={props.latestPosts} headingSize={3} />
-                <div className="mt-10">
+                <div className="mt-8">
                     <Anchor href="/posts" isLinkButton>
                         See all posts
                     </Anchor>

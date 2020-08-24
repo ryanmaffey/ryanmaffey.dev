@@ -2,9 +2,9 @@ export const getTableOfContents = (headings: NodeListOf<Element>) => {
     const getClassName = (num: number) => {
         switch (num) {
             case 1:
-                return "ml-3 text-sm";
+                return "ml-4 text-sm";
             case 2:
-                return "ml-6 text-sm";
+                return "ml-8 text-sm";
             default:
                 return "";
         }

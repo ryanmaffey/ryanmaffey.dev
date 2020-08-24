@@ -23,7 +23,7 @@ export const PostLink: React.StatelessComponent<IProps> = (props) => (
                         {props.post.meta.title}
                     </h3>
                 )}
-                <div className="mb-2 text-gray-500 font-bold text-sm">
+                <div className="mb-2 text-gray-500 text-sm">
                     <time
                         dateTime={props.post.meta.date
                             .split("/")
@@ -31,8 +31,8 @@ export const PostLink: React.StatelessComponent<IProps> = (props) => (
                             .join("-")}
                     >
                         {props.post.meta.date}
-                    </time>
-                    &nbsp;
+                    </time>{" "}
+                    &nbsp; | &nbsp;{" "}
                     <span>({props.post.meta.readTime} min read)</span>
                 </div>
                 <p className="mb-0">{props.post.meta.description}</p>

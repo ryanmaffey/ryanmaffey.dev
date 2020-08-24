@@ -11,7 +11,7 @@ interface IProps {
 export class PostList extends React.PureComponent<IProps> {
     render() {
         return (
-            <ol className="grid gap-10 grid-cols-1 md:grid-cols-2">
+            <ol className="grid gap-8 grid-cols-1 md:grid-cols-2">
                 {this.props.posts.map((p) => (
                     <li key={p.id}>
                         <PostLink

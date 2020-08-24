@@ -1,9 +1,0 @@
-.u-underline-orange-500 {
-    @apply underline;
-    text-decoration-color: #ed8936;
-}
-
-.u-underline-blue-500 {
-    @apply underline;
-    text-decoration-color: #4299e1;
-}
