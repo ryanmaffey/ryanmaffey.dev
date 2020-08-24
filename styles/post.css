@@ -1,5 +1,5 @@
 .post pre[class*="language-"] {
-    @apply mb-6 border-4 border-gray-800 bg-transparent;
+    @apply mb-6 border-4 border-gray-800 bg-transparent overflow-scroll;
 }
 
 .post pre[class*="language-"],
