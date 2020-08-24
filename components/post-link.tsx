@@ -23,7 +23,7 @@ export const PostLink: React.StatelessComponent<IProps> = (props) => (
                         {props.post.meta.title}
                     </h3>
                 )}
-                <div className="mb-4 text-gray-500 font-bold text-sm">
+                <div className="mb-2 text-gray-500 font-bold text-sm">
                     <time
                         dateTime={props.post.meta.date
                             .split("/")

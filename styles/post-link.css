@@ -1,9 +1,9 @@
 .c-post-link {
-    @apply block p-5 bg-gray-800 h-full border-l-4 border-blue-500;
+    @apply block p-5 bg-gray-800 h-full border-l-8 border-blue-500;
 }
 
 .c-post-link__heading {
-    @apply text-xl;
+    @apply text-xl mb-2;
 }
 
 .c-post-link:focus,
