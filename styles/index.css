@@ -3,7 +3,8 @@
 html,
 body,
 #__next {
-    @apply bg-gray-800 text-gray-300 w-full;
+    @apply text-gray-300 w-full;
+    background-color: #262e3c;
 }
 
 h1 {
