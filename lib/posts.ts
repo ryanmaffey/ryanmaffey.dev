@@ -40,9 +40,55 @@ export const getPost = async (id: string): Promise<IPost> => {
     };
 };
 
+type getNextAndPreviousPostDataResult = {
+    next: IPost | null;
+    previous: IPost | null;
+};
+
+export const getNextAndPreviousPostData = async (
+    date: string
+): Promise<getNextAndPreviousPostDataResult> => {
+    const allPosts = await getAllPostData();
+    const post = allPosts.find((p) => p.meta.date === date);
+    if (!post) throw new Error(`No matching post for date ${date}`);
+    const index = allPosts.indexOf(post);
+    var res: getNextAndPreviousPostDataResult = {
+        next: null,
+        previous: null,
+    };
+
+    if (index > 0) {
+        const next = allPosts[index - 1];
+        res.next = {
+            ...next,
+            meta: {
+                ...next.meta,
+                title: "Next: " + next.meta.title,
+            },
+        };
+    }
+
+    if (index !== allPosts.length - 1) {
+        const previous = allPosts[index + 1];
+        res.previous = {
+            ...previous,
+            meta: {
+                ...previous.meta,
+                title: "Previous: " + previous.meta.title,
+            },
+        };
+    }
+
+    return res;
+};
+
 export const getLatestPostsData = async (
     numberOfPosts: number
 ): Promise<IPost[]> => {
+    return (await getAllPostData()).slice(0, numberOfPosts);
+};
+
+const getAllPostData = async (): Promise<IPost[]> => {
     const fileNames = fs.readdirSync("posts");
     return fileNames
         .map((f) => {
@@ -64,6 +110,5 @@ export const getLatestPostsData = async (
             (a, b) =>
                 new Date(b.meta.date).getTime() -
                 new Date(a.meta.date).getTime()
-        )
-        .slice(0, numberOfPosts);
+        );
 };

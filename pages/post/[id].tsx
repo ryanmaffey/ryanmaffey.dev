@@ -1,19 +1,25 @@
 import React from "react";
 
-import { getAllPostIds, getPost } from "../../lib/posts";
+import {
+    getAllPostIds,
+    getPost,
+    getNextAndPreviousPostData,
+} from "../../lib/posts";
 import { Post } from "../../components/post";
 import Layout from "../../components/layout";
 import { IPost } from "../../types";
 
 interface IProps {
     post: IPost;
+    next: IPost | null;
+    previous: IPost | null;
 }
 
 const PostsPage: React.StatelessComponent<IProps> = (props) => {
     return (
         <>
             <Layout>
-                <Post post={props.post} />
+                <Post {...props} />
             </Layout>
         </>
     );
@@ -25,9 +31,13 @@ export const getStaticProps = async ({
     params: { id: string };
 }): Promise<{ props: IProps }> => {
     const post = await getPost(params.id);
+    const nextAndPreviousPostData = await getNextAndPreviousPostData(
+        post.meta.date
+    );
     return {
         props: {
             post,
+            ...nextAndPreviousPostData,
         },
     };
 };

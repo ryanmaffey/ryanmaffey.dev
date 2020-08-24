@@ -4,8 +4,13 @@ import Head from "next/head";
 import { siteTitle } from "./layout";
 import { loadCssAsync } from "../utils";
 import { IPost } from "../types/post";
+import { PostLink } from "./post-link";
 
-export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
+export const Post: React.FunctionComponent<{
+    post: IPost;
+    next: IPost | null;
+    previous: IPost | null;
+}> = (props) => {
     React.useEffect(() => {
         if (!props.post.meta.containsCodeBlocks) {
             return;
@@ -79,6 +84,18 @@ export const Post: React.FunctionComponent<{ post: IPost }> = (props) => {
                     </div>
                 </div>
             </article>
+            <div className="container md:flex mt-10">
+                <div className="w-full md:w-1/2 mb-10 md:mb-0 md:mr-5">
+                    {props.previous && (
+                        <PostLink post={props.previous} headingSize={2} />
+                    )}
+                </div>
+                <div className="w-full md:w-1/2 md:ml-5">
+                    {props.next && (
+                        <PostLink post={props.next} headingSize={2} />
+                    )}
+                </div>
+            </div>
         </>
     );
 };
