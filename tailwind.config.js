@@ -18,6 +18,7 @@ module.exports = {
             },
         },
         fill: (theme) => ({
+            current: "currentColor",
             "red-700": theme("colors.red.700"),
         }),
     },
