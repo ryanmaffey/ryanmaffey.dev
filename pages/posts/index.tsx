@@ -15,6 +15,10 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
         <Layout>
             <Head>
                 <title>Posts | {siteTitle}</title>
+                <meta
+                    name="description"
+                    content="Here's all my latest blog posts for you to browse and enjoy!"
+                />
             </Head>
             <div className="py-8 md:py-20 mb-8 bg-gray-900 text-center">
                 <h1 className="m-0">All Posts</h1>

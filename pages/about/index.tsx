@@ -15,6 +15,11 @@ const AboutPage: React.StatelessComponent<IProps> = (props) => {
         <Layout>
             <Head>
                 <title>About Me | {siteTitle}</title>
+                <meta
+                    name="description"
+                    content="I'm Ryan, a professional Front-End Web Developer /
+                        Software Engineer working in Bournemouth, UK. Here you'll find a bit about the skills I have and the tech I know how to use, as well as my employment and education history."
+                />
             </Head>
             <div className="py-8 md:py-20 mb-8 bg-gray-900 text-center">
                 <h1 className="m-0">About Me</h1>
@@ -54,7 +59,7 @@ const AboutPage: React.StatelessComponent<IProps> = (props) => {
                     {/* === SKILLS ====================================== */}
 
                     <section className="mt-16">
-                        <h2>Skills</h2>
+                        <h2>Skills &amp; Tech</h2>
                         <p>
                             Here's a collection of all of the tools and tech
                             that I've had experience with:
@@ -108,6 +113,9 @@ const AboutPage: React.StatelessComponent<IProps> = (props) => {
                             <li className="c-tag">Jest</li>
                             <li className="c-tag">Cypress.io</li>
                             <li className="c-tag">Nightwatch.js</li>
+                            <li className="c-tag">
+                                Object Orientated Programming
+                            </li>
                         </ul>
                     </section>
 

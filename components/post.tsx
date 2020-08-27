@@ -61,6 +61,10 @@ export const Post: React.FunctionComponent<{
         <>
             <Head>
                 <title>{props.post.meta.title + " | " + siteTitle}</title>
+                <meta
+                    name="description"
+                    content={props.post.meta.description}
+                />
             </Head>
             <article>
                 <header className="py-8 md:py-20 mb-8 bg-gray-900 text-center">
