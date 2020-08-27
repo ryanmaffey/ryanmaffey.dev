@@ -34,6 +34,7 @@ export const Layout: React.FunctionComponent<{
                 <meta name="twitter:description" content={props.description} />
                 <meta name="twitter:creator" content="@ryanmaffey" />
                 <meta name="twitter:site" content="@ryanmaffey" />
+                <meta name="twitter:image" content="/img/ryanmaffey-md.webp" />
 
                 {/* Title */}
                 <title>
