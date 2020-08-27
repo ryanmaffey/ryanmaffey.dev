@@ -76,7 +76,7 @@ const AboutPage: React.StatelessComponent<IProps> = (props) => {
                             <li className="c-tag">Tailwind</li>
                             <li className="c-tag">Next.js</li>
                             <li className="c-tag">C#</li>
-                            <li className="c-tag">Razor#</li>
+                            <li className="c-tag">Razor</li>
                             <li className="c-tag">.NET</li>
                             <li className="c-tag">.NET Core</li>
                             <li className="c-tag">MVC</li>
