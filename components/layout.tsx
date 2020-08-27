@@ -27,9 +27,13 @@ export const Layout: React.FunctionComponent<{
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary" />
-                <meta name="twitter:title" content={props.title} />
+                <meta
+                    name="twitter:title"
+                    content={props.title ?? "ryanmaffey.dev"}
+                />
                 <meta name="twitter:description" content={props.description} />
                 <meta name="twitter:creator" content="@ryanmaffey" />
+                <meta name="twitter:site" content="@ryanmaffey" />
 
                 {/* Title */}
                 <title>
