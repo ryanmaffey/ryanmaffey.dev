@@ -63,7 +63,7 @@ export const Nav: React.FunctionComponent = () => {
                     <div className="flex-grow hidden items-center md:flex">
                         <div className="md:flex-grow">
                             {navItems.map((item) => (
-                                <Link href={item.url}>
+                                <Link href={item.url} key={item.url}>
                                     <a
                                         className={`block md:inline-block mx-2 px-4 hover:text-orange-400 focus:text-orange-400 ${
                                             router.pathname === item.url
