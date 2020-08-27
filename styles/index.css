@@ -58,6 +58,8 @@ p + h4 {
 @import "./link.css";
 @import "./link-button.css";
 
+@import "./icon-button.css";
+
 @import "./tag.css";
 @import "./tag-list.css";
 

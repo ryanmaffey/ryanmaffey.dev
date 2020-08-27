@@ -6,6 +6,7 @@ import { IPost } from "../types";
 interface IProps {
     post: IPost;
     headingSize: 2 | 3;
+    likes: number;
     classNames?: string;
 }
 
@@ -33,7 +34,8 @@ export const PostLink: React.StatelessComponent<IProps> = (props) => (
                         {props.post.meta.date}
                     </time>{" "}
                     &nbsp; | &nbsp;{" "}
-                    <span>({props.post.meta.readTime} min read)</span>
+                    <span>{props.post.meta.readTime} min read</span> &nbsp; |
+                    &nbsp; {props.likes} like{props.likes === 1 ? "" : "s"}
                 </div>
                 <p className="mb-0">{props.post.meta.description}</p>
             </a>

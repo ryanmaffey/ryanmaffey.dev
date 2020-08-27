@@ -17,6 +17,9 @@ module.exports = {
                 default: "1rem",
             },
         },
+        fill: (theme) => ({
+            "red-700": theme("colors.red.700"),
+        }),
     },
     variants: {},
     plugins: [
