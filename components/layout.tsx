@@ -33,7 +33,7 @@ export const Layout: React.FunctionComponent<{
 
                 {/* Title */}
                 <title>
-                    {props.title !== "" && `${props.title} | `}
+                    {props.title === "" ? "" : `${props.title} | `}
                     ryanmaffey.dev
                 </title>
             </Head>
