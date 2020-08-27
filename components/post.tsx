@@ -17,18 +17,33 @@ export const Post: React.FunctionComponent<{
     next: IPost | null;
     previous: IPost | null;
 }> = (props) => {
-    const [state, setState] = React.useState<{ likes: number | null }>({
+    const [state, setState] = React.useState<{
+        likes: number | null;
+        prevLikes: number | null;
+        nextLikes: number | null;
+    }>({
         likes: null,
+        prevLikes: null,
+        nextLikes: null,
     });
 
     React.useEffect(() => {
         fetch("https://ryanmaffey-dev.herokuapp.com/likes")
             .then((x) => x.json())
-            .then(
-                (x: ILike[]) => x.filter((y) => y.post_id === props.post.id)[0]
-            )
-            .then((x: ILike | null) => {
-                setState({ likes: x ? x.like_count : 0 });
+            .then((x: ILike[]) => {
+                var likes = x.filter((y) => y.post_id === props.post.id)[0]
+                    ?.like_count;
+                var prevLikes = x.filter(
+                    (y) => y.post_id === props.previous?.id
+                )[0]?.like_count;
+                var nextLikes = x.filter((y) => y.post_id === props.next?.id)[0]
+                    ?.like_count;
+
+                setState({
+                    likes,
+                    prevLikes,
+                    nextLikes,
+                });
             });
     }, []);
 
@@ -107,7 +122,10 @@ export const Post: React.FunctionComponent<{
                                 postId={props.post.id}
                                 likes={state.likes}
                                 onLike={() =>
-                                    setState({ likes: state.likes + 1 })
+                                    setState({
+                                        ...state,
+                                        likes: (state.likes as number) + 1,
+                                    })
                                 }
                             />
                         </div>
@@ -117,12 +135,20 @@ export const Post: React.FunctionComponent<{
             <div className="container md:flex mt-8">
                 <div className="w-full md:w-1/2 mb-8 md:mb-0 md:mr-4">
                     {props.previous && (
-                        <PostLink post={props.previous} headingSize={2} />
+                        <PostLink
+                            likes={state.prevLikes ?? 0}
+                            post={props.previous}
+                            headingSize={2}
+                        />
                     )}
                 </div>
                 <div className="w-full md:w-1/2 md:ml-4">
                     {props.next && (
-                        <PostLink post={props.next} headingSize={2} />
+                        <PostLink
+                            likes={state.nextLikes ?? 0}
+                            post={props.next}
+                            headingSize={2}
+                        />
                     )}
                 </div>
             </div>
