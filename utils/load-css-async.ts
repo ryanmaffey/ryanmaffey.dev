@@ -3,11 +3,8 @@ export const loadCssAsync = (url: string) => {
     newLink.rel = "stylesheet";
     newLink.href = url;
     newLink.type = "text/css";
-    var firstLink = document.getElementsByTagName("link")[0];
 
     setTimeout(() => {
-        firstLink &&
-            firstLink.parentNode &&
-            firstLink.parentNode.insertBefore(newLink, firstLink);
+        document.head.appendChild(newLink);
     });
 };
