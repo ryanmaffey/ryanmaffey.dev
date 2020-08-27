@@ -4,10 +4,10 @@ import Head from "next/head";
 import { Nav } from "./nav";
 import { Footer } from "./footer";
 
-export const siteTitle = "Ryan Maffey Blog";
+export const siteTitle = "ryanmaffey.dev";
 
 const description =
-    "I'm a professional Front-End Web Developer / Software Engineer working in Bournemouth, UK who loves creating applications for the web and teaching others how to do the same.";
+    "I'm Ryan, a professional Front-End Web Developer / Software Engineer working in Bournemouth, UK. I love creating applications for the web and teaching others how to do the same. That's why I decided to share my thoughts, experiences and things I've learned here on this blog. I hope you find something useful!";
 
 export const Layout: React.FunctionComponent = ({ children }) => {
     return (
