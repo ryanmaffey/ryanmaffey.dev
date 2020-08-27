@@ -1,8 +1,6 @@
 import React from "react";
-import Head from "next/head";
 import fetch from "isomorphic-fetch";
 
-import { siteTitle } from "./layout";
 import { loadCssAsync } from "../utils";
 import { IPost } from "../types/post";
 import { PostLink } from "./post-link";
@@ -59,13 +57,6 @@ export const Post: React.FunctionComponent<{
 
     return (
         <>
-            <Head>
-                <title>{props.post.meta.title + " | " + siteTitle}</title>
-                <meta
-                    name="description"
-                    content={props.post.meta.description}
-                />
-            </Head>
             <article>
                 <header className="py-8 md:py-20 mb-8 bg-gray-900 text-center">
                     <div className="container">

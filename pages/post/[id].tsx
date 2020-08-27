@@ -18,7 +18,10 @@ interface IProps {
 const PostsPage: React.StatelessComponent<IProps> = (props) => {
     return (
         <>
-            <Layout>
+            <Layout
+                title={props.post.meta.title}
+                description={props.post.meta.description}
+            >
                 <Post {...props} />
             </Layout>
         </>

@@ -1,8 +1,6 @@
 import React from "react";
-import Head from "next/head";
 
-import Layout, { siteTitle } from "../../components/layout";
-import { getLatestPostsData } from "../../lib/posts";
+import Layout from "../../components/layout";
 import { IPost } from "../../types";
 import { Anchor } from "../../components/anchor";
 
@@ -12,15 +10,11 @@ interface IProps {
 
 const AboutPage: React.StatelessComponent<IProps> = (props) => {
     return (
-        <Layout>
-            <Head>
-                <title>About Me | {siteTitle}</title>
-                <meta
-                    name="description"
-                    content="I'm Ryan, a professional Front-End Web Developer /
-                        Software Engineer working in Bournemouth, UK. Here you'll find a bit about the skills I have and the tech I know how to use, as well as my employment and education history."
-                />
-            </Head>
+        <Layout
+            title="About Me"
+            description="I'm Ryan, a professional Front-End Web Developer /
+        Software Engineer working in Bournemouth, UK. Here you'll find a bit about the skills I have and the tech I know how to use, as well as my employment and education history."
+        >
             <div className="py-8 md:py-20 mb-8 bg-gray-900 text-center">
                 <h1 className="m-0">About Me</h1>
             </div>

@@ -29,7 +29,6 @@ export const getPost = async (id: string): Promise<IPost> => {
     const dom = new JSDOM(htmlFromMarkdownResult.html.toString());
     const headings = dom.window.document.querySelectorAll("h2, h3, h4");
 
-    // addHeadingNumbers(dom);
     syntaxHighlightCodeBlocks(dom);
 
     return {

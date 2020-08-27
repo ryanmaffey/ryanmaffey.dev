@@ -1,7 +1,6 @@
 import React from "react";
-import Head from "next/head";
 
-import Layout, { siteTitle } from "../../components/layout";
+import Layout from "../../components/layout";
 import { getLatestPostsData } from "../../lib/posts";
 import { PostList } from "../../components/post-list";
 import { IPost } from "../../types";
@@ -12,14 +11,10 @@ interface IProps {
 
 const PostsPage: React.StatelessComponent<IProps> = (props) => {
     return (
-        <Layout>
-            <Head>
-                <title>Posts | {siteTitle}</title>
-                <meta
-                    name="description"
-                    content="Here's all my latest blog posts for you to browse and enjoy!"
-                />
-            </Head>
+        <Layout
+            title="Posts"
+            description="Here's all my latest blog posts for you to browse and enjoy!"
+        >
             <div className="py-8 md:py-20 mb-8 bg-gray-900 text-center">
                 <h1 className="m-0">All Posts</h1>
             </div>

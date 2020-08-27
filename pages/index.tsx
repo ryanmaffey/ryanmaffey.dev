@@ -1,7 +1,6 @@
 import React from "react";
-import Head from "next/head";
 
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
 import { getLatestPostsData } from "../lib/posts";
 import { IPost } from "../types";
 import { Anchor } from "../components/anchor";
@@ -13,10 +12,15 @@ interface IProps {
 
 const Home: React.StatelessComponent<IProps> = (props) => {
     return (
-        <Layout>
-            <Head>
-                <title>{siteTitle}</title>
-            </Head>
+        <Layout
+            title=""
+            description="I'm Ryan, a professional Front-End Web Developer /
+        Software Engineer working in Bournemouth, UK. I love
+        creating applications for the web and teaching others
+        how to do the same. That's why I decided to share my
+        thoughts, experiences and things I've learned here on
+        this blog. I hope you find something useful!"
+        >
             <div className="py-8 md:py-20 mb-8 bg-gray-900 text-center">
                 <section className="container">
                     <h1>Welcome!</h1>
