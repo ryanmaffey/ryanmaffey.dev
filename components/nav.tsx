@@ -32,7 +32,7 @@ export const Nav: React.FunctionComponent = () => {
                     <div className="flex items-center flex-grow sm:flex-grow md:flex-grow-0 md:justify-between mr-8">
                         <Link href="/">
                             <a className="text-2xl text-orange-400">
-                                ryanmaffey.dev
+                                Ryan Maffey Blog
                             </a>
                         </Link>
                     </div>

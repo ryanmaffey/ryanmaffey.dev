@@ -17,7 +17,7 @@ const AboutPage: React.StatelessComponent<IProps> = (props) => {
                 <title>About Me | {siteTitle}</title>
                 <meta
                     name="description"
-                    content="I'm Ryan, a professional Front-End Web Developer /
+                    content="I'm a professional Front-End Web Developer /
                         Software Engineer working in Bournemouth, UK. Here you'll find a bit about the skills I have and the tech I know how to use, as well as my employment and education history."
                 />
             </Head>
