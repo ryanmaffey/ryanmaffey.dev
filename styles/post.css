@@ -53,10 +53,6 @@
     @apply mb-2;
 }
 
-.post em {
-    @apply text-orange-400;
-}
-
 .post a {
     @apply border-b border-orange-400;
 }

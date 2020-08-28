@@ -63,8 +63,6 @@ export const Layout: React.FunctionComponent<{
                         "post",
                         "tech",
                         "technology",
-                        "engineer",
-                        "engineering",
                         "code",
                         "coding",
                         "career",

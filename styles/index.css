@@ -50,6 +50,11 @@ p + h4 {
     @apply text-orange-400;
 }
 
+.page em,
+.post em {
+    @apply text-orange-400;
+}
+
 @import "./skip-to-content.css";
 
 @import "./table-of-contents.css";
