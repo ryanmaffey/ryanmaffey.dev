@@ -276,7 +276,7 @@ const LikePost: React.FunctionComponent<{
                 <p className="mb-0">
                     {props.likes ? props.likes : "0"} like
                     {props.likes === 1 ? "" : "s"}
-                    {!props.likes && ' - be the first to "like" this post!'}
+                    {!props.likes && " - be the first to like this post!"}
                 </p>
             </div>
         </div>
