@@ -1,6 +1,6 @@
 ---
 title: What is Abstraction?
-description: You might have seen or heard developers using the word "abstraction" and not really understand what it means. Abstraction is not as much of a complicated concept as you might think. Especially because you already abstract every day without even knowing it!
+description: Abstraction is not as complicated as you might first think, especially because you already abstract every day without even thinking about it!
 date: "24/07/2020"
 readTime: 7
 containsCodeBlocks: true

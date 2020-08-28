@@ -1,6 +1,6 @@
 ---
 title: Why do I want to start a blog?
-description: I thought a good place to start is with an explanation of my rationale behind wanting to create and write on my own blog in the first place. I want to give you an outline of what I want to achieve for myself and anyone who reads my posts.
+description: My rationale behind wanting to create and write on my very own blog, with an outline of what I want to achieve for myself and anyone who reads my posts.
 date: "20/06/2020"
 readTime: 3
 containsCodeBlocks: false

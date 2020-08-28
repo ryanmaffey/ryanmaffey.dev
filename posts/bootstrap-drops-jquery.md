@@ -1,6 +1,6 @@
 ---
 title: Bootstrap is Dropping its jQuery Dependency!
-description: I am really happy to see that Bootstrap has decided to remove the dependence on jQuery. I definitely feel that it's the right time to say goodbye to jQuery and rely solely on the powerful capabilities of modern web browsers.
+description: I definitely feel that it's the right time for Bootstrap to say goodbye to jQuery and move to rely solely on the powerful capabilities of modern web browsers.
 date: "20/08/2020"
 readTime: 3
 keywords:
