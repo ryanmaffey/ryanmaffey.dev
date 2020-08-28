@@ -21,6 +21,7 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
             <Layout
                 title={props.post.meta.title}
                 description={props.post.meta.description}
+                keywords={props.post.meta.keywords}
             >
                 <Post {...props} />
             </Layout>

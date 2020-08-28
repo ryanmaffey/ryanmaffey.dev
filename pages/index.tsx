@@ -13,24 +13,19 @@ interface IProps {
 const Home: React.StatelessComponent<IProps> = (props) => {
     return (
         <Layout
-            title=""
-            description="I'm Ryan, a professional Front-End Web Developer /
-        Software Engineer working in Bournemouth, UK. I love
-        creating applications for the web and teaching others
-        how to do the same. That's why I decided to share my
-        thoughts, experiences and things I've learned here on
-        this blog. I hope you find something useful!"
+            title="Welcome to My Blog!"
+            description="I'm Ryan, a Front-End Web Developer working in Bournemouth, UK. I love creating applications for the web and teaching others how to do the same!"
         >
             <div className="py-8 md:py-20 mb-8 bg-gray-900 text-center">
                 <section className="container">
-                    <h1>Welcome!</h1>
+                    <h1>Welcome to My Blog!</h1>
                     <p className="mb-8">
                         I'm Ryan, a professional Front-End Web Developer /
                         Software Engineer working in Bournemouth, UK. I love
                         creating applications for the web and teaching others
                         how to do the same. That's why I decided to share my
                         thoughts, experiences and things I've learned here on
-                        this blog. I hope you find something useful!
+                        this blog.
                     </p>
                     <Anchor href="/about" isLinkButton className="bg-gray-800">
                         Read more about me

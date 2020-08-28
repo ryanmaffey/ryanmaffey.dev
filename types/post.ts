@@ -11,4 +11,5 @@ export interface IPostMeta {
     readTime: number;
     description: string;
     containsCodeBlocks: boolean;
+    keywords?: string[];
 }

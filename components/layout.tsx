@@ -7,6 +7,7 @@ import { Footer } from "./footer";
 export const Layout: React.FunctionComponent<{
     title: string;
     description: string;
+    keywords?: string[];
 }> = (props) => {
     return (
         <>
@@ -46,6 +47,30 @@ export const Layout: React.FunctionComponent<{
                     content="width=device-width, initial-scale=1.0"
                 />
                 <meta name="description" content={props.description} />
+                <meta
+                    name="keywords"
+                    content={[
+                        "developer",
+                        "development",
+                        "software",
+                        "program",
+                        "programming",
+                        "programmer",
+                        "web",
+                        "website",
+                        "blog",
+                        "article",
+                        "post",
+                        "tech",
+                        "technology",
+                        "engineer",
+                        "engineering",
+                        "code",
+                        "coding",
+                        "career",
+                        ...(props.keywords ?? []),
+                    ].join(", ")}
+                />
 
                 {/* OG */}
                 <meta name="og:title" content={props.title} />
@@ -67,10 +92,7 @@ export const Layout: React.FunctionComponent<{
                 />
 
                 {/* Title */}
-                <title>
-                    {props.title === "" ? "" : `${props.title} | `}
-                    ryanmaffey.dev
-                </title>
+                <title>{props.title}</title>
             </Head>
             <div
                 className="grid min-h-full text-gray-300"

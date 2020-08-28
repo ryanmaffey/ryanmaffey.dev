@@ -12,8 +12,8 @@ interface IProps {
 const PostsPage: React.StatelessComponent<IProps> = (props) => {
     return (
         <Layout
-            title="Posts"
-            description="Here's all my latest blog posts for you to browse and enjoy!"
+            title="All Posts"
+            description="Here's all my latest blog posts for you to browse and enjoy! I love to write about web technologies, programming and software development."
         >
             <div className="py-8 md:py-20 mb-8 bg-gray-900 text-center">
                 <h1 className="m-0">All Posts</h1>
