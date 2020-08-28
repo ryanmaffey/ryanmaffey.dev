@@ -2,10 +2,6 @@
     @apply block px-8 py-5 bg-gray-900 h-full border-l-8 border-orange-400 rounded;
 }
 
-.c-post-link__heading {
-    @apply text-2xl mb-2;
-}
-
 .c-post-link:active,
 .c-post-link:focus,
 .c-post-link:hover {

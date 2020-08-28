@@ -15,16 +15,16 @@ export const PostLink: React.StatelessComponent<IProps> = (props) => (
         <Link href={`/post/[id]`} as={`/post/${props.post.id}`}>
             <a className={`c-post-link ${props.classNames || ""}`}>
                 {props.headingSize === 2 && (
-                    <h2 className="c-post-link__heading">
+                    <h2 className="c-post-link__heading text-2xl mb-4">
                         {props.post.meta.title}
                     </h2>
                 )}
                 {props.headingSize === 3 && (
-                    <h3 className=" c-post-link__heading">
+                    <h3 className=" c-post-link__heading text-2xl mb-4">
                         {props.post.meta.title}
                     </h3>
                 )}
-                <div className="mb-2 text-gray-500 text-sm">
+                <div className="mb-4 text-gray-500 text-sm">
                     <time
                         dateTime={props.post.meta.date
                             .split("/")
