@@ -2,7 +2,7 @@ module.exports = {
     purge: [
         "./components/**/*.{ts,tsx}",
         "./utils/**/*.{ts,tsx}",
-        "./pages/**/*.{ts,tsx}",
+        "./pages/**/*.{ts,tsx,md}",
         "./posts/**/*.md",
     ],
     theme: {
