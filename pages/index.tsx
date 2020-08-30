@@ -14,7 +14,7 @@ interface IProps {
 const Home: React.StatelessComponent<IProps> = (props) => {
     return (
         <Layout
-            title="Welcome to My Blog!"
+            title="Welcome to ryanmaffey.dev"
             description="I'm Ryan, a Front-End Web Developer working in Bournemouth. I love creating applications for the web and teaching others how to do the same!"
         >
             <TitleHeader>
