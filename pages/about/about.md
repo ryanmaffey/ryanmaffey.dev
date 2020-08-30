@@ -76,6 +76,8 @@ Here's a collection of all of the tools, tech and skills that I've worked with /
     <li class="c-tag">Visual Studio Code</li>
     <li class="c-tag">SQL Server Management Studio</li>
     <li class="c-tag">Postman</li>
+    <li class="c-tag">Xcode</li>
+    <li class="c-tag">Android Studio</li>
     
 </ul>
 
