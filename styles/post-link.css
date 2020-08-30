@@ -1,5 +1,5 @@
 .c-post-link {
-    @apply block px-8 py-5 bg-gray-900 h-full border-l-8 border-orange-400 rounded;
+    @apply block px-8 py-5 pb-6 bg-gray-900 h-full border-l-8 border-orange-400 rounded;
 }
 
 .c-post-link:active,
