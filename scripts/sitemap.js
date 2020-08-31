@@ -32,6 +32,12 @@ const getAllPostIds = async () => {
         });
 
         smStream.write({
+            url: `/cookies`,
+            changefreq: "monthly",
+            priority: 0.9,
+        });
+
+        smStream.write({
             url: `/posts`,
             changefreq: "monthly",
             priority: 0.9,

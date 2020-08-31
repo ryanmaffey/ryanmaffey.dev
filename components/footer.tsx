@@ -25,6 +25,9 @@ export class Footer extends React.PureComponent {
                                     GitHub (ryanmaffey)
                                 </Anchor>
                             </li>
+                            <li className="mb-4">
+                                <Anchor href="/cookies">Cookie Info</Anchor>
+                            </li>
                         </ul>
                     </section>
                     <section>
