@@ -180,6 +180,7 @@ const LikePost: React.FunctionComponent<{
                         (liked ? " c-icon-button--active" : " ")
                     }
                     onClick={onLikePostClick}
+                    aria-label="Like this post."
                 >
                     <svg
                         width="1.5em"
