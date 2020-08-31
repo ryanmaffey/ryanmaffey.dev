@@ -18,6 +18,9 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
         >
             <TitleHeader>
                 <h1 className="m-0">Posts</h1>
+                <p className="text-gray-500 mb-0">
+                    Here's all my blog posts for you to browse and enjoy.
+                </p>
             </TitleHeader>
             <div className="container">
                 <PostList posts={props.latestPosts} headingSize={2} />

@@ -12,7 +12,7 @@ export const Nav: React.FunctionComponent = () => {
 
     const navItems = [
         {
-            text: "About Me",
+            text: "About",
             url: "/about",
         },
         {

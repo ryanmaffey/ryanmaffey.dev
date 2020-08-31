@@ -16,11 +16,15 @@ interface IProps {
 const AboutPage: React.StatelessComponent<IProps> = (props) => {
     return (
         <Layout
-            title="About Me"
+            title="About"
             description="I'm Ryan, a professional Front-End Web Developer working in Bournemouth. Here you can find a bit more about me and what I can do."
         >
             <TitleHeader>
-                <h1 className="m-0">About Me</h1>
+                <h1 className="m-0">About</h1>
+                <p className="text-gray-500 mb-0">
+                    Here's a bit more about about me, my experience and what I
+                    can do.
+                </p>
             </TitleHeader>
             <div className="page">
                 <SidebarLayout
