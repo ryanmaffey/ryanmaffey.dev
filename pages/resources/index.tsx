@@ -234,10 +234,7 @@ const ResourcesPage: React.StatelessComponent = () => {
                             </Anchor>
                         </li>
                         <li>
-                            <Anchor
-                                href="http://asciiflow.com/"
-                                isExternalLink
-                            >
+                            <Anchor href="http://asciiflow.com/" isExternalLink>
                                 ASCII Flow
                             </Anchor>
                         </li>
@@ -273,14 +270,6 @@ const ResourcesPage: React.StatelessComponent = () => {
                                 isExternalLink
                             >
                                 Minutes to Seconds
-                            </Anchor>
-                        </li>
-                        <li>
-                            <Anchor
-                                href="https://search.google.com/structured-data/testing-tool/u/0/"
-                                isExternalLink
-                            >
-                                Structured Data Testing Tool
                             </Anchor>
                         </li>
                         <li>
