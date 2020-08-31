@@ -283,6 +283,14 @@ const ResourcesPage: React.StatelessComponent = () => {
                                 Rich Text Results
                             </Anchor>
                         </li>
+                        <li>
+                            <Anchor
+                                href="https://bundlephobia.com/"
+                                isExternalLink
+                            >
+                                BundlePhobia
+                            </Anchor>
+                        </li>
                     </ul>
                 </section>
             </div>
