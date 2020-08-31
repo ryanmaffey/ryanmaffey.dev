@@ -13,7 +13,7 @@ const ResourcesPage: React.StatelessComponent = () => {
         >
             <TitleHeader>
                 <h1 className="m-0">Resources</h1>
-                <p className="text-gray-500">
+                <p className="text-gray-500 mb-0">
                     A collections of stuff which I find useful on a regular
                     basis.
                 </p>
