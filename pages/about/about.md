@@ -57,7 +57,7 @@ Here's a collection of all of the tools, tech and skills that I've worked with /
     <li class="c-tag">Git + GitHub</li>
     <li class="c-tag">Team Foundation Server</li>
     <li class="c-tag">Visual Studio Team Services</li>
-    <li class="c-tag">Node Package Manager (npm)</li>
+    <li class="c-tag">npm</li>
     <li class="c-tag">yarn</li>
 </ul>
 
