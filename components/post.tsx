@@ -1,5 +1,6 @@
 import React from "react";
 import fetch from "isomorphic-fetch";
+import Head from "next/head";
 
 import { loadCssAsync } from "../utils";
 import { IPost } from "../types/post";
@@ -60,6 +61,28 @@ export const Post: React.FunctionComponent<{
 
     return (
         <article>
+            <Head>
+                <script type="application/ld+json">
+                    {`{
+                        "@context": "https://schema.org",
+                        "@type": "Article",
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": "https://ryanmaffey.dev/post/${props.post.id}"
+                        },
+                        "headline": "${props.post.meta.title}",
+                        "datePublished": "${props.post.meta.date}",
+                        "author": {
+                            "@type": "Person",
+                            "name": "Ryan Maffey"
+                        },
+                        "publisher": {
+                            "@type": "Person",
+                            "name": "Ryan Maffey"
+                        }
+                    }`}
+                </script>
+            </Head>
             <TitleHeader>
                 <h1>{props.post.meta.title}</h1>
                 <p className="text-sm mb-0 text-gray-500">
