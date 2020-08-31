@@ -6,7 +6,11 @@ import { TitleHeader } from "../../components/title-header";
 
 const ResourcesPage: React.StatelessComponent = () => {
     return (
-        <Layout title="Resources" description="TODO">
+        <Layout
+            title="Resources"
+            description="A collections of stuff which I find useful on a regular
+        basis."
+        >
             <TitleHeader>
                 <h1 className="m-0">Resources</h1>
                 <p className="text-gray-500">

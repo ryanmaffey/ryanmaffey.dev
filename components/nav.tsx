@@ -16,8 +16,12 @@ export const Nav: React.FunctionComponent = () => {
             url: "/about",
         },
         {
-            text: "All Posts",
+            text: "Posts",
             url: "/posts",
+        },
+        {
+            text: "Resources",
+            url: "/resources",
         },
     ];
 

@@ -13,11 +13,11 @@ interface IProps {
 const PostsPage: React.StatelessComponent<IProps> = (props) => {
     return (
         <Layout
-            title="All Posts"
+            title="Posts"
             description="Here's all my latest blog posts for you to browse and enjoy! I love to write about web technologies, programming and software development."
         >
             <TitleHeader>
-                <h1 className="m-0">All Posts</h1>
+                <h1 className="m-0">Posts</h1>
             </TitleHeader>
             <div className="container">
                 <PostList posts={props.latestPosts} headingSize={2} />
