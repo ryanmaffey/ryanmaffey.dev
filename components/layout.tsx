@@ -93,10 +93,11 @@ export const Layout: React.FunctionComponent<{
                 <title>{props.title}</title>
             </Head>
             <div
-                className="grid min-h-full text-gray-300"
+                className="grid text-gray-300"
                 style={{
                     gridTemplateRows: "auto 1fr auto",
                     gridTemplateColumns: "100%",
+                    minHeight: "100vh",
                 }}
             >
                 <Nav />
