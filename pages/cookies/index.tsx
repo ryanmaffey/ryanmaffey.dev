@@ -6,9 +6,8 @@ import { TitleHeader } from "../../components/title-header";
 const CookiesPage: React.StatelessComponent = () => {
     return (
         <Layout
-            title="Resources"
-            description="A collections of stuff which I find useful on a regular
-        basis."
+            title="No Cookies Here!"
+            description="Enjoy use of this site without any analytics or tracking."
         >
             <TitleHeader>
                 <h1 className="m-0">No Cookies Here!</h1>
