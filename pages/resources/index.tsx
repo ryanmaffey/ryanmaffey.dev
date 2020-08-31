@@ -299,6 +299,14 @@ const ResourcesPage: React.StatelessComponent = () => {
                                 BundlePhobia
                             </Anchor>
                         </li>
+                        <li>
+                            <Anchor
+                                href="https://frontendchecklist.io/"
+                                isExternalLink
+                            >
+                                Front End Checklist
+                            </Anchor>
+                        </li>
                     </ul>
                 </section>
             </div>
