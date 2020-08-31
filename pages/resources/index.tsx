@@ -234,6 +234,14 @@ const ResourcesPage: React.StatelessComponent = () => {
                             </Anchor>
                         </li>
                         <li>
+                            <Anchor
+                                href="http://asciiflow.com/"
+                                isExternalLink
+                            >
+                                ASCII Flow
+                            </Anchor>
+                        </li>
+                        <li>
                             <Anchor href="http://keycode.info/" isExternalLink>
                                 Keycode Event Info
                             </Anchor>
@@ -281,6 +289,22 @@ const ResourcesPage: React.StatelessComponent = () => {
                                 isExternalLink
                             >
                                 Rich Text Results
+                            </Anchor>
+                        </li>
+                        <li>
+                            <Anchor
+                                href="https://bundlephobia.com/"
+                                isExternalLink
+                            >
+                                BundlePhobia
+                            </Anchor>
+                        </li>
+                        <li>
+                            <Anchor
+                                href="https://frontendchecklist.io/"
+                                isExternalLink
+                            >
+                                Front End Checklist
                             </Anchor>
                         </li>
                     </ul>
