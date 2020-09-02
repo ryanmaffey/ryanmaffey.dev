@@ -4,6 +4,25 @@ import Head from "next/head";
 import { Nav } from "./nav";
 import { Footer } from "./footer";
 
+export const KEYWORDS = [
+    "developer",
+    "development",
+    "software",
+    "program",
+    "programming",
+    "programmer",
+    "web",
+    "website",
+    "blog",
+    "article",
+    "post",
+    "tech",
+    "technology",
+    "code",
+    "coding",
+    "career",
+];
+
 export const Layout: React.FunctionComponent<{
     title: string;
     description: string;
@@ -49,25 +68,9 @@ export const Layout: React.FunctionComponent<{
                 <meta name="description" content={props.description} />
                 <meta
                     name="keywords"
-                    content={[
-                        "developer",
-                        "development",
-                        "software",
-                        "program",
-                        "programming",
-                        "programmer",
-                        "web",
-                        "website",
-                        "blog",
-                        "article",
-                        "post",
-                        "tech",
-                        "technology",
-                        "code",
-                        "coding",
-                        "career",
-                        ...(props.keywords ?? []),
-                    ].join(", ")}
+                    content={[...KEYWORDS, ...(props.keywords ?? [])].join(
+                        ", "
+                    )}
                 />
 
                 {/* OG */}
