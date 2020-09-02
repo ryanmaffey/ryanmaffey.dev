@@ -40,9 +40,8 @@ const Home: React.StatelessComponent<IProps> = (props) => {
                     </h1>
                     <p className="mb-8">
                         I'm Ryan, a Front-End Web Developer working in
-                        Bournemouth. I've been working as a web developer since
-                        I graduated university in 2015. I love what I do and
-                        teaching others how to do the same, which is why I
+                        Bournemouth. I love creating applications for the web
+                        and teaching others how to do the same, which is why I
                         decided to share my thoughts, experiences and things
                         I've learned here on this blog!
                     </p>

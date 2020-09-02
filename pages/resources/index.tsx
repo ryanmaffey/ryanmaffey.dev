@@ -296,6 +296,14 @@ const ResourcesPage: React.StatelessComponent = () => {
                                 Front End Checklist
                             </Anchor>
                         </li>
+                        <li>
+                            <Anchor
+                                href="https://www.seoptimer.com/"
+                                isExternalLink
+                            >
+                                SEO Optimiser
+                            </Anchor>
+                        </li>
                     </ul>
                 </section>
             </div>
