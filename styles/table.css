@@ -1,0 +1,7 @@
+.c-table {
+    @apply w-full;
+}
+
+.c-table td {
+    @apply border-b p-2 border-gray-700;
+}

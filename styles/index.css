@@ -69,6 +69,8 @@ p + h4 {
 @import "./tag.css";
 @import "./tag-list.css";
 
+@import "./table.css";
+
 @import "./utilities.css";
 
 @tailwind components;
