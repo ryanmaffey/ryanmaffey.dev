@@ -1,5 +1,5 @@
 .c-link-button {
-    @apply bg-gray-900 px-5 py-3 inline-block rounded border-l-4 border-orange-400;
+    @apply bg-gray-900 px-5 py-3 inline-block rounded border border-orange-400;
 }
 
 .c-link-button:active,

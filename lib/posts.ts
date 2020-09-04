@@ -111,7 +111,7 @@ export const getPostsWithTag = async (tag: string): Promise<IPost[]> => {
     return (await getAllPostData()).filter((p) => p.meta.tags?.includes(tag));
 };
 
-const getAllPostData = async (): Promise<IPost[]> => {
+export const getAllPostData = async (): Promise<IPost[]> => {
     const fileNames = fs.readdirSync("posts");
     return fileNames
         .map((f) => {
