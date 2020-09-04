@@ -70,7 +70,7 @@ const Home: React.StatelessComponent<IProps> = (props) => {
                     </div>
                 </section>
                 <section className="container">
-                    <h2>Browse by Tag</h2>
+                    <h2>Browse Posts by Tag</h2>
                     <p className="mb-6">
                         Here are all the tags for my blog posts. Click on a
                         topic you're interested in to see the relevant posts.
