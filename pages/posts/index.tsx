@@ -14,12 +14,12 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
     return (
         <Layout
             title="Posts"
-            description="Here's all my latest blog posts for you to browse and enjoy! I love to write about web technologies, programming and software development."
+            description="Here are all my latest blog posts for you to browse and enjoy! I love to write about web technologies, programming and software development."
         >
             <TitleHeader>
                 <h1 className="m-0">Posts</h1>
                 <p className="text-gray-500 mb-0">
-                    Here's all my blog posts for you to browse and enjoy.
+                    Here are all my blog posts for you to browse and enjoy.
                 </p>
             </TitleHeader>
             <div className="container">

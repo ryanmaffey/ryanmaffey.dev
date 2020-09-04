@@ -15,7 +15,7 @@ interface IProps {
     previous: IPost | null;
 }
 
-const PostsPage: React.StatelessComponent<IProps> = (props) => {
+const PostPage: React.StatelessComponent<IProps> = (props) => {
     return (
         <>
             <Layout
@@ -54,4 +54,4 @@ export async function getStaticPaths() {
     };
 }
 
-export default PostsPage;
+export default PostPage;

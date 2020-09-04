@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 
 import { IPost } from "../types";
+import { Anchor } from "./anchor";
+import { Tag } from "./tag";
 
 interface IProps {
     post: IPost;
@@ -37,7 +39,10 @@ export const PostLink: React.StatelessComponent<IProps> = (props) => (
                     <span>{props.post.meta.readTime} min read</span> &nbsp; |
                     &nbsp; {props.likes} like{props.likes === 1 ? "" : "s"}
                 </div>
-                <p className="mb-0">{props.post.meta.description}</p>
+                <p>{props.post.meta.description}</p>
+                {props.post.meta.tags?.map((tag) => (
+                    <Tag name={tag} className="c-tag--light" />
+                ))}
             </a>
         </Link>
     </>

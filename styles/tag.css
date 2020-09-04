@@ -1,3 +1,13 @@
 .c-tag {
     @apply inline-flex px-2 py-1 bg-gray-900 mr-2 mb-2 rounded;
 }
+
+.c-tag--light {
+    @apply bg-gray-800;
+}
+
+a.c-tag:active,
+a.c-tag:focus,
+a.c-tag:hover {
+    @apply text-orange-400;
+}

@@ -87,6 +87,30 @@ export const getLatestPostsData = async (
     return (await getAllPostData()).slice(0, numberOfPosts);
 };
 
+export const getAllTags = async () => {
+    let arr: string[] = [];
+
+    (await getAllPostData()).forEach(
+        (p) => (arr = [...arr, ...(p.meta.tags ?? [])])
+    );
+
+    return [...new Set(arr)];
+};
+
+export const getAllTagsPaths = async () => {
+    return (await getAllTags()).map((tag) => {
+        return {
+            params: {
+                tag,
+            },
+        };
+    });
+};
+
+export const getPostsWithTag = async (tag: string): Promise<IPost[]> => {
+    return (await getAllPostData()).filter((p) => p.meta.tags?.includes(tag));
+};
+
 const getAllPostData = async (): Promise<IPost[]> => {
     const fileNames = fs.readdirSync("posts");
     return fileNames

@@ -20,6 +20,10 @@ export const Nav: React.FunctionComponent = () => {
             url: "/posts",
         },
         {
+            text: "Tags",
+            url: "/tags",
+        },
+        {
             text: "Resources",
             url: "/resources",
         },

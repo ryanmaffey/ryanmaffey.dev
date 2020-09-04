@@ -8,6 +8,8 @@ keywords:
     - abstract
     - abstraction
     - abstracting
+tags:
+    - definition
 ---
 
 ## Defining Abstraction

@@ -12,4 +12,5 @@ export interface IPostMeta {
     description: string;
     containsCodeBlocks: boolean;
     keywords?: string[];
+    tags?: string[];
 }
