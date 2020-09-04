@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "next/link";
 import { Anchor } from "./anchor";
+import { TWITTER } from "../constants/urls";
 
 export class Footer extends React.PureComponent {
     render() {
@@ -10,10 +10,7 @@ export class Footer extends React.PureComponent {
                     <section>
                         <ul>
                             <li className="mb-4">
-                                <Anchor
-                                    href="https://twitter.com/ryanmaffey?lang=en"
-                                    isExternalLink
-                                >
+                                <Anchor href={TWITTER} isExternalLink>
                                     Twitter (@ryanmaffey)
                                 </Anchor>
                             </li>
