@@ -13,7 +13,7 @@ export class TagList extends React.PureComponent<IProps> {
         return (
             <ul className={className}>
                 {this.props.tags.sort().map((t) => (
-                    <li>
+                    <li key={t}>
                         <Tag name={t} />
                     </li>
                 ))}
