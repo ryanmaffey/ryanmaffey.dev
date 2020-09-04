@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 
 import { IPost } from "../types";
-import { Anchor } from "./anchor";
 import { Tag } from "./tag";
 
 interface IProps {
@@ -13,9 +12,9 @@ interface IProps {
 }
 
 export const PostLink: React.StatelessComponent<IProps> = (props) => (
-    <>
+    <div className={`c-post-link ${props.classNames || ""}`}>
         <Link href={`/post/[id]`} as={`/post/${props.post.id}`}>
-            <a className={`c-post-link ${props.classNames || ""}`}>
+            <a className="c-post-link__anchor">
                 {props.headingSize === 2 && (
                     <h2 className="c-post-link__heading text-2xl mb-4">
                         {props.post.meta.title}
@@ -40,10 +39,10 @@ export const PostLink: React.StatelessComponent<IProps> = (props) => (
                     &nbsp; {props.likes} like{props.likes === 1 ? "" : "s"}
                 </div>
                 <p>{props.post.meta.description}</p>
-                {props.post.meta.tags?.map((tag) => (
-                    <Tag name={tag} className="c-tag--light" />
-                ))}
             </a>
         </Link>
-    </>
+        {props.post.meta.tags?.map((tag) => (
+            <Tag name={tag} key={tag} className="c-tag--light mb-0" />
+        ))}
+    </div>
 );
