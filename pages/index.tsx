@@ -17,7 +17,7 @@ interface IProps {
 
 const Home: React.StatelessComponent<IProps> = (props) => {
     const description =
-        "I'm Ryan, a Front-End Web Developer working in Bournemouth. I love programming and creating applications for the web, and teaching others how to do the same!";
+        "I'm Ryan, a Front-End Web Developer working in Bournemouth. I love programming, creating applications for the web and teaching others how to do the same!";
     return (
         <>
             <Head>
@@ -44,7 +44,7 @@ const Home: React.StatelessComponent<IProps> = (props) => {
                     <p className="mb-8">
                         I'm Ryan, a Front-End Web Developer working in
                         Bournemouth. I love programming and creating
-                        applications for the web, but I also teaching and
+                        applications for the web, but I also enjoy teaching and
                         sharing knowledge with other developers, which is why I
                         decided to share my thoughts, experiences and things
                         I've learned here on this blog!
@@ -105,7 +105,7 @@ const Home: React.StatelessComponent<IProps> = (props) => {
 };
 
 export const getStaticProps = async (): Promise<{ props: IProps }> => {
-    const latestPosts = await getLatestPostsData(3);
+    const latestPosts = await getLatestPostsData(4);
     const tags = await getAllTags();
     return {
         props: {

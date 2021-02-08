@@ -86,14 +86,8 @@ export const Post: React.FunctionComponent<{
             <TitleHeader>
                 <h1>{props.post.meta.title}</h1>
                 <p className="text-sm mb-0 text-gray-500">
-                    <time
-                        className="text-sm"
-                        dateTime={props.post.meta.date
-                            .split("/")
-                            .reverse()
-                            .join("-")}
-                    >
-                        {props.post.meta.date}
+                    <time className="text-sm" dateTime={props.post.meta.date}>
+                        {props.post.meta.date.split("-").reverse().join("-")}
                     </time>{" "}
                     &nbsp; | &nbsp; {props.post.meta.readTime} min read &nbsp; |
                     &nbsp; {state.likes} like

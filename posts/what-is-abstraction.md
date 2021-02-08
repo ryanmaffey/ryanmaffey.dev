@@ -1,7 +1,7 @@
 ---
 title: What is Abstraction?
 description: Abstraction is not as complicated as you might first think, especially because you already abstract every day without even thinking about it!
-date: "24/07/2020"
+date: "2020-07-24"
 readTime: 7
 containsCodeBlocks: true
 keywords:

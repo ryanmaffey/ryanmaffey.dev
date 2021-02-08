@@ -1,9 +1,11 @@
 ---
 title: Why do I want to start a blog?
 description: My rationale behind wanting to create and write on my very own blog, with an outline of what I want to achieve for myself and anyone who reads my posts.
-date: "20/06/2020"
+date: "2020-06-20"
 readTime: 3
 containsCodeBlocks: false
+tags:
+    - personal
 ---
 
 It makes sense to kick off this blog by explaining why I want to start a blog at all!

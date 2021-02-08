@@ -138,8 +138,6 @@ I have massively grown as a developer as a result of working at Amigo. Despite m
 
 I also look after all of the Engineering placement students when they first join the team. I help them get set up, settled in and generally be there whenever they have any questions, technical or otherwise.
 
-If you're interested in joining the team <a href="https://www.amigoloans.co.uk/careers/Departments/Engineering" class="c-link" target="_blank" rel="noopener">we're always hiring!</a>
-
 </section>
 
 <section class="mt-16">
