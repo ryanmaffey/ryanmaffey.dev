@@ -69,7 +69,7 @@ export const getStaticProps = async (): Promise<{ props: IProps }> => {
     const pageCount = Math.ceil(
         (await (await getAllPostData()).length) / PAGE_SIZE
     );
-    console.log(pageCount);
+    
     return {
         props: {
             latestPosts,
