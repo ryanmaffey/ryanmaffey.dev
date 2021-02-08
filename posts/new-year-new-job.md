@@ -23,7 +23,7 @@ I'm incredibly excited to get started and work with new people to build amazing 
 
 I'll also be working with a few ex-Redweb colleagues again which is a great bonus!
 
-## Are you Happy in your Work?
+## Are You Happy in Your Work?
 
 I have spent a lot of time going back and forth about whether I should stay at Amigo. It was never going to be an easy decision. There are lots of things to consider and always the question of "is the grass really greener on the other side?".
 
