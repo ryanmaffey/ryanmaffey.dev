@@ -27,6 +27,10 @@ export const Nav: React.FunctionComponent = () => {
             text: "Resources",
             url: "/resources",
         },
+        {
+            text: "Privacy",
+            url: "/privacy",
+        },
     ];
 
     return (
@@ -35,12 +39,12 @@ export const Nav: React.FunctionComponent = () => {
                 Skip to content
             </a>
 
-            <nav className="flex items-center justify-between flex-wrap py-4 md:py-8">
+            <nav className="flex items-center justify-between flex-wrap py-4 md:pt-8 md:pb-0">
                 <div className="container flex sm:content-between">
-                    <div className="flex items-center flex-grow sm:flex-grow md:flex-grow-0 md:justify-between mr-8">
+                    <div className="flex items-center flex-grow sm:flex-grow md:justify-between mr-8">
                         <Link href="/">
-                            <a className="text-2xl text-orange-400">
-                                ryanmaffey.dev
+                            <a className="text-2xl">
+                                <strong>ryanmaffey.dev</strong>
                             </a>
                         </Link>
                     </div>
@@ -68,14 +72,14 @@ export const Nav: React.FunctionComponent = () => {
                             </svg>
                         </button>
                     </div>
-                    <div className="flex-grow hidden items-center md:flex">
+                    <div className="hidden items-center md:flex">
                         <div className="md:flex-grow">
                             {navItems.map((item) => (
                                 <Link href={item.url} key={item.url}>
                                     <a
-                                        className={`block md:inline-block mx-2 px-4 hover:text-orange-400 focus:text-orange-400 ${
+                                        className={`block md:inline-block mx-2 px-4 hover:text-purple-500 focus:text-purple-500 ${
                                             router.pathname === item.url
-                                                ? "text-orange-400"
+                                                ? "text-purple-500"
                                                 : ""
                                         }`}
                                     >
@@ -92,9 +96,9 @@ export const Nav: React.FunctionComponent = () => {
                             {navItems.map((item) => (
                                 <Link href={item.url}>
                                     <a
-                                        className={`block mt-2 py-2 hover:text-orange-400 focus:text-orange-400 ${
+                                        className={`block mt-2 py-2 hover:text-purple-500 focus:text-purple-500 ${
                                             router.pathname === item.url
-                                                ? "text-orange-400"
+                                                ? "text-purple-500"
                                                 : ""
                                         }`}
                                     >

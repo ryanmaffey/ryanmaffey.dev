@@ -13,7 +13,7 @@ interface IProps {
     page: IPage;
 }
 
-const AboutPage: React.StatelessComponent<IProps> = (props) => {
+const AboutPage: React.FC<IProps> = (props) => {
     return (
         <Layout
             title="About"
@@ -21,7 +21,7 @@ const AboutPage: React.StatelessComponent<IProps> = (props) => {
         >
             <TitleHeader>
                 <h1 className="m-0">About</h1>
-                <p className="text-gray-500 mb-0">
+                <p className="mb-0">
                     Here's a bit more about about me, my experience and what I
                     can do.
                 </p>

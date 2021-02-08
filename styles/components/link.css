@@ -1,8 +1,8 @@
 .c-link {
-    @apply border-b border-orange-400;
+    @apply border-b border-purple-500;
 }
 
 .c-link:focus,
 .c-link:hover {
-    @apply text-orange-400;
+    @apply text-purple-500;
 }

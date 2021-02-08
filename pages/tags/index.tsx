@@ -9,7 +9,7 @@ interface IProps {
     tags: string[];
 }
 
-const TagsPage: React.StatelessComponent<IProps> = (props) => {
+const TagsPage: React.FC<IProps> = (props) => {
     const title = "Tags";
     const text =
         "Here are all the tags for my blog posts. Click on a topic you're interested in to see the relevant posts.";
@@ -17,7 +17,7 @@ const TagsPage: React.StatelessComponent<IProps> = (props) => {
         <Layout title={title} description={text}>
             <TitleHeader>
                 <h1 className="m-0">{title}</h1>
-                <p className="text-gray-500 mb-0">{text}</p>
+                <p className="mb-0">{text}</p>
             </TitleHeader>
             <div className="container">
                 <TagList tags={props.tags} />

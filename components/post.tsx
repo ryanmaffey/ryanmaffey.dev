@@ -49,7 +49,7 @@ export const Post: React.FunctionComponent<{
             </Head>
             <TitleHeader>
                 <h1>{props.post.meta.title}</h1>
-                <p className="text-sm mb-0 text-gray-500">
+                <p className="text-sm mb-0">
                     <time className="text-sm" dateTime={props.post.meta.date}>
                         {props.post.meta.date.split("-").reverse().join("/")}
                     </time>{" "}

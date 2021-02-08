@@ -1,9 +1,21 @@
 .c-link-button {
-    @apply bg-gray-900 px-5 py-3 inline-block rounded border border-orange-400;
+    background: #5a277e; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #7828c9,
+        #532375
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #6d20b9,
+        #491a68
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    @apply inline-block rounded;
 }
 
 .c-link-button:active,
 .c-link-button:focus,
 .c-link-button:hover {
-    @apply text-orange-400;
+    @apply underline;
 }

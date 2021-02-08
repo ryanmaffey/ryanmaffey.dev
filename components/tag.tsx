@@ -12,7 +12,7 @@ export class Tag extends React.PureComponent<IProps> {
 
         return (
             <Link as={`/tag/${this.props.name}`} href="/tag/[tag]">
-                <a className={className}>#{this.props.name}</a>
+                <a className={className}>{this.props.name}</a>
             </Link>
         );
     }

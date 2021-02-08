@@ -5,21 +5,21 @@
 .c-icon-button--red:active,
 .c-icon-button--red:focus,
 .c-icon-button--red:hover {
-    @apply border-red-700;
+    @apply border-purple-500;
 }
 
 .c-icon-button--red:active .c-icon-button__inactive-path,
 .c-icon-button--red:focus .c-icon-button__inactive-path,
 .c-icon-button--red:hover .c-icon-button__inactive-path {
-    @apply fill-red-700;
+    @apply fill-purple-500;
 }
 
 .c-icon-button__active-path {
-    @apply hidden fill-red-700;
+    @apply hidden fill-purple-500;
 }
 
 .c-icon-button--active {
-    @apply border-red-700;
+    @apply border-purple-500;
 }
 
 .c-icon-button--active .c-icon-button__inactive-path {

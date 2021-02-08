@@ -4,7 +4,7 @@ import Layout from "../../components/layout";
 import { Anchor } from "../../components/anchor";
 import { TitleHeader } from "../../components/title-header";
 
-const ResourcesPage: React.StatelessComponent = () => {
+const ResourcesPage: React.FC = () => {
     return (
         <Layout
             title="Resources"
@@ -13,7 +13,7 @@ const ResourcesPage: React.StatelessComponent = () => {
         >
             <TitleHeader>
                 <h1 className="m-0">Resources</h1>
-                <p className="text-gray-500 mb-0">
+                <p className="mb-0">
                     A collections of stuff which I find useful on a regular
                     basis.
                 </p>
@@ -455,7 +455,7 @@ const ResourcesPage: React.StatelessComponent = () => {
                                     </Anchor>
                                 </td>
                                 <td>
-                                    Useful checklist for greenfield projects.
+                                    Useful checklist for orangefield projects.
                                 </td>
                             </tr>
                             <tr>

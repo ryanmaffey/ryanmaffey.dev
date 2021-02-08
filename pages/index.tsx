@@ -9,13 +9,14 @@ import { TitleHeader } from "../components/title-header";
 import Head from "next/head";
 import { TagList } from "../components/tag-list";
 import { TWITTER } from "../constants/urls";
+import { SidebarLayout } from "../components/layout/sidebar-layout";
 
 interface IProps {
     latestPosts: IPost[];
     tags: string[];
 }
 
-const Home: React.StatelessComponent<IProps> = (props) => {
+const Home: React.FC<IProps> = (props) => {
     const description =
         "I'm Ryan, a Front-End Web Developer working in Bournemouth. I love programming, creating applications for the web and teaching others how to do the same!";
     return (
@@ -37,11 +38,8 @@ const Home: React.StatelessComponent<IProps> = (props) => {
             </Head>
             <Layout title="Welcome to ryanmaffey.dev" description={description}>
                 <TitleHeader>
-                    <h1>
-                        Welcome to{" "}
-                        <span className="text-orange-400">ryanmaffey.dev</span>
-                    </h1>
-                    <p className="mb-8">
+                    <h1>Welcome</h1>
+                    <p className="mb-0">
                         I'm Ryan, a Front-End Web Developer working in
                         Bournemouth. I love programming and creating
                         applications for the web, but I also enjoy teaching and
@@ -49,35 +47,31 @@ const Home: React.StatelessComponent<IProps> = (props) => {
                         decided to share my thoughts, experiences and things
                         I've learned here on this blog!
                     </p>
-                    <Anchor href="/about" isLinkButton className="bg-gray-800">
-                        Read more about me
-                    </Anchor>
                 </TitleHeader>
-                <section className="container mb-16">
-                    <h2>Latest Posts</h2>
-                    <p>
-                        I try to write on new post every month so check back
-                        soon for new content!
-                    </p>
-                    <p className="mb-6">
-                        If you like what you read, don't forget to give it a
-                        'like' (click the ❤ button).
-                    </p>
-                    <PostList posts={props.latestPosts} headingSize={3} />
-                    <div className="mt-8">
-                        <Anchor href="/posts" isLinkButton>
-                            See all blog posts
-                        </Anchor>
-                    </div>
-                </section>
-                <section className="container mb-16">
-                    <h2>Browse Posts by Tag</h2>
-                    <p className="mb-6">
-                        Here are all the tags for my blog posts. Click on a
-                        topic you're interested in to see the relevant posts.
-                    </p>
-                    <TagList tags={props.tags} />
-                </section>
+                <SidebarLayout
+                    sidebarPosition="right"
+                    side={() => (
+                        <section
+                            className="mb-16 overflow-auto sticky"
+                            style={{
+                                top: "1.25rem",
+                            }}
+                        >
+                            <h2 className="mb-8">Popular Topics</h2>
+                            <TagList tags={props.tags} />
+                        </section>
+                    )}
+                    main={() => (
+                        <section className="mb-16">
+                            <h2>Latest Posts</h2>
+                            <PostList
+                                posts={props.latestPosts}
+                                headingSize={3}
+                            />
+                        </section>
+                    )}
+                />
+
                 <section className="container">
                     <h2>Some Helpful Resources</h2>
                     <p>
@@ -93,11 +87,6 @@ const Home: React.StatelessComponent<IProps> = (props) => {
                         </Anchor>
                         !
                     </p>
-                    <div className="mt-8">
-                        <Anchor href="/resources" isLinkButton>
-                            View resources
-                        </Anchor>
-                    </div>
                 </section>
             </Layout>
         </>

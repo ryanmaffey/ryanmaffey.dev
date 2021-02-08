@@ -15,7 +15,7 @@ interface IProps {
     previous: IPost | null;
 }
 
-const PostPage: React.StatelessComponent<IProps> = (props) => {
+const PostPage: React.FC<IProps> = (props) => {
     return (
         <>
             <Layout

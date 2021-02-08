@@ -11,18 +11,15 @@ interface IProps {
     posts: IPost[];
 }
 
-const TagPage: React.StatelessComponent<IProps> = (props) => {
+const TagPage: React.FC<IProps> = (props) => {
     return (
         <>
             <Layout
-                title={`#${props.tag}`}
-                description={`All blog posts tagged with #${props.tag}`}
+                title={`"${props.tag}" posts`}
+                description={`All blog posts tagged with "${props.tag}"`}
             >
                 <TitleHeader>
-                    <h1 className="m-0">#{props.tag}</h1>
-                    <p className="text-gray-500 mb-0">
-                        Here are all the blog posts tagged with #{props.tag}.
-                    </p>
+                    <h1 className="m-0">"{props.tag}" posts</h1>
                 </TitleHeader>
                 <div className="container">
                     <PostList {...props} headingSize={2} />

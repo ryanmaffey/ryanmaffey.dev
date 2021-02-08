@@ -12,7 +12,7 @@ interface IProps {
     pageCount: number;
 }
 
-const PostsPage: React.StatelessComponent<IProps> = (props) => {
+const PostsPage: React.FC<IProps> = (props) => {
     const [state, setState] = React.useState({
         posts: props.latestPosts,
         page: 0,
@@ -43,7 +43,7 @@ const PostsPage: React.StatelessComponent<IProps> = (props) => {
         >
             <TitleHeader>
                 <h1 className="m-0">Posts</h1>
-                <p className="text-gray-500 mb-0">
+                <p className="mb-0">
                     Here are all my blog posts for you to browse and enjoy.
                 </p>
             </TitleHeader>
@@ -69,7 +69,7 @@ export const getStaticProps = async (): Promise<{ props: IProps }> => {
     const pageCount = Math.ceil(
         (await (await getAllPostData()).length) / PAGE_SIZE
     );
-    
+
     return {
         props: {
             latestPosts,

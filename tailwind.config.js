@@ -8,7 +8,7 @@ module.exports = {
     theme: {
         extend: {
             maxWidth: {
-                "10": "10rem",
+                10: "10rem",
             },
         },
         container: {
@@ -19,7 +19,7 @@ module.exports = {
         },
         fill: (theme) => ({
             current: "currentColor",
-            "red-700": theme("colors.red.700"),
+            "purple-500": theme("colors.purple.500"),
         }),
     },
     variants: {},

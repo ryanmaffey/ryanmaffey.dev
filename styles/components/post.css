@@ -25,7 +25,7 @@
 }
 
 .post blockquote::before {
-    @apply bottom-0 top-0 left-0 block absolute bg-orange-400;
+    @apply bottom-0 top-0 left-0 block absolute bg-purple-500;
     content: "";
     width: 0.5rem;
     height: 100%;
@@ -54,16 +54,16 @@
 }
 
 .post a {
-    @apply border-b border-orange-400;
+    @apply border-b border-purple-500;
 }
 
 .post a:focus,
 .post a:hover {
-    @apply text-orange-400;
+    @apply text-purple-500;
 }
 
 .post table thead {
-    @apply border-b-2 border-orange-400;
+    @apply border-b-2 border-purple-500;
 }
 .post table th,
 .post table td {
