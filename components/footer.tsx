@@ -28,7 +28,7 @@ export class Footer extends React.PureComponent {
                         </ul>
                     </section>
                     <section>
-                        <p className="mb-0">&copy; Ryan Maffey, 2020</p>
+                        <p className="mb-0">&copy; Ryan Maffey, 2021</p>
                     </section>
                 </div>
             </footer>
