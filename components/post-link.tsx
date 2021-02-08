@@ -7,11 +7,10 @@ import { Tag } from "./tag";
 interface IProps {
     post: IPost;
     headingSize: 2 | 3;
-    likes: number;
     classNames?: string;
 }
 
-export const PostLink: React.StatelessComponent<IProps> = (props) => (
+export const PostLink: React.FC<IProps> = (props) => (
     <div className={`c-post-link ${props.classNames || ""}`}>
         <Link href={`/post/[id]`} as={`/post/${props.post.id}`}>
             <a className="c-post-link__anchor">
@@ -30,8 +29,7 @@ export const PostLink: React.StatelessComponent<IProps> = (props) => (
                         {props.post.meta.date.split("-").reverse().join("/")}
                     </time>{" "}
                     &nbsp; | &nbsp;{" "}
-                    <span>{props.post.meta.readTime} min read</span> &nbsp; |
-                    &nbsp; {props.likes} like{props.likes === 1 ? "" : "s"}
+                    <span>{props.post.meta.readTime} min read</span>
                 </div>
                 <p>{props.post.meta.description}</p>
             </a>
