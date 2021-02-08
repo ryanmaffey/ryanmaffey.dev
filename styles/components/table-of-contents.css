@@ -9,5 +9,5 @@
 .toc a:active,
 .toc a:focus,
 .toc a:hover {
-    @apply text-purple-500;
+    color: #965ad3;
 }

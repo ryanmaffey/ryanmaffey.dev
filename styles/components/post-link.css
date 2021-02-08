@@ -1,9 +1,8 @@
 .c-post-link {
-    @apply py-8;
 }
 
 .c-post-link__heading {
-    @apply text-purple-500;
+    color: #965ad3;
 }
 
 .c-post-link__anchor:active,

@@ -39,12 +39,14 @@ export const Nav: React.FunctionComponent = () => {
                 Skip to content
             </a>
 
-            <nav className="flex items-center justify-between flex-wrap py-4 md:pt-8 md:pb-0">
+            <nav className="flex items-center justify-between flex-wrap pt-8 pb-4 md:pt-8 md:pb-0">
                 <div className="container flex sm:content-between">
                     <div className="flex items-center flex-grow sm:flex-grow md:justify-between mr-8">
                         <Link href="/">
                             <a className="text-2xl">
-                                <strong>ryanmaffey.dev</strong>
+                                <strong className="text-primary">
+                                    ryanmaffey.dev
+                                </strong>
                             </a>
                         </Link>
                     </div>
@@ -55,7 +57,7 @@ export const Nav: React.FunctionComponent = () => {
                                 (state.isNavOpen ? "Close" : "Open") +
                                 " the navigation"
                             }
-                            className="flex items-center px-4 py-2 mt-1"
+                            className="flex items-center pl-4 pr-1 py-2 mt-1 text-primary"
                             onClick={() =>
                                 setState({
                                     isNavOpen: !state.isNavOpen,
@@ -77,9 +79,9 @@ export const Nav: React.FunctionComponent = () => {
                             {navItems.map((item) => (
                                 <Link href={item.url} key={item.url}>
                                     <a
-                                        className={`block md:inline-block mx-2 px-4 hover:text-purple-500 focus:text-purple-500 ${
+                                        className={`block md:inline-block mx-2 px-4 hover:text-primary focus:text-primary ${
                                             router.pathname === item.url
-                                                ? "text-purple-500"
+                                                ? "text-primary"
                                                 : ""
                                         }`}
                                     >
@@ -94,11 +96,11 @@ export const Nav: React.FunctionComponent = () => {
                     <div className="container flex mt-4 md:hidden">
                         <div className="w-full">
                             {navItems.map((item) => (
-                                <Link href={item.url}>
+                                <Link href={item.url} key={item.url}>
                                     <a
-                                        className={`block mt-2 py-2 hover:text-purple-500 focus:text-purple-500 ${
+                                        className={`block mt-2 py-2 hover:text-primary focus:text-primary ${
                                             router.pathname === item.url
-                                                ? "text-purple-500"
+                                                ? "text-primary"
                                                 : ""
                                         }`}
                                     >

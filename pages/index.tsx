@@ -39,7 +39,7 @@ const Home: React.FC<IProps> = (props) => {
             <Layout title="Welcome to ryanmaffey.dev" description={description}>
                 <TitleHeader>
                     <h1>Welcome</h1>
-                    <p className="mb-0">
+                    <p>
                         I'm Ryan, a Front-End Web Developer working in
                         Bournemouth. I love programming and creating
                         applications for the web, but I also enjoy teaching and
@@ -52,7 +52,7 @@ const Home: React.FC<IProps> = (props) => {
                     sidebarPosition="right"
                     side={() => (
                         <section
-                            className="mb-16 overflow-auto sticky"
+                            className="mb-8 md:mb-12 overflow-auto sticky"
                             style={{
                                 top: "1.25rem",
                             }}
@@ -62,8 +62,8 @@ const Home: React.FC<IProps> = (props) => {
                         </section>
                     )}
                     main={() => (
-                        <section className="mb-16">
-                            <h2>Latest Posts</h2>
+                        <section className="mb-8 md:mb-12">
+                            <h2 className="mb-8">Latest Posts</h2>
                             <PostList
                                 posts={props.latestPosts}
                                 headingSize={3}
@@ -72,9 +72,11 @@ const Home: React.FC<IProps> = (props) => {
                     )}
                 />
 
+                <TitleHeader />
+
                 <section className="container">
                     <h2>Some Helpful Resources</h2>
-                    <p>
+                    <p className="mb-0">
                         I've curated a{" "}
                         <Anchor href="/resources">list of resources</Anchor>{" "}
                         across the web which I frequently find useful. Check

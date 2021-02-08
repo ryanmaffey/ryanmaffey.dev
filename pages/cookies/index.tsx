@@ -12,15 +12,13 @@ const CookiesPage: React.FC = () => {
         >
             <TitleHeader>
                 <h1 className="m-0">No Cookies Here!</h1>
-                <p className="mb-0">
-                    You won't find a single cookie on this website.
-                </p>
+                <p>You won't find a single cookie on this website.</p>
             </TitleHeader>
             <div className="container page">
                 <section>
                     <p>
                         There is no analytics on this site, so there are{" "}
-                        <strong className="text-purple-500">
+                        <strong className="text-primary">
                             no tracking cookies
                         </strong>{" "}
                         of any kind.

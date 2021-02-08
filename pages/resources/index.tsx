@@ -13,7 +13,7 @@ const ResourcesPage: React.FC = () => {
         >
             <TitleHeader>
                 <h1 className="m-0">Resources</h1>
-                <p className="mb-0">
+                <p>
                     A collections of stuff which I find useful on a regular
                     basis.
                 </p>

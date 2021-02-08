@@ -13,7 +13,7 @@ const CookiesPage: React.FC = () => {
         >
             <TitleHeader>
                 <h1 className="m-0">Your Privacy is Respected and Protected</h1>
-                <p className="mb-0">
+                <p>
                     There is no analytics or tracking of any kind on this
                     website.
                 </p>
@@ -27,11 +27,10 @@ const CookiesPage: React.FC = () => {
                         preferences analysed where it's not necessary.
                     </p>
                     <p className="mb-0">
-                        I've opted{" "}
-                        <strong className="text-purple-500">not</strong> to add
-                        any form of analytics to this site, which means You can
-                        browse freely and anonymously with no tracking cookies
-                        following you around. In fact, there are{" "}
+                        I've opted <strong className="text-primary">not</strong>{" "}
+                        to add any form of analytics to this site, which means
+                        You can browse freely and anonymously with no tracking
+                        cookies following you around. In fact, there are{" "}
                         <Anchor href="/cookies">no cookies of any kind</Anchor>{" "}
                         on this website at all!.
                     </p>

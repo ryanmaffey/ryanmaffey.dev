@@ -4,5 +4,5 @@
 
 .c-link:focus,
 .c-link:hover {
-    @apply text-purple-500;
+    color: #965ad3;
 }

@@ -43,9 +43,7 @@ const PostsPage: React.FC<IProps> = (props) => {
         >
             <TitleHeader>
                 <h1 className="m-0">Posts</h1>
-                <p className="mb-0">
-                    Here are all my blog posts for you to browse and enjoy.
-                </p>
+                <p>Here are all my blog posts for you to browse and enjoy.</p>
             </TitleHeader>
             <div className="container">
                 <PostList posts={state.posts} headingSize={2} />

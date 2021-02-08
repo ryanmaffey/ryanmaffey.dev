@@ -3,17 +3,11 @@ import Link from "next/link";
 
 interface IProps {
     name: string;
-    className?: string;
+    size: "md" | "lg";
 }
 
-export class Tag extends React.PureComponent<IProps> {
-    render() {
-        const className = `${"c-tag"} ${this.props.className || ""}`;
-
-        return (
-            <Link as={`/tag/${this.props.name}`} href="/tag/[tag]">
-                <a className={className}>{this.props.name}</a>
-            </Link>
-        );
-    }
-}
+export const Tag: React.FC<IProps> = ({ name = "", size = "md" }) => (
+    <Link as={`/tag/${name}`} href="/tag/[tag]">
+        <a className={`${"c-tag"} c-tag--${size}`}>{name}</a>
+    </Link>
+);

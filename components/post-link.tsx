@@ -14,12 +14,12 @@ export const PostLink: React.FC<IProps> = (props) => (
         <Link href={`/post/[id]`} as={`/post/${props.post.id}`}>
             <a className="c-post-link__anchor inline-block">
                 {props.headingSize === 2 && (
-                    <h2 className="c-post-link__heading text-2xl mb-2">
+                    <h2 className="c-post-link__heading mb-2">
                         {props.post.meta.title}
                     </h2>
                 )}
                 {props.headingSize === 3 && (
-                    <h3 className="c-post-link__heading text-2xl mb-2">
+                    <h3 className="c-post-link__heading mb-2">
                         {props.post.meta.title}
                     </h3>
                 )}
@@ -31,6 +31,6 @@ export const PostLink: React.FC<IProps> = (props) => (
             </time>{" "}
             &nbsp; | &nbsp; <span>{props.post.meta.readTime} min read</span>
         </div>
-        <p>{props.post.meta.description}</p>
+        <p className="mb-0">{props.post.meta.description}</p>
     </div>
 );

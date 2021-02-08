@@ -4,13 +4,13 @@ export const TableOfContents: React.FC<{
     html: string;
 }> = (props) => (
     <div
-        className="p-1 pb-4 overflow-auto sticky"
+        className="p-1 pb-8 mb-4 md:mb-0 overflow-auto sticky border-b-2 border-purple-700"
         style={{
             top: "1.25rem",
             maxHeight: "calc(100vh - 3rem)",
         }}
     >
-        <h2 className="uppercase text-purple-500 text-base bg-transparent p-0">
+        <h2 className="uppercase text-primary text-base bg-transparent p-0">
             Contents
         </h2>
         <div

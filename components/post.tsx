@@ -69,6 +69,7 @@ export const Post: React.FunctionComponent<{
                     />
                 )}
             />
+            <TitleHeader />
             <div className="container md:flex mt-8">
                 <div className="w-full md:w-1/2 mb-8 md:mb-0 md:mr-4">
                     {props.previous && (

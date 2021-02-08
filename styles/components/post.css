@@ -59,7 +59,7 @@
 
 .post a:focus,
 .post a:hover {
-    @apply text-purple-500;
+    color: #965ad3;
 }
 
 .post table thead {

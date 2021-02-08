@@ -8,14 +8,14 @@ body,
 }
 
 h1 {
-    @apply text-4xl;
+    @apply text-5xl;
 }
 h2 {
     @apply text-2xl;
 }
 @media only screen and (min-width: 768px) {
     h1 {
-        @apply text-5xl;
+        @apply text-6xl;
     }
     h2 {
         @apply text-3xl;
@@ -50,12 +50,12 @@ p + h4 {
 .post h3,
 .page h4,
 .post h4 {
-    @apply text-purple-500;
+    color: #965ad3;
 }
 
 .page em,
 .post em {
-    @apply text-purple-500;
+    color: #965ad3;
 }
 
 @import "./components/skip-to-content.css";
