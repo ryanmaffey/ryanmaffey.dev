@@ -5,7 +5,7 @@ date: "2020-06-20"
 readTime: 3
 containsCodeBlocks: false
 tags:
-    - personal
+    - Personal
 ---
 
 It makes sense to kick off this blog by explaining why I want to start a blog at all!

@@ -111,6 +111,30 @@ export const getPostsWithTag = async (tag: string): Promise<IPost[]> => {
     return (await getAllPostData()).filter((p) => p.meta.tags?.includes(tag));
 };
 
+export const getAllSeries = async () => {
+    let arr: string[] = [];
+
+    (await getAllPostData()).forEach(
+        (p) => p.meta.series && arr.push(p.meta.series)
+    );
+
+    return [...new Set(arr)];
+};
+
+export const getAllSeriesPaths = async () => {
+    return (await getAllSeries()).map((id) => {
+        return {
+            params: {
+                id,
+            },
+        };
+    });
+};
+
+export const getPostsInSeries = async (id: string): Promise<IPost[]> => {
+    return (await getAllPostData()).filter((p) => p.meta.series === id);
+};
+
 export const getAllPostData = async (): Promise<IPost[]> => {
     const fileNames = fs.readdirSync("posts");
     return fileNames

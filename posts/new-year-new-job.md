@@ -5,8 +5,9 @@ date: "2021-02-08"
 readTime: 2
 containsCodeBlocks: false
 tags:
-    - news
-    - personal
+    - News
+    - Personal
+    - Career
 ---
 
 It's been a little over 3 years since I joined the Engineering Team at Amigo Loans as a Front End Software Engineer, and it's been quite a journey for me.

@@ -7,6 +7,8 @@ import { PostLink } from "./post-link";
 import { SidebarLayout } from "./layout/sidebar-layout";
 import { TableOfContents } from "./table-of-contents";
 import { TitleHeader } from "./title-header";
+import { SERIES_ID_MAP } from "../constants/series";
+import { Anchor } from "./anchor";
 
 export const Post: React.FunctionComponent<{
     post: IPost;
@@ -69,7 +71,30 @@ export const Post: React.FunctionComponent<{
                     />
                 )}
             />
+
             <TitleHeader />
+
+            {props.post.meta.series && (
+                <>
+                    <div className="container">
+                        <h2>
+                            More in the "{SERIES_ID_MAP[props.post.meta.series]}
+                            " Series
+                        </h2>
+                        <p className="mb-8">
+                            Thanks for reading! I hope you enjoyed the post and
+                            found it useful. If you liked this, why not take a
+                            look at{" "}
+                            <Anchor href={`/series/${props.post.meta.series}`}>
+                                more posts in the "
+                                {SERIES_ID_MAP[props.post.meta.series]}" series
+                            </Anchor>
+                        </p>
+                    </div>
+                    <TitleHeader />
+                </>
+            )}
+
             <div className="container md:flex mt-8">
                 <div className="w-full md:w-1/2 mb-8 md:mb-0 md:mr-4">
                     {props.previous && (

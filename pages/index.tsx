@@ -72,6 +72,19 @@ const Home: React.FC<IProps> = (props) => {
                     )}
                 />
 
+                <section className="container mb-8">
+                    <h2>Series: "WTF is...?"</h2>
+                    <p>
+                        This series of posts is designed to make complicated (or
+                        complicated-sounding) programming concepts and jargon
+                        and help you understand what it all means in the
+                        simplest way possible!{" "}
+                        <Anchor href="/series/WTF">
+                            See all "WTF is...?" posts.
+                        </Anchor>
+                    </p>
+                </section>
+
                 <TitleHeader />
 
                 <section className="container">

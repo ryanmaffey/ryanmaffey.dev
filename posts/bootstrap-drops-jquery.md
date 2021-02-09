@@ -14,8 +14,9 @@ keywords:
     - library
 containsCodeBlocks: false
 tags:
-    - news
-    - javascript
+    - News
+    - JavaScript
+    - Framework
 ---
 
 Bootstrap's dependence on jQuery has been a relatively large factor in my reason to stop using it in recent years. Now, with the Bootstrap 5 alpha, they're ditching jQuery in preference of using the APIs provided by modern browsers. This is a big step, but one that I feel is beneficial and necessary to encourage developers like me to use it again on future projects.

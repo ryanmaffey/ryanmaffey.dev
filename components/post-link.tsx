@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 
 import { IPost } from "../types";
+import { Anchor } from "./anchor";
+import { SERIES_ID_MAP } from "../constants/series";
 
 interface IProps {
     post: IPost;
@@ -32,5 +34,14 @@ export const PostLink: React.FC<IProps> = (props) => (
             &nbsp; | &nbsp; <span>{props.post.meta.readTime} min read</span>
         </div>
         <p className="mb-0">{props.post.meta.description}</p>
+        {props.post.meta.series && (
+            <Anchor
+                href={`/series/${props.post.meta.series}`}
+                className="mt-4 inline-block"
+            >
+                Read more in the "{SERIES_ID_MAP[props.post.meta.series]}"
+                series
+            </Anchor>
+        )}
     </div>
 );
