@@ -92,25 +92,31 @@ export const Nav: React.FunctionComponent = () => {
                         </div>
                     </div>
                 </div>
-                {state.isNavOpen && (
-                    <div className="container flex mt-4 md:hidden">
-                        <div className="w-full">
-                            {navItems.map((item) => (
-                                <Link href={item.url} key={item.url}>
-                                    <a
-                                        className={`block mt-2 py-2 hover:text-primary focus:text-primary ${
-                                            router.pathname === item.url
-                                                ? "text-primary"
-                                                : ""
-                                        }`}
-                                    >
-                                        {item.text}
-                                    </a>
-                                </Link>
-                            ))}
-                        </div>
+                <div
+                    className={`container flex md:hidden ${
+                        state.isNavOpen ? "pt-4" : ""
+                    }`}
+                    style={{
+                        maxHeight: state.isNavOpen ? "300px" : "0",
+                        transition: "all 0.2s ease-in-out",
+                    }}
+                >
+                    <div className="w-full">
+                        {navItems.map((item) => (
+                            <Link href={item.url} key={item.url}>
+                                <a
+                                    className={`block mt-2 py-2 hover:text-primary focus:text-primary ${
+                                        router.pathname === item.url
+                                            ? "text-primary"
+                                            : ""
+                                    }`}
+                                >
+                                    {item.text}
+                                </a>
+                            </Link>
+                        ))}
                     </div>
-                )}
+                </div>
             </nav>
         </header>
     );
