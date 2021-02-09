@@ -50,12 +50,12 @@ p + h4 {
 .post h3,
 .page h4,
 .post h4 {
-    color: #965ad3;
+    color: #a86de2;
 }
 
 .page em,
 .post em {
-    color: #965ad3;
+    color: #a86de2;
 }
 
 @import "./components/skip-to-content.css";

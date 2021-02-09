@@ -5,7 +5,7 @@ import { TWITTER } from "../constants/urls";
 export class Footer extends React.PureComponent {
     render() {
         return (
-            <footer className="gradient pb-8 mt-8">
+            <footer className="gradient mt-8">
                 <div className="h-12 md:h-24 flex">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

@@ -1,7 +1,7 @@
 import React from "react";
 
 export const TitleHeader: React.FC = (props) => {
-    const cn = props.children ? "h-12 md:h-24" : "h-6 md:h-12";
+    const cn = props.children ? "h-12 md:h-24" : "h-4 md:h-8";
     return (
         <header className="gradient mb-5 text-center">
             <div className={`flex ${cn}`}>
@@ -21,7 +21,7 @@ export const TitleHeader: React.FC = (props) => {
             {props.children && (
                 <div className="container mt-8 mb-10">{props.children}</div>
             )}
-            <div className={`flex ${cn}`}>
+            <div className={`flex ${cn} mb-8 md:mb-16`}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1440 320"
