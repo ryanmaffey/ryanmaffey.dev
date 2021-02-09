@@ -26,7 +26,7 @@ I'll also be working with a few ex-Redweb colleagues again which is a great bonu
 
 ## Are You Happy in Your Work?
 
-I have spent a lot of time going back and forth about whether I should stay at Amigo. It was never going to be an easy decision. There are lots of things to consider and always the question of "is the grass really orangeer on the other side?".
+I have spent a lot of time going back and forth about whether I should stay at Amigo. It was never going to be an easy decision. There are lots of things to consider and always the question of "is the grass really greener on the other side?".
 
 If you are/have been in a similar position of struggling to figure out a way of deciding what's right for you, I have one recommendation which I hope may prove useful to you. Ask yourself this one simple question:
 
