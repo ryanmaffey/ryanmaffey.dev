@@ -5,6 +5,7 @@ import Layout from "../../components/layout";
 import { IPost } from "../../types";
 import { PostList } from "../../components/post-list";
 import { TitleHeader } from "../../components/title-header";
+import { SERIES_ID_MAP } from "../../constants/series";
 
 interface IProps {
     id: string;
@@ -15,18 +16,22 @@ const TagPage: React.FC<IProps> = (props) => {
     return (
         <>
             <Layout
-                title={`"${props.tag}" Posts`}
-                description={`All blog posts tagged with "${props.tag}"`}
+                title={`"${SERIES_ID_MAP[props.id]}" Posts`}
+                description={`All blog posts tagged with "${
+                    SERIES_ID_MAP[props.id]
+                }"`}
             >
-                <TitleHeader>
-                    <h1 className="m-0">WTF is...?</h1>
-                    <p className="mt-4">
-                        This series of posts is designed to make complicated (or
-                        complicated-sounding) programming concepts and jargon
-                        and help you understand what it all means in the
-                        simplest way possible!
-                    </p>
-                </TitleHeader>
+                {props.id === "WTF" && (
+                    <TitleHeader>
+                        <h1 className="m-0">WTF is...?</h1>
+                        <p className="mt-4">
+                            This series of posts is designed to make complicated
+                            (or complicated-sounding) programming concepts and
+                            jargon and help you understand what it all means in
+                            the simplest way possible!
+                        </p>
+                    </TitleHeader>
+                )}
                 <div className="container">
                     <PostList {...props} headingSize={2} />
                 </div>

@@ -20,14 +20,6 @@ const TagPage: React.FC<IProps> = (props) => {
             >
                 <TitleHeader>
                     <h1 className="m-0">"{props.tag}" Posts</h1>
-                    {props.tag === "WTF is...?" && (
-                        <p className="mt-4">
-                            My "WTF is...?" posts are designed to make
-                            complicated (or complicated-sounding) programming
-                            concepts and jargon and help you understand what it
-                            all means in the simplest way possible!
-                        </p>
-                    )}
                 </TitleHeader>
                 <div className="container">
                     <PostList {...props} headingSize={2} />
