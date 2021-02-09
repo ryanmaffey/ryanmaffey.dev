@@ -36,9 +36,9 @@ const Home: React.FC<IProps> = (props) => {
                     }`}
                 </script>
             </Head>
-            <Layout title="Welcome to ryanmaffey.dev" description={description}>
+            <Layout title="ryanmaffey.dev" description={description}>
                 <TitleHeader>
-                    <h1>Welcome</h1>
+                    <h1>Welcome to ryanmaffey.dev!</h1>
                     <p>
                         I'm Ryan, a Front-End Web Developer working in
                         Bournemouth. I love programming and creating
