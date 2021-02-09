@@ -3,5 +3,5 @@
 }
 
 .c-table td {
-    @apply border-b p-2 border-gray-700;
+    @apply border-b py-3 pr-3 border-gray-700;
 }

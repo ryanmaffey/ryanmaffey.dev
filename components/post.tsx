@@ -5,7 +5,7 @@ import { loadCssAsync } from "../utils";
 import { IPost } from "../types/post";
 import { PostLink } from "./post-link";
 import { SidebarLayout } from "./layout/sidebar-layout";
-import { TableOfContents } from "./table-of-contents";
+import { TableOfContentsHtml } from "./table-of-contents-html";
 import { TitleHeader } from "./title-header";
 import { SERIES_ID_MAP } from "../constants/series";
 import { Anchor } from "./anchor";
@@ -60,7 +60,7 @@ export const Post: React.FunctionComponent<{
             </TitleHeader>
             <SidebarLayout
                 side={() => (
-                    <TableOfContents html={props.post.tableOfContents} />
+                    <TableOfContentsHtml html={props.post.tableOfContents} />
                 )}
                 main={() => (
                     <section

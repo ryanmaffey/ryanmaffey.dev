@@ -1,12 +1,10 @@
 import React from "react";
 
 import Layout from "../../components/layout";
-import { IPost } from "../../types";
-import { Anchor } from "../../components/anchor";
 import { SidebarLayout } from "../../components/layout/sidebar-layout";
 import { getPage } from "../../lib/page";
 import { IPage } from "../../types/page";
-import { TableOfContents } from "../../components/table-of-contents";
+import { TableOfContentsHtml } from "../../components/table-of-contents-html";
 import { TitleHeader } from "../../components/title-header";
 
 interface IProps {
@@ -29,7 +27,9 @@ const AboutPage: React.FC<IProps> = (props) => {
             <div className="page">
                 <SidebarLayout
                     side={() => (
-                        <TableOfContents html={props.page.tableOfContents} />
+                        <TableOfContentsHtml
+                            html={props.page.tableOfContents}
+                        />
                     )}
                     main={() => (
                         <div
