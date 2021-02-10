@@ -20,8 +20,7 @@ const AboutPage: React.FC<IProps> = (props) => {
             <TitleHeader>
                 <h1 className="m-0">About</h1>
                 <p>
-                    Here's a bit more about about me, my experience and what I
-                    can do.
+                    Here's a bit more about me, my experience and what I can do!
                 </p>
             </TitleHeader>
             <div className="page">

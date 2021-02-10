@@ -43,7 +43,7 @@ const Home: React.FC<IProps> = (props) => {
                         I'm Ryan, a Front-End Web Developer working in
                         Bournemouth. I love programming and creating
                         applications for the web, but I also enjoy teaching and
-                        sharing knowledge with other developers, which is why I
+                        sharing knowledge with other developers. That's why I
                         decided to share my thoughts, experiences and things
                         I've learned here on this blog!
                     </p>
