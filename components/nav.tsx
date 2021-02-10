@@ -52,11 +52,16 @@ export const Nav: React.FunctionComponent = () => {
                     </div>
                     <div className="md:hidden">
                         <button
+                            type="button"
                             role="button"
                             aria-label={
                                 (state.isNavOpen ? "Close" : "Open") +
                                 " the navigation"
                             }
+                            aria-pressed={state.isNavOpen}
+                            aria-expanded={state.isNavOpen}
+                            aria-haspopup="menu"
+                            aria-controls="nav-menu"
                             className="flex items-center pl-4 pr-1 py-2 mt-1 text-primary"
                             onClick={() =>
                                 setState({
@@ -93,12 +98,14 @@ export const Nav: React.FunctionComponent = () => {
                     </div>
                 </div>
                 <div
+                    id="nav-menu"
                     className={`container flex md:hidden ${
                         state.isNavOpen ? "pt-4" : ""
                     }`}
                     style={{
                         maxHeight: state.isNavOpen ? "300px" : "0",
                         transition: "all 0.2s ease-in-out",
+                        overflow: "hidden",
                     }}
                 >
                     <div className="w-full">
