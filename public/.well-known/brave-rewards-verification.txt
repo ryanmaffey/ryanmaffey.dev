@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: ryanmaffey.dev
+Token: defb1156bc8c9b3fe66d256cdc6eab514a0c714db16e4a17c5b67b4b6f3694b6
