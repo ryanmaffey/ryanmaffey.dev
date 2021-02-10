@@ -21,7 +21,7 @@ export const TitleHeader: React.FC = (props) => {
             {props.children && (
                 <div className="container mt-8 mb-10">{props.children}</div>
             )}
-            <div className={`flex ${cn} mb-8 md:mb-16`}>
+            <div className={`flex ${cn} mb-4 md:mb-8`}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1440 320"
