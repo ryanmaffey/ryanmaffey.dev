@@ -39,7 +39,7 @@ export const Nav: React.FunctionComponent = () => {
                 Skip to content
             </a>
 
-            <nav className="flex items-center justify-between flex-wrap pt-8 pb-4 md:pt-8 md:pb-0">
+            <nav className="c-nav flex items-center justify-between flex-wrap pt-8 pb-4 md:pt-8 md:pb-0">
                 <div className="container flex sm:content-between">
                     <div className="flex items-center flex-grow sm:flex-grow md:justify-between mr-8">
                         <Link href="/">

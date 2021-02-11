@@ -59,6 +59,12 @@ p + h4 {
     color: #a86de2;
 }
 
+.c-nav a:active,
+.c-nav a:focus,
+.c-nav a:hover {
+    color: #a86de2;
+}
+
 @import "./components/skip-to-content.css";
 
 @import "./components/table-of-contents.css";
