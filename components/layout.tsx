@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 import { Nav } from "./nav";
 import { Footer } from "./footer";
@@ -28,6 +29,8 @@ export const Layout: React.FunctionComponent<{
     description: string;
     keywords?: string[];
 }> = (props) => {
+    const router = useRouter();
+
     return (
         <>
             <Head>
@@ -73,6 +76,11 @@ export const Layout: React.FunctionComponent<{
                 />
 
                 {/* OG */}
+                <meta property="og:locale" content="en_UK" />
+                <meta
+                    property="og:url"
+                    content={`https://ryanmaffey.dev${router.asPath}`}
+                />
                 <meta name="og:title" content={props.title} />
                 <meta name="og:description" content={props.description} />
                 <meta property="og:type" content="website" />
@@ -89,6 +97,10 @@ export const Layout: React.FunctionComponent<{
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary" />
+                <meta
+                    property="twitter:url"
+                    content={`https://ryanmaffey.dev${router.asPath}`}
+                />
                 <meta
                     name="twitter:title"
                     content={
