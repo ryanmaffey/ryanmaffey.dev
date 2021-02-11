@@ -88,13 +88,26 @@ export const getLatestPostsData = async (
 };
 
 export const getAllTags = async () => {
-    let arr: string[] = [];
+    let obj: { [key: string]: number } = {};
 
-    (await getAllPostData()).forEach(
-        (p) => (arr = [...arr, ...(p.meta.tags ?? [])])
-    );
+    (await getAllPostData()).forEach((post) => {
+        if (!post.meta.tags) {
+            return;
+        }
 
-    return [...new Set(arr)];
+        post.meta.tags.forEach((tag) => {
+            if (!obj[tag]) {
+                obj[tag] = 1;
+                return;
+            }
+
+            obj[tag]++;
+        });
+    });
+
+    return Object.entries(obj)
+        .sort((a, b) => b[1] - a[1])
+        .map((x) => x[0]);
 };
 
 export const getAllTagsPaths = async () => {

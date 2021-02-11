@@ -13,7 +13,7 @@ export const TagList: React.FC<IProps> = ({
     className = undefined,
 }) => (
     <ul className={`${"c-tag-list"} ${className || ""}`}>
-        {tags.sort().map((t) => (
+        {tags.map((t) => (
             <li key={t}>
                 <Tag name={t} size={tagSize} />
             </li>
