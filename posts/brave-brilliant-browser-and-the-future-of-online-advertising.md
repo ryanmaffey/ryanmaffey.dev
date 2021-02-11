@@ -10,15 +10,16 @@ tags:
     - Advertising
     - Privacy
     - Crypto
+    - Monetization
 ---
 
-I use <a href="https://brave.com/">Brave</a> as my primary web browser on all my devices and I absolutely love it. I want to share my favourite features of Brave and explain how its re-imagination of online advertising is beneficial for everyone and could be the future for the web that we've all been hoping for.
+I use <a href="https://brave.com/" rel="noopener" target="_blank">Brave</a> as my primary web browser on all my devices and I absolutely love it. I want to share my favourite features of Brave and explain how its re-imagination of online advertising is beneficial for everyone and could be the future for the web that we've all been hoping for.
 
 ## Chromium-Based Browser
 
-<a href="https://www.chromium.org/Home">Chromium</a> is the foundation for a lot of web browsers these days, including <a href="https://www.google.co.uk/chrome/">Google Chrome</a> and <a href="https://microsoftedgewelcome.microsoft.com/en-gb/">Microsoft Edge</a>. It's a solid option for any browser to build upon and has all the developer tools I know and love using right out of the box.
+<a href="https://www.chromium.org/Home" rel="noopener" target="_blank">Chromium</a> is the foundation for a lot of web browsers these days, including <a href="https://www.google.co.uk/chrome/" rel="noopener" target="_blank">Google Chrome</a> and <a href="https://microsoftedgewelcome.microsoft.com/en-gb/" rel="noopener" target="_blank">Microsoft Edge</a>. It's a solid option for any browser to build upon and has all the developer tools I know and love using right out of the box.
 
-It also means that you are able to install anything available in the <a href="https://chrome.google.com/webstore/category/extensions">Chrome Web Store</a>, so you can add all your favourite browser extensions.
+It also means that you are able to install anything available in the <a href="https://chrome.google.com/webstore/category/extensions" rel="noopener" target="_blank">Chrome Web Store</a>, so you can add all your favourite browser extensions.
 
 ## Brave Shields
 
@@ -58,7 +59,7 @@ As I've talked about before, Brave blocks all on-page advertisements by default.
 
 ### Why Would You Choose to See Ads?
 
-Brave feels strongly that you should be rewarded for your precious time and attention viewing advertisements, so they have give you <a href="https://basicattentiontoken.org/">Basic Attention Tokens (BAT)</a> for every ad you see.
+Brave feels strongly that you should be rewarded for your precious time and attention viewing advertisements, so they have give you <a href="https://basicattentiontoken.org/" rel="noopener" target="_blank">Basic Attention Tokens (BAT)</a> for every ad you see.
 
 BAT is a form of cryptocurrency; it has a real monetary value, so Brave are literally paying you to look at advertisements. This reward money is a portion of the income Brave, as an advertising platform, receives from advertisers.
 
@@ -78,7 +79,7 @@ You can, of course, keep the BAT and save it up or cash it out, but the idea is 
 
 As you browse the web, Brave will keep track of the portion of your browsing time you're spending on each website. Each month you can tell Brave to distribute a portion of your BAT to all of the content creators of the sites you've visited that month. The creators will get a percentage of your allocated BAT based on the amount of time you've spent looking at their content. What an incredible way to effectively give back, for free!
 
-Creators will need to sign up to be a <a href="https://creators.brave.com/">Brave Verified Creator</a> in order to receive the rewards. The process is free and easy, so there's no reason not to!
+Creators will need to sign up to be a <a href="https://creators.brave.com/" rel="noopener" target="_blank">Brave Verified Creator</a> in order to receive the rewards. The process is free and easy, so there's no reason not to!
 
 #### Tips
 
@@ -86,7 +87,7 @@ If particularly love someone's blog post, video, etc., you can give a one off ti
 
 ## Other Features
 
-There are other awesome features of this browser like integration with third party crypto services, Tor browsing and a built-in VPN & Firewall (paid feature) but I won't go into detail on that here. You can <a href="https://brave.com/features/">check out the full list of Brave features</a> for yourself.
+There are other awesome features of this browser like integration with third party crypto services, Tor browsing and a built-in VPN & Firewall (paid feature) but I won't go into detail on that here. You can <a href="https://brave.com/features/" rel="noopener" target="_blank">check out the full list of Brave features</a> for yourself.
 
 ## Roundup
 
