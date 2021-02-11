@@ -10,6 +10,7 @@ keywords:
     - abstracting
 tags:
     - Programming Concept
+    - Jargon
 series: WTF
 ---
 
