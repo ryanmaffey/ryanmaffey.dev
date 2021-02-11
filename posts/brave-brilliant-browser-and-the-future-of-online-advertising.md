@@ -1,6 +1,6 @@
 ---
-title: "Brave: Brilliant Browser and the Future of Online Advertising"
-description: I want to share my favourite features of Brave and explain how it's re-imagination of online advertising is beneficial for everyone and could be the future for the web that we've all been hoping for.
+title: "Brave: Brilliant Browser and the Future of Online Ads"
+description: My favourite features of Brave and an explanation of how its re-imagination of online advertising could lead to a better future for the everyone.
 date: "2021-02-11"
 readTime: 5
 containsCodeBlocks: false
@@ -12,7 +12,7 @@ tags:
     - Crypto
 ---
 
-I use <a href="https://brave.com/">Brave</a> as my primary web browser on all my devices and I absolutely love it. I want to share my favourite features of Brave and explain how it's re-imagination of online advertising is beneficial for everyone and could be the future for the web that we've all been hoping for.
+I use <a href="https://brave.com/">Brave</a> as my primary web browser on all my devices and I absolutely love it. I want to share my favourite features of Brave and explain how its re-imagination of online advertising is beneficial for everyone and could be the future for the web that we've all been hoping for.
 
 ## Chromium-Based Browser
 
