@@ -74,6 +74,18 @@ export const Layout: React.FunctionComponent<{
 
                 {/* OG */}
                 <meta name="og:title" content={props.title} />
+                <meta name="og:description" content={props.description} />
+                <meta property="og:type" content="website" />
+                <meta
+                    property="og:title"
+                    content={
+                        props.title === "" ? "ryanmaffey.dev" : props.title
+                    }
+                />
+                <meta
+                    property="og:image"
+                    content="https://ryanmaffey.dev/android-chrome-192x192.png"
+                ></meta>
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary" />
@@ -90,6 +102,7 @@ export const Layout: React.FunctionComponent<{
                     name="twitter:image"
                     content="https://ryanmaffey.dev/android-chrome-192x192.png"
                 />
+                <meta property="twitter:domain" content="ryanmaffey.dev" />
 
                 {/* Title */}
                 <title>{props.title}</title>
