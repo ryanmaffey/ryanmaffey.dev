@@ -88,7 +88,7 @@ export const Layout: React.FunctionComponent<{
                 <meta name="twitter:site" content="@ryanmaffey" />
                 <meta
                     name="twitter:image"
-                    content="https://ryanmaffey.dev/img/ryanmaffey-md.webp"
+                    content="https://ryanmaffey.dev/android-chrome-192x192.png"
                 />
 
                 {/* Title */}
