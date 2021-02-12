@@ -6,7 +6,7 @@
         "static": "node scripts/generate-api-data-for-posts.js && yarn build && next export && node ./scripts/sitemap.js",
         "dev": "node scripts/generate-api-data-for-posts.js && next dev",
         "build": "node scripts/generate-api-data-for-posts.js && next build",
-        "start": "node scripts/generate-api-data-for-posts.js && next start"
+        "start": "yarn build && next start"
     },
     "dependencies": {
         "@types/jsdom": "^16.2.3",
