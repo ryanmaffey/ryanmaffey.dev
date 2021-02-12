@@ -21,9 +21,9 @@ const TagPage: React.FC<IProps> = (props) => {
                     SERIES_ID_MAP[props.id]
                 }"`}
             >
-                {props.id === "WTF" && (
+                {props.id === "What-Is" && (
                     <TitleHeader>
-                        <h1 className="m-0">WTF is...?</h1>
+                        <h1 className="m-0">What Is...?</h1>
                         <p className="mt-4">
                             This series of posts is designed to make complicated
                             (or complicated-sounding) programming concepts and
