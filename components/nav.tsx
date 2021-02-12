@@ -6,32 +6,32 @@ interface IState {
     isNavOpen: boolean;
 }
 
+const NAV_ITEMS = [
+    {
+        text: "About",
+        url: "/about",
+    },
+    {
+        text: "Posts",
+        url: "/posts",
+    },
+    {
+        text: "Tags",
+        url: "/tags",
+    },
+    {
+        text: "Resources",
+        url: "/resources",
+    },
+    {
+        text: "Privacy",
+        url: "/privacy",
+    },
+];
+
 export const Nav: React.FunctionComponent = () => {
     const [state, setState] = React.useState<IState>({ isNavOpen: false });
     const router = useRouter();
-
-    const navItems = [
-        {
-            text: "About",
-            url: "/about",
-        },
-        {
-            text: "Posts",
-            url: "/posts",
-        },
-        {
-            text: "Tags",
-            url: "/tags",
-        },
-        {
-            text: "Resources",
-            url: "/resources",
-        },
-        {
-            text: "Privacy",
-            url: "/privacy",
-        },
-    ];
 
     return (
         <header>
@@ -62,7 +62,7 @@ export const Nav: React.FunctionComponent = () => {
                             aria-expanded={state.isNavOpen}
                             aria-haspopup="menu"
                             aria-controls="nav-menu"
-                            className="flex items-center pl-4 pr-1 py-2 mt-1 text-primary"
+                            className="c-nav__button flex items-center pl-4 pr-1 py-2 mt-1 text-primary"
                             onClick={() =>
                                 setState({
                                     isNavOpen: !state.isNavOpen,
@@ -81,7 +81,7 @@ export const Nav: React.FunctionComponent = () => {
                     </div>
                     <div className="hidden items-center md:flex">
                         <div className="md:flex-grow">
-                            {navItems.map((item) => (
+                            {NAV_ITEMS.map((item) => (
                                 <Link href={item.url} key={item.url}>
                                     <a
                                         className={`block md:inline-block mx-2 px-4 hover:text-primary focus:text-primary ${
@@ -108,23 +108,41 @@ export const Nav: React.FunctionComponent = () => {
                         overflow: "hidden",
                     }}
                 >
-                    <div className="w-full">
-                        {navItems.map((item) => (
-                            <Link href={item.url} key={item.url}>
-                                <a
-                                    className={`block mt-2 py-2 hover:text-primary focus:text-primary ${
-                                        router.pathname === item.url
-                                            ? "text-primary"
-                                            : ""
-                                    }`}
-                                >
-                                    {item.text}
-                                </a>
-                            </Link>
-                        ))}
-                    </div>
+                    <Mobile />
                 </div>
+                <noscript>
+                    <div className="container flex md:hidden">
+                        <Mobile />
+                    </div>
+                    <style>
+                        {`
+                            .c-nav__button { 
+                                display: none;
+                            }
+                        `}
+                    </style>
+                </noscript>
             </nav>
         </header>
+    );
+};
+
+const Mobile: React.FC = () => {
+    const router = useRouter();
+
+    return (
+        <div className="w-full">
+            {NAV_ITEMS.map((item) => (
+                <Link href={item.url} key={item.url}>
+                    <a
+                        className={`block mt-2 py-2 hover:text-primary focus:text-primary ${
+                            router.pathname === item.url ? "text-primary" : ""
+                        }`}
+                    >
+                        {item.text}
+                    </a>
+                </Link>
+            ))}
+        </div>
     );
 };
