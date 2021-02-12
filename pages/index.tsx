@@ -57,7 +57,7 @@ const Home: React.FC<IProps> = (props) => {
                                 top: "1.25rem",
                             }}
                         >
-                            <h2 className="mb-8">Popular Topics</h2>
+                            <h2 className="mb-8">Popular Tags</h2>
                             <TagList tags={props.tags} />
                         </section>
                     )}
