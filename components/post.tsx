@@ -9,6 +9,7 @@ import { TableOfContentsHtml } from "./table-of-contents-html";
 import { TitleHeader } from "./title-header";
 import { SERIES_ID_MAP } from "../constants/series";
 import { Anchor } from "./anchor";
+import { TagList } from "./tag-list";
 
 export const Post: React.FunctionComponent<{
     post: IPost;
@@ -63,12 +64,20 @@ export const Post: React.FunctionComponent<{
                     <TableOfContentsHtml html={props.post.tableOfContents} />
                 )}
                 main={() => (
-                    <section
-                        className="post text-lg"
-                        dangerouslySetInnerHTML={{
-                            __html: props.post.html,
-                        }}
-                    />
+                    <>
+                        <section
+                            className="post text-lg"
+                            dangerouslySetInnerHTML={{
+                                __html: props.post.html,
+                            }}
+                        />
+                        <div className="mt-8 md:mt-12 mb-8">
+                            <h2>Tags</h2>
+                            {props.post.meta.tags && (
+                                <TagList tags={props.post.meta.tags} />
+                            )}
+                        </div>
+                    </>
                 )}
             />
 
