@@ -36,7 +36,7 @@ If you want to take advantage of Brave Rewards, you can do so completely free of
     - The wallet gets created alongside the Brave Rewards setup
 1. <a href="https://creators.brave.com/" rel="noopener" target="_blank">Sign up as a Brave Creator</a>
 1. <a href="https://support.brave.com/hc/en-us/articles/360021408352" rel="noopener" target="_blank">Verify ownership of your content</a>
-    - If, like me, you use the "File Upload Verification" method, you can remove the file from the _.well-known/_ folder once you've completed verification
+    - If, like me, you use the "File Upload Verification" method, you can remove the file from the `.well-known/` folder once you've completed verification
     - You have to wait up to 24 hours for the verification to take effect
 
 I would say the whole process can be done in about 15-20 mins...though that's a bit of a guess because I've not done a straight run-through before.

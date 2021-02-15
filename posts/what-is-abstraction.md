@@ -78,7 +78,7 @@ const isReadyToAssemble =
     tomatoState === "sliced";
 ```
 
-_isReadyToAssemble_ is an abstraction. Referring back to my earlier definition, _isReadyToAssemble_ is the **label** which describes of whether all of ingredients are ready for sandwich assembly. Now, further down in our code, we don't have to concern ourselves with _how_ we know it's ready, we just know that _isReadyToAssemble_ will tell us; that's the beauty of abstraction - overlaying more complex logic with a simple label.
+`isReadyToAssemble` is an abstraction. Referring back to my earlier definition, `isReadyToAssemble` is the _label_ which describes of whether all of ingredients are ready for sandwich assembly. Now, further down in our code, we don't have to concern ourselves with _how_ we know it's ready, we just know that `isReadyToAssemble` will tell us; that's the beauty of abstraction - overlaying more complex logic with a simple label.
 
 If it helps you can relate this to the real-life equivalent situation. Which of the following questions are you more likely to ask?
 
@@ -99,9 +99,9 @@ And this leads us nicely on to our next example...
 
 Similar to variables but containing more complex logic.
 
-We can use _assembleBltSandwich()_ as our example here. We know that we can call this function and it will return us an assembled sandwich. All of the logic describing _how_ the sandwich is made is hidden away inside that function.
+We can use `assembleBltSandwich()` as our example here. We know that we can call this function and it will return us an assembled sandwich. All of the logic describing _how_ the sandwich is made is hidden away inside that function.
 
-We could imagine that the contents of _assembleBltSandwich()_ looks something like this:
+We could imagine that the contents of `assembleBltSandwich()` looks something like this:
 
 ```js
 function assembleBltSandwich(ingredients) {
@@ -115,11 +115,11 @@ function assembleBltSandwich(ingredients) {
 }
 ```
 
-Here we can once again see that some of the logic is abstracted further into functions like _addBacon()_. The result is layer upon layer of abstraction, with the bottom layers doing the heavy logic and the top layers basically just acting as labelled wrappers to make things easier.
+Here we can once again see that some of the logic is abstracted further into functions like `addBacon()`. The result is layer upon layer of abstraction, with the bottom layers doing the heavy logic and the top layers basically just acting as labelled wrappers to make things easier.
 
 ### Classes
 
-I won't go too in-depth with this because I think you're getting the idea by now. You can abstract details and actions of a sandwich into a _BltSandwich_ class like so:
+I won't go too in-depth with this because I think you're getting the idea by now. You can abstract details and actions of a sandwich into a `BltSandwich` class like so:
 
 ```js
 class BltSandwich extends Sandwich { // <-- You don't have to worry about what's in the base Sandwich class for this example.
