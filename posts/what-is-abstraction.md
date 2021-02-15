@@ -61,7 +61,7 @@ I'm going to use "making a BLT sandwich" as a contrived example.
 
 We have a bunch of variables containing a bunch of values, like this:
 
-```ts
+```js
 const breadState = "buttered";
 const baconState = "raw";
 const lettuceState = "washed";
@@ -70,7 +70,7 @@ const tomatoState = "washed";
 
 We can see all of the states of all the necessary ingredients for our sandwich. Now we want to know whether we can assemble it:
 
-```ts
+```js
 const isReadyToAssemble =
     breadState === "buttered" &&
     baconState === "cooked" &&
@@ -87,7 +87,7 @@ If it helps you can relate this to the real-life equivalent situation. Which of 
 
 My guess is that you're a bit more in-line with number 2. So you see, you abstract everyday without even realising!
 
-```ts
+```js
 if (isReadyToAssemble) {
     const sandwich = assembleBltSandwich(ingredients);
 }
@@ -103,7 +103,7 @@ We can use _assembleBltSandwich()_ as our example here. We know that we can call
 
 We could imagine that the contents of _assembleBltSandwich()_ looks something like this:
 
-```ts
+```js
 function assembleBltSandwich(ingredients) {
     return layBreadButterSideUp(ingredients.bread.sliceOne)
         .then(() => addMayo(ingredients.mayo))
@@ -121,7 +121,7 @@ Here we can once again see that some of the logic is abstracted further into fun
 
 I won't go too in-depth with this because I think you're getting the idea by now. You can abstract details and actions of a sandwich into a _BltSandwich_ class like so:
 
-```ts
+```js
 class BltSandwich extends Sandwich { // <-- You don't have to worry about what's in the base Sandwich class for this example.
     public ingredients;
 
@@ -145,7 +145,7 @@ class BltSandwich extends Sandwich { // <-- You don't have to worry about what's
 
 This is a further abstraction on top of everything we've already covered. So when we want to prepare and assemble a sandwich now, all we have to do is this:
 
-```ts
+```js
 const ingredients = {
     bread,
     butter,

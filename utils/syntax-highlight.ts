@@ -31,7 +31,7 @@ export const syntaxHighlightCodeBlocks = (dom: jsdom.JSDOM) => {
             - tsx [x]
             - sass
         */
-        const language = block.className.trim().split("-")[1];
+        const language = block.className.trim().split("-")[1] ?? "js";
 
         let p = ts(prismjs);
         p = tsx(p);
@@ -42,9 +42,9 @@ export const syntaxHighlightCodeBlocks = (dom: jsdom.JSDOM) => {
             language
         );
         block.innerHTML = prismCode;
-        var pre = block.parentElement;
-        pre?.classList.add(`language-${language}`);
-        pre?.setAttribute("tabindex", "0");
+        var parent = block.parentElement;
+        parent?.classList.add(`language-${language}`);
+        parent?.nodeName === "PRE" && parent?.setAttribute("tabindex", "0");
     }
     // return dom;
 };
