@@ -126,7 +126,7 @@ class BltSandwich extends Sandwich { // <-- You don't have to worry about what's
     public ingredients;
 
     constructor(ingredients) {
-        super(ingredients)
+        super(ingredients);
     }
 
     public prepare() {

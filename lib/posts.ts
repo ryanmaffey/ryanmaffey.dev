@@ -4,7 +4,6 @@ import matter from "gray-matter";
 import jsdom from "jsdom";
 
 import { IPost, IPostMeta } from "../types";
-import { syntaxHighlightCodeBlocks } from "../utils/syntax-highlight";
 import { getTableOfContents } from "../utils/post";
 import { getHtmlFromMarkdown } from "../utils/markdown";
 
@@ -28,8 +27,6 @@ export const getPost = async (id: string): Promise<IPost> => {
     );
     const dom = new JSDOM(htmlFromMarkdownResult.html.toString());
     const headings = dom.window.document.querySelectorAll("h2, h3, h4");
-
-    syntaxHighlightCodeBlocks(dom);
 
     return {
         id,

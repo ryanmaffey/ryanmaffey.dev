@@ -6,6 +6,8 @@ import remark from "remark";
 import remarkHtml from "remark-html";
 // @ts-ignore - no types available
 import slug from "remark-slug";
+// @ts-ignore - no types available
+import prism from "remark-prism";
 
 export const getGrayMatter = (filePath: string, fileName: string) => {
     const fullPath = path.join(filePath, fileName);
@@ -20,6 +22,7 @@ export const getHtmlFromMarkdown = async (
     const grayMatter = getGrayMatter(filePath, fileName);
     const html = await remark()
         .use(slug)
+        .use(prism)
         .use(remarkHtml)
         .process(grayMatter.content);
 

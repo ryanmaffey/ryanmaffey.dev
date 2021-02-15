@@ -7,11 +7,6 @@
     @apply mb-4 p-4 bg-gray-900 overflow-scroll rounded border border-gray-800;
 }
 
-.post pre[class*="language-"] .token.function,
-p[class*="language-"] code .token.function {
-    color: #a86de2;
-}
-
 post pre[class*="language-"] .token.comment {
     color: #aaa;
 }
