@@ -1,0 +1,5 @@
+.c-nav a:active,
+.c-nav a:focus,
+.c-nav a:hover {
+    color: #a86de2;
+}

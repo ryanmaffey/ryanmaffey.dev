@@ -18,10 +18,7 @@ const CookiesPage: React.FC = () => {
                 <section>
                     <p>
                         There is no analytics on this site, so there are{" "}
-                        <strong className="text-primary">
-                            no tracking cookies
-                        </strong>{" "}
-                        of any kind.
+                        <em>no tracking cookies</em> of any kind.
                     </p>
                     <p>
                         Also, this site does not have any functionality which

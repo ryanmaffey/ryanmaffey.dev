@@ -27,10 +27,10 @@ const CookiesPage: React.FC = () => {
                         preferences analysed where it's not necessary.
                     </p>
                     <p className="mb-0">
-                        I've opted <strong className="text-primary">not</strong>{" "}
-                        to add any form of analytics to this site, which means
-                        You can browse freely and anonymously with no tracking
-                        cookies following you around. In fact, there are{" "}
+                        I've opted <em>not</em> to add any form of analytics to
+                        this site, which means You can browse freely and
+                        anonymously with no tracking cookies following you
+                        around. In fact, there are{" "}
                         <Anchor href="/cookies">no cookies of any kind</Anchor>{" "}
                         on this website at all!.
                     </p>

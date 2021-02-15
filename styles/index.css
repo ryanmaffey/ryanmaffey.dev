@@ -1,23 +1,26 @@
 @tailwind base;
 
-html,
-body,
-#__next {
-    background-color: #12161d;
-    @apply text-gray-300 w-full;
+h1,
+h2,
+h3,
+h4 {
+    @apply mb-4 font-bold;
 }
 
 h1 {
     line-height: 1.25;
     @apply text-5xl;
 }
+
 h2 {
     @apply text-2xl;
 }
+
 @media only screen and (min-width: 768px) {
     h1 {
         @apply text-6xl;
     }
+
     h2 {
         @apply text-3xl;
     }
@@ -26,16 +29,11 @@ h2 {
 h3 {
     @apply text-xl;
 }
-h1,
-h2,
-h3,
-h4 {
-    @apply mb-4 font-bold;
-}
 
 p {
     @apply mb-4;
 }
+
 p + h1,
 p + h2,
 p + h3,
@@ -43,45 +41,23 @@ p + h4 {
     @apply mt-8;
 }
 
+@import "./base/main.css";
+
+@import "./components/page.css";
 @import "./components/post.css";
-
-.page h2,
-.post h2,
-.page h3,
-.post h3,
-.page h4,
-.post h4 {
-    color: #a86de2;
-}
-
-.page em,
-.post em {
-    color: #a86de2;
-}
-
-.c-nav a:active,
-.c-nav a:focus,
-.c-nav a:hover {
-    color: #a86de2;
-}
-
 @import "./components/skip-to-content.css";
-
+@import "./components/nav.css";
 @import "./components/table-of-contents.css";
-
 @import "./components/post-link.css";
-
 @import "./components/link.css";
 @import "./components/link-button.css";
-
 @import "./components/icon-button.css";
-
 @import "./components/tag.css";
 @import "./components/tag-list.css";
-
 @import "./components/table.css";
 
-@import "./components/utilities.css";
+@import "./misc/prism-overrides.css";
+@import "./misc/utilities.css";
 
 @tailwind components;
 @tailwind utilities;

@@ -1,19 +1,8 @@
-.post pre[class*="language-"],
-.post pre[class*="language-"] code {
-    font-size: 0.8rem !important;
-}
-
-.post pre[class*="language-"] {
-    @apply mb-4 p-4 bg-gray-900 overflow-scroll rounded border border-gray-800;
-}
-
-post pre[class*="language-"] .token.comment {
-    color: #aaa;
-}
-
-p[class*="language-"] code {
-    font-size: 0.9rem !important;
-    @apply px-2 py-1 mx-1 bg-gray-900 overflow-scroll rounded border border-gray-800;
+.post h2,
+.post h3,
+.post h4,
+.post em {
+    color: #a86de2;
 }
 
 .post blockquote {

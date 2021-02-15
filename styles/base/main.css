@@ -1,0 +1,6 @@
+html,
+body,
+#__next {
+    background-color: #12161d;
+    @apply text-gray-300 w-full;
+}
