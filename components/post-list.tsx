@@ -7,6 +7,7 @@ interface IProps {
     posts: IPost[];
     headingSize: 2 | 3;
     showTags?: boolean;
+    showSeriesLink?: boolean;
 }
 
 export const PostList: React.FC<IProps> = (props) => (
@@ -20,6 +21,7 @@ export const PostList: React.FC<IProps> = (props) => (
                     post={p}
                     headingSize={props.headingSize}
                     showTags={props.showTags}
+                    showSeriesLink={props.showSeriesLink}
                 />
             </li>
         ))}

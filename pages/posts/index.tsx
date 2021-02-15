@@ -46,7 +46,12 @@ const PostsPage: React.FC<IProps> = (props) => {
                 <p>Here are all my blog posts for you to browse and enjoy.</p>
             </TitleHeader>
             <div className="container">
-                <PostList posts={state.posts} headingSize={2} showTags />
+                <PostList
+                    posts={state.posts}
+                    headingSize={2}
+                    showTags
+                    showSeriesLink
+                />
                 {props.pageCount > state.page + 1 && (
                     <div className="flex justify-center mt-8">
                         <button

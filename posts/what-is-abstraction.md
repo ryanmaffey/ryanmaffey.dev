@@ -1,5 +1,5 @@
 ---
-title: "What Is Abstraction?"
+title: "Explained: What Is Abstraction?"
 description: Abstraction is not as complicated as you might first think, especially because you already abstract every day without even thinking about it!
 date: "2020-07-24"
 readTime: 7
@@ -11,7 +11,7 @@ keywords:
 tags:
     - Programming Concept
     - Jargon
-series: What-Is
+series: Explained
 ---
 
 ## Defining Abstraction

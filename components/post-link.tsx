@@ -12,6 +12,7 @@ interface IProps {
     headingSize: 2 | 3;
     classNames?: string;
     showTags?: boolean;
+    showSeriesLink?: boolean;
 }
 
 export const PostLink: React.FC<IProps> = (props) => (
@@ -37,20 +38,20 @@ export const PostLink: React.FC<IProps> = (props) => (
             &nbsp; | &nbsp; <span>{props.post.meta.readTime} min read</span>
         </div>
         <p className="mb-0">{props.post.meta.description}</p>
-        {props.post.meta.series && (
-            <Anchor
-                href={`/series/${props.post.meta.series}`}
-                className="mt-4 inline-block"
-            >
-                Read more in the "{SERIES_ID_MAP[props.post.meta.series]}"
-                series
-            </Anchor>
-        )}
         {props.showTags && props.post.meta.tags && (
             <>
                 <div className="mt-4" />
                 <TagList tags={props.post.meta.tags} />
             </>
+        )}
+        {props.showSeriesLink && props.post.meta.series && (
+            <Anchor
+                href={`/series/${props.post.meta.series}`}
+                className="mt-4 inline-block"
+            >
+                See all posts in the "{SERIES_ID_MAP[props.post.meta.series]}"
+                series
+            </Anchor>
         )}
     </div>
 );

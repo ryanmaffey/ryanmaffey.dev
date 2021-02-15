@@ -21,17 +21,17 @@ const TagPage: React.FC<IProps> = (props) => {
                     SERIES_ID_MAP[props.id]
                 }"`}
             >
-                {props.id === "What-Is" && (
-                    <TitleHeader>
-                        <h1 className="m-0">What Is...?</h1>
+                <TitleHeader>
+                    <h1 className="m-0">Series: "{SERIES_ID_MAP[props.id]}"</h1>
+                    {props.id === "Explained" && (
                         <p className="mt-4">
                             This series of posts is designed to make complicated
                             (or complicated-sounding) programming concepts and
                             jargon and help you understand what it all means in
                             the simplest way possible!
                         </p>
-                    </TitleHeader>
-                )}
+                    )}
+                </TitleHeader>
                 <div className="container">
                     <PostList {...props} headingSize={2} />
                 </div>

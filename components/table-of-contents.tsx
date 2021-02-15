@@ -26,7 +26,7 @@ export const TableOfContents: React.FC<{
         </h2>
         <ul className="toc">
             {props.items.map((item) => (
-                <li>
+                <li key={item.id}>
                     <a
                         href={`#${item.id}`}
                         className={getClassName(item.level)}

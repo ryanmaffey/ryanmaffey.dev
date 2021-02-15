@@ -74,14 +74,14 @@ const Home: React.FC<IProps> = (props) => {
 
                 <section className="container mb-8">
                     <h2>Series</h2>
-                    <h3 className="text-primary">What Is...?</h3>
+                    <h3 className="text-primary">Explained</h3>
                     <p>
                         This series of posts is designed to make complicated (or
                         complicated-sounding) programming concepts and jargon
                         and help you understand what it all means in the
                         simplest way possible!{" "}
-                        <Anchor href="/series/What-Is">
-                            See all "What Is...?" posts.
+                        <Anchor href="/series/Explained">
+                            See all posts in the "Explained" series.
                         </Anchor>
                     </p>
                 </section>
