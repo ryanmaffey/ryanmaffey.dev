@@ -6,6 +6,7 @@ import { IPost } from "../types";
 interface IProps {
     posts: IPost[];
     headingSize: 2 | 3;
+    showTags?: boolean;
 }
 
 export const PostList: React.FC<IProps> = (props) => (
@@ -15,7 +16,11 @@ export const PostList: React.FC<IProps> = (props) => (
                 key={p.id}
                 className={`${i < props.posts.length - 1 && "mb-10 md:mb-12"}`}
             >
-                <PostLink post={p} headingSize={props.headingSize} />
+                <PostLink
+                    post={p}
+                    headingSize={props.headingSize}
+                    showTags={props.showTags}
+                />
             </li>
         ))}
     </ol>

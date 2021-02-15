@@ -5,11 +5,13 @@ import { IPost } from "../types";
 import { Anchor } from "./anchor";
 import { SERIES_ID_MAP } from "../constants/series";
 import { formatDate } from "../utils/formatDate";
+import { TagList } from "./tag-list";
 
 interface IProps {
     post: IPost;
     headingSize: 2 | 3;
     classNames?: string;
+    showTags?: boolean;
 }
 
 export const PostLink: React.FC<IProps> = (props) => (
@@ -43,6 +45,12 @@ export const PostLink: React.FC<IProps> = (props) => (
                 Read more in the "{SERIES_ID_MAP[props.post.meta.series]}"
                 series
             </Anchor>
+        )}
+        {props.showTags && props.post.meta.tags && (
+            <>
+                <div className="mt-4" />
+                <TagList tags={props.post.meta.tags} />
+            </>
         )}
     </div>
 );
