@@ -4,6 +4,7 @@ import Link from "next/link";
 import { IPost } from "../types";
 import { Anchor } from "./anchor";
 import { SERIES_ID_MAP } from "../constants/series";
+import { formatDate } from "../utils/formatDate";
 
 interface IProps {
     post: IPost;
@@ -29,7 +30,7 @@ export const PostLink: React.FC<IProps> = (props) => (
         </Link>
         <div className="mb-2 text-gray-500 text-sm">
             <time dateTime={props.post.meta.date}>
-                {props.post.meta.date.split("-").reverse().join("/")}
+                {formatDate(new Date(props.post.meta.date))}
             </time>{" "}
             &nbsp; | &nbsp; <span>{props.post.meta.readTime} min read</span>
         </div>

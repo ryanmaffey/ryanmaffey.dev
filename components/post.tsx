@@ -10,6 +10,7 @@ import { TitleHeader } from "./title-header";
 import { SERIES_ID_MAP } from "../constants/series";
 import { Anchor } from "./anchor";
 import { TagList } from "./tag-list";
+import { formatDate } from "../utils/formatDate";
 
 export const Post: React.FunctionComponent<{
     post: IPost;
@@ -54,7 +55,7 @@ export const Post: React.FunctionComponent<{
                 <h1>{props.post.meta.title}</h1>
                 <p className="text-sm mb-0">
                     <time className="text-sm" dateTime={props.post.meta.date}>
-                        {props.post.meta.date.split("-").reverse().join("/")}
+                        {formatDate(new Date(props.post.meta.date))}
                     </time>{" "}
                     &nbsp; | &nbsp; {props.post.meta.readTime} min read
                 </p>
