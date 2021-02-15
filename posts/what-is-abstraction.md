@@ -9,7 +9,7 @@ keywords:
     - abstraction
     - abstracting
 tags:
-    - Programming Concept
+    - Concept
     - Jargon
 series: Explained
 ---
