@@ -8,6 +8,7 @@ import {
 import { Post } from "../../components/post";
 import Layout from "../../components/layout";
 import { IPost } from "../../types";
+import Head from "next/head";
 
 interface IProps {
     post: IPost;
@@ -18,6 +19,15 @@ interface IProps {
 const PostPage: React.FC<IProps> = (props) => {
     return (
         <>
+            <Head>
+                {props.post.meta.containsCodeBlocks && (
+                    <link
+                        href="/styles/prism.min.css"
+                        type="text/css"
+                        rel="stylesheet"
+                    />
+                )}
+            </Head>
             <Layout
                 title={props.post.meta.title}
                 description={props.post.meta.description}
@@ -38,6 +48,7 @@ export const getStaticProps = async ({
     const nextAndPreviousPostData = await getNextAndPreviousPostData(
         post.meta.date
     );
+
     return {
         props: {
             post,
