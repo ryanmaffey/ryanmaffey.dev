@@ -63,3 +63,7 @@ function chunkArray(inputArray, perChunk) {
         return resultArray;
     }, []);
 }
+
+module.exports = {
+    getAllPostData,
+};
