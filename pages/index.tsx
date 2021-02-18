@@ -18,7 +18,7 @@ interface IProps {
 
 const Home: React.FC<IProps> = (props) => {
     const description =
-        "I'm a Front-End Web Developer working in Bournemouth. I love programming, creating applications for the web and teaching others how to do the same!";
+        "I'm a Front-End Web Developer working in Bournemouth. I love creating applications for the web and teaching others how to do the same!";
     return (
         <>
             <Head>
@@ -41,11 +41,10 @@ const Home: React.FC<IProps> = (props) => {
                     <h1>Hello, I'm Ryan!</h1>
                     <p>
                         I'm a Front-End Web Developer working in Bournemouth. I
-                        love programming and creating applications for the web,
-                        but I also enjoy teaching and sharing knowledge with
-                        other developers. That's why I decided to share my
-                        thoughts, experiences and things I've learned here on
-                        this blog!
+                        love creating applications for the web and teaching /
+                        sharing knowledge with other developers. That's why I
+                        decided to share my thoughts, experiences and things
+                        I've learned here on this blog!
                     </p>
                 </TitleHeader>
                 <SidebarLayout

@@ -11,8 +11,8 @@ const CookiesPage: React.FC = () => {
             description="You won't find a single cookie on this website."
         >
             <TitleHeader>
-                <h1 className="m-0">No Cookies Here!</h1>
-                <p>You won't find a single cookie on this website.</p>
+                <h1 className="m-0">Cookies</h1>
+                <p>No cookies here!</p>
             </TitleHeader>
             <div className="container page">
                 <section>

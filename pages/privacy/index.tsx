@@ -12,11 +12,8 @@ const CookiesPage: React.FC = () => {
             website."
         >
             <TitleHeader>
-                <h1 className="m-0">Your Privacy is Respected and Protected</h1>
-                <p>
-                    There is no analytics or tracking of any kind on this
-                    website.
-                </p>
+                <h1 className="m-0">Privacy</h1>
+                <p>Your privacy is respected and protected.</p>
             </TitleHeader>
             <div className="container page">
                 <section>
