@@ -1,5 +1,5 @@
 import React from "react";
-import { Tag } from "./tag";
+import { Tag } from "./Tag";
 
 interface IProps {
     tags: string[];

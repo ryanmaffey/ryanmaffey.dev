@@ -1,43 +1,19 @@
-import React from "react";
-import { Anchor } from "../../components/anchor";
+import { GetStaticProps, GetStaticPropsResult } from "next";
+import { BasicPage } from "../../components/pages";
 
-import Layout from "../../components/layout";
-import { TitleHeader } from "../../components/title-header";
+import { IPage } from "../../types/page";
+import { getPage } from "../../utils/page";
 
-const CookiesPage: React.FC = () => {
-    return (
-        <Layout
-            title="Privacy"
-            description="There is no analytics or tracking of any kind on this
-            website."
-        >
-            <TitleHeader>
-                <h1 className="m-0">Your Privacy is Respected and Protected</h1>
-                <p>
-                    There is no analytics or tracking of any kind on this
-                    website.
-                </p>
-            </TitleHeader>
-            <div className="container page">
-                <section>
-                    <p>
-                        Privacy online is a big topic these days, and I am in
-                        the mindset that everyone has a right to browse the web
-                        without being followed and having their habits and
-                        preferences analysed where it's not necessary.
-                    </p>
-                    <p className="mb-0">
-                        I've opted <em>not</em> to add any form of analytics to
-                        this site, which means You can browse freely and
-                        anonymously with no tracking cookies following you
-                        around. In fact, there are{" "}
-                        <Anchor href="/cookies">no cookies of any kind</Anchor>{" "}
-                        on this website at all!.
-                    </p>
-                </section>
-            </div>
-        </Layout>
-    );
-};
+interface IProps {
+    page: IPage;
+}
 
-export default CookiesPage;
+export const getStaticProps: GetStaticProps<IProps> = async (): Promise<
+    GetStaticPropsResult<IProps>
+> => ({
+    props: {
+        page: await getPage("privacy"),
+    },
+});
+
+export default BasicPage;

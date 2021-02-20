@@ -1,10 +1,11 @@
 import React from "react";
+import { GetStaticProps, GetStaticPropsResult } from "next";
 
-import Layout from "../../components/layout";
-import { getLatestPostsData, getAllPostData } from "../../lib/posts";
-import { PostList } from "../../components/post-list";
+import PageWrapper from "../../components/site/PageWrapper";
+import { getLatestPostsData, getAllPosts } from "../../utils/posts";
+import { PostList } from "../../components/posts/PostList";
 import { IPost } from "../../types";
-import { TitleHeader } from "../../components/title-header";
+import { TitleHeader } from "../../components/site/TitleHeader";
 import { PAGE_SIZE } from "../../constants/pagination";
 
 interface IProps {
@@ -30,14 +31,12 @@ const PostsPage: React.FC<IProps> = (props) => {
                 posts: [...state.posts, ...newPosts],
                 page: nextPage,
             });
-        } catch (ex) {
-            // TODO: do something
-        }
+        } catch (ex) {}
         window.scrollTo(0, yScrollPosition);
     };
 
     return (
-        <Layout
+        <PageWrapper
             title="Posts"
             description="Here are all my latest blog posts for you to browse and enjoy! I love to write about web technologies, programming and software development."
         >
@@ -63,22 +62,17 @@ const PostsPage: React.FC<IProps> = (props) => {
                     </div>
                 )}
             </div>
-        </Layout>
+        </PageWrapper>
     );
 };
 
-export const getStaticProps = async (): Promise<{ props: IProps }> => {
-    const latestPosts = await getLatestPostsData(PAGE_SIZE);
-    const pageCount = Math.ceil(
-        (await (await getAllPostData()).length) / PAGE_SIZE
-    );
-
-    return {
-        props: {
-            latestPosts,
-            pageCount,
-        },
-    };
-};
+export const getStaticProps: GetStaticProps<IProps> = async (): Promise<
+    GetStaticPropsResult<IProps>
+> => ({
+    props: {
+        latestPosts: getLatestPostsData(PAGE_SIZE),
+        pageCount: Math.ceil(getAllPosts().length / PAGE_SIZE),
+    },
+});
 
 export default PostsPage;

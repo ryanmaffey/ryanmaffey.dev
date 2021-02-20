@@ -1,17 +1,17 @@
 export interface IPost {
-    id: string;
-    html: string;
-    tableOfContents: string;
-    meta: IPostMeta;
-}
-
-export interface IPostMeta {
     title: string;
-    date: string;
-    readTime: number;
+    slug: string;
     description: string;
-    containsCodeBlocks: boolean;
+    body: string;
+    publishDate: string;
     keywords?: string[];
     tags?: string[];
     series?: string;
+    readTime: number;
+}
+
+export interface IToCItem {
+    id: string;
+    text: string;
+    level: number;
 }

@@ -1,4 +1,7 @@
 export interface IPage {
-    html: string;
-    tableOfContents: string;
+    title: string;
+    slug: string;
+    description: string;
+    metaDescription: string;
+    body: string;
 }

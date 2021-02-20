@@ -1,4 +1,6 @@
 import React from "react";
+import { IToCItem } from "../../types";
+import { getTableOfContentsFromMarkdown } from "../../utils/toc";
 
 const getClassName = (num: number) => {
     switch (num) {
@@ -12,7 +14,7 @@ const getClassName = (num: number) => {
 };
 
 export const TableOfContents: React.FC<{
-    items: { text: string; id: string; level: number }[];
+    items: IToCItem[];
 }> = (props) => (
     <div
         className="p-1 pb-8 mb-4 md:mb-0 overflow-auto sticky border-b-2 md:border-b-0 border-purple-700"

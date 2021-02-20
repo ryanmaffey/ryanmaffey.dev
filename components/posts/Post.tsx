@@ -1,18 +1,19 @@
 import React from "react";
 import Head from "next/head";
 
-import { IPost } from "../types/post";
-import { PostLink } from "./post-link";
-import { SidebarLayout } from "./layout/sidebar-layout";
-import { TableOfContentsHtml } from "./table-of-contents-html";
-import { TitleHeader } from "./title-header";
-import { SERIES_ID_MAP } from "../constants/series";
-import { Anchor } from "./anchor";
-import { TagList } from "./tag-list";
-import { formatDate } from "../utils/formatDate";
+import { IPost, IToCItem } from "../../types/post";
+import { PostLink } from "./PostLink";
+import { SidebarLayout } from "../layouts/SidebarLayout";
+import { SERIES_ID_MAP } from "../../constants/series";
+import { Anchor } from "../site/Anchor";
+import { TagList } from "../tags/TagList";
+import { formatDate } from "../../utils/formatDate";
+import { TitleHeader } from "../site/TitleHeader";
+import { TableOfContents } from "../table-of-contents";
 
-export const Post: React.FunctionComponent<{
+export const Post: React.FC<{
     post: IPost;
+    tocItems: IToCItem[];
     next: IPost | null;
     previous: IPost | null;
 }> = (props) => (
@@ -24,10 +25,10 @@ export const Post: React.FunctionComponent<{
                         "@type": "Article",
                         "mainEntityOfPage": {
                             "@type": "WebPage",
-                            "@id": "https://ryanmaffey.dev/post/${props.post.id}"
+                            "@id": "https://ryanmaffey.dev/post/${props.post.slug}"
                         },
-                        "headline": "${props.post.meta.title}",
-                        "datePublished": "${props.post.meta.date}",
+                        "headline": "${props.post.title}",
+                        "datePublished": "${props.post.publishDate}",
                         "author": {
                             "@type": "Person",
                             "name": "Ryan Maffey"
@@ -40,31 +41,25 @@ export const Post: React.FunctionComponent<{
             </script>
         </Head>
         <TitleHeader>
-            <h1>{props.post.meta.title}</h1>
+            <h1>{props.post.title}</h1>
             <p className="text-sm mb-0">
-                <time className="text-sm" dateTime={props.post.meta.date}>
-                    {formatDate(new Date(props.post.meta.date))}
+                <time className="text-sm" dateTime={props.post.publishDate}>
+                    {formatDate(new Date(props.post.publishDate))}
                 </time>{" "}
-                &nbsp; | &nbsp; {props.post.meta.readTime} min read
+                &nbsp; | &nbsp; {props.post.readTime} min read
             </p>
         </TitleHeader>
         <SidebarLayout
-            side={() => (
-                <TableOfContentsHtml html={props.post.tableOfContents} />
-            )}
+            side={() => <TableOfContents items={props.tocItems} />}
             main={() => (
                 <>
                     <section
                         className="post text-lg"
-                        dangerouslySetInnerHTML={{
-                            __html: props.post.html,
-                        }}
+                        dangerouslySetInnerHTML={{ __html: props.post.body }}
                     />
                     <div className="mt-8 md:mt-12 mb-8">
                         <h2>Tags</h2>
-                        {props.post.meta.tags && (
-                            <TagList tags={props.post.meta.tags} />
-                        )}
+                        {props.post.tags && <TagList tags={props.post.tags} />}
                     </div>
                 </>
             )}
@@ -72,20 +67,19 @@ export const Post: React.FunctionComponent<{
 
         <TitleHeader />
 
-        {props.post.meta.series && (
+        {props.post.series && (
             <>
                 <div className="container">
                     <h2>
-                        More in the "{SERIES_ID_MAP[props.post.meta.series]}"
-                        Series
+                        More in the "{SERIES_ID_MAP[props.post.series]}" Series
                     </h2>
                     <p className="mb-8">
                         Thanks for reading! I hope you enjoyed the post and
                         found it useful. If you liked this, why not take a look
                         at{" "}
-                        <Anchor href={`/series/${props.post.meta.series}`}>
+                        <Anchor href={`/series/${props.post.series}`}>
                             more posts in the "
-                            {SERIES_ID_MAP[props.post.meta.series]}" series
+                            {SERIES_ID_MAP[props.post.series]}" series
                         </Anchor>
                     </p>
                 </div>

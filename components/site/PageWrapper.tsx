@@ -2,8 +2,8 @@ import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import { Nav } from "./nav";
-import { Footer } from "./footer";
+import { Nav } from "./Nav";
+import { Footer } from "./Footer";
 
 export const KEYWORDS = [
     "developer",
@@ -24,7 +24,7 @@ export const KEYWORDS = [
     "career",
 ];
 
-export const Layout: React.FunctionComponent<{
+export const PageWrapper: React.FunctionComponent<{
     title: string;
     description: string;
     keywords?: string[];
@@ -135,4 +135,4 @@ export const Layout: React.FunctionComponent<{
     );
 };
 
-export default Layout;
+export default PageWrapper;

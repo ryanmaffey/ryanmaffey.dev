@@ -1,14 +1,14 @@
 import React from "react";
 
-import Layout from "../../components/layout";
-import { Anchor } from "../../components/anchor";
-import { TitleHeader } from "../../components/title-header";
-import { SidebarLayout } from "../../components/layout/sidebar-layout";
+import PageWrapper from "../../components/site/PageWrapper";
+import { Anchor } from "../../components/site/Anchor";
+import { TitleHeader } from "../../components/site/TitleHeader";
+import { SidebarLayout } from "../../components/layouts/SidebarLayout";
 import { TableOfContents } from "../../components/table-of-contents";
 
 const ResourcesPage: React.FC = () => {
     return (
-        <Layout
+        <PageWrapper
             title="Resources"
             description="A collections of stuff which I find useful on a regular
         basis."
@@ -44,7 +44,7 @@ const ResourcesPage: React.FC = () => {
                     />
                 )}
             />
-        </Layout>
+        </PageWrapper>
     );
 };
 
