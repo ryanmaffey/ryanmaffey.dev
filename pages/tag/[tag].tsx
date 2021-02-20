@@ -1,10 +1,16 @@
 import React from "react";
+import {
+    GetStaticPaths,
+    GetStaticPathsResult,
+    GetStaticProps,
+    GetStaticPropsResult,
+} from "next";
 
-import { getPostsWithTag, getAllTagsPaths } from "../../lib/posts";
-import Layout from "../../components/layout";
+import PageWrapper from "../../components/site/PageWrapper";
 import { IPost } from "../../types";
-import { PostList } from "../../components/post-list";
-import { TitleHeader } from "../../components/title-header";
+import { PostList } from "../../components/posts/PostList";
+import { TitleHeader } from "../../components/site/TitleHeader";
+import { getAllTags, getPostsWithTag } from "../../utils/tags";
 
 interface IProps {
     tag: string;
@@ -14,7 +20,7 @@ interface IProps {
 const TagPage: React.FC<IProps> = (props) => {
     return (
         <>
-            <Layout
+            <PageWrapper
                 title={`"${props.tag}" Posts`}
                 description={`All blog posts tagged with "${props.tag}"`}
             >
@@ -24,32 +30,39 @@ const TagPage: React.FC<IProps> = (props) => {
                 <div className="container">
                     <PostList {...props} headingSize={2} />
                 </div>
-            </Layout>
+            </PageWrapper>
         </>
     );
 };
 
-export const getStaticProps = async ({
+export const getStaticProps: GetStaticProps<IProps> = async ({
     params,
-}: {
-    params: { tag: string };
-}): Promise<{ props: IProps }> => {
-    const posts = await getPostsWithTag(params.tag);
+}): Promise<GetStaticPropsResult<IProps>> => {
+    const tag = params?.tag as string;
 
     return {
         props: {
-            tag: params.tag,
-            posts,
+            tag,
+            posts: getPostsWithTag(tag),
         },
     };
 };
 
-export async function getStaticPaths() {
-    const paths = await getAllTagsPaths();
+type PathParams = {
+    tag: string;
+};
+
+export const getStaticPaths: GetStaticPaths<PathParams> = async (): Promise<
+    GetStaticPathsResult<PathParams>
+> => {
     return {
-        paths,
+        paths: getAllTags().map((tag) => ({
+            params: {
+                tag,
+            },
+        })),
         fallback: false,
     };
-}
+};
 
 export default TagPage;

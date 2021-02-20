@@ -1,54 +1,55 @@
 import React from "react";
+import { GetStaticProps, GetStaticPropsResult } from "next";
 
-import Layout from "../../components/layout";
-import { SidebarLayout } from "../../components/layout/sidebar-layout";
-import { getPage } from "../../lib/page";
+import PageWrapper from "../../components/site/PageWrapper";
+import { SidebarLayout } from "../../components/layouts/SidebarLayout";
 import { IPage } from "../../types/page";
-import { TableOfContentsHtml } from "../../components/table-of-contents-html";
-import { TitleHeader } from "../../components/title-header";
+import { TitleHeader } from "../../components/site/TitleHeader";
+import { IToCItem } from "../../types";
+import { getPage } from "../../utils/page";
+import { TableOfContents } from "../../components/table-of-contents";
+import { getTableOfContentsFromMarkdown } from "../../utils/toc";
 
 interface IProps {
     page: IPage;
+    tocItems: IToCItem[];
 }
 
 const AboutPage: React.FC<IProps> = (props) => {
     return (
-        <Layout
-            title="About"
-            description="I'm Ryan, a professional Front-End Web Developer working in Bournemouth. Here you can find a bit more about me and what I can do."
+        <PageWrapper
+            title={props.page.title}
+            description={props.page.metaDescription}
         >
             <TitleHeader>
-                <h1 className="m-0">About</h1>
-                <p>
-                    Here's a bit more about me, my experience and what I can do!
-                </p>
+                <h1 className="m-0">{props.page.title}</h1>
+                <p>{props.page.description}</p>
             </TitleHeader>
             <div className="page">
                 <SidebarLayout
-                    side={() => (
-                        <TableOfContentsHtml
-                            html={props.page.tableOfContents}
-                        />
-                    )}
+                    side={() => <TableOfContents items={props.tocItems} />}
                     main={() => (
                         <div
                             className="mb-8"
                             dangerouslySetInnerHTML={{
-                                __html: props.page.html,
+                                __html: props.page.body,
                             }}
-                        ></div>
+                        />
                     )}
                 />
             </div>
-        </Layout>
+        </PageWrapper>
     );
 };
 
-export const getStaticProps = async (): Promise<{ props: IProps }> => {
-    const page = await getPage("pages/about", "about");
+export const getStaticProps: GetStaticProps<IProps> = async (): Promise<
+    GetStaticPropsResult<IProps>
+> => {
+    const page = await getPage("about");
     return {
         props: {
             page,
+            tocItems: await getTableOfContentsFromMarkdown(page.body),
         },
     };
 };

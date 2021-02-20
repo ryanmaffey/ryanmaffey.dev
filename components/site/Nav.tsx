@@ -2,10 +2,6 @@ import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-interface IState {
-    isNavOpen: boolean;
-}
-
 const NAV_ITEMS = [
     {
         text: "About",
@@ -30,7 +26,9 @@ const NAV_ITEMS = [
 ];
 
 export const Nav: React.FunctionComponent = () => {
-    const [state, setState] = React.useState<IState>({ isNavOpen: false });
+    const [state, setState] = React.useState<{
+        isNavOpen: boolean;
+    }>({ isNavOpen: false });
     const router = useRouter();
 
     return (

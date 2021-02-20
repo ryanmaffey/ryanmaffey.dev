@@ -1,6 +1,6 @@
 import React from "react";
-import { Anchor } from "./anchor";
-import { TWITTER } from "../constants/urls";
+import { Anchor } from "./Anchor";
+import { TWITTER } from "../../constants/urls";
 
 export const Footer: React.FC = () => (
     <footer className="gradient mt-8 pb-4 md:pb-8">

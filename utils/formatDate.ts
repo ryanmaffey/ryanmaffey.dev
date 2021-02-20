@@ -1,4 +1,4 @@
-import { toOrdinalNumber } from "./toOrdinalNumber";
+import { toOrdinalNumber } from "./to-ordinal-number";
 
 const MONTHS = [
     "January",

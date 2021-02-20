@@ -38,15 +38,6 @@
     @apply mb-2;
 }
 
-.post a {
-    @apply border-b border-purple-500;
-}
-
-.post a:focus,
-.post a:hover {
-    color: #a86de2;
-}
-
 .post table thead {
     @apply border-b-2 border-purple-500;
 }

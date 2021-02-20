@@ -1,28 +1,9 @@
 const fs = require("fs");
 const path = require("path");
-const matter = require("gray-matter");
+const posts = require("../data/blogPost.json");
 const PAGE_SIZE = require("../constants/pagination").PAGE_SIZE;
 
-const getAllPostData = async () => {
-    const fileNames = fs.readdirSync("posts");
-    return fileNames
-        .map((f) => {
-            const fullPath = path.join("posts", f);
-            const fileContents = fs.readFileSync(fullPath, "utf8");
-
-            // Use gray-matter to parse the post metadata section
-            const matterResult = matter(fileContents);
-
-            // Combine the data with the id
-            return {
-                id: f.replace(".md", ""),
-                meta: matterResult.data,
-            };
-        })
-        .sort(
-            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-        );
-};
+const getAllPostData = async () => {};
 
 (async () => {
     try {
@@ -34,9 +15,18 @@ const getAllPostData = async () => {
             fs.mkdirSync("public/api/posts/");
         }
 
-        const postData = chunkArray(await getAllPostData(), PAGE_SIZE);
+        const postsSorted = posts
+            .map((p) => {
+                delete p.body;
+                return p;
+            })
+            .sort(
+                (a, b) =>
+                    new Date(b.publishDate).getTime() -
+                    new Date(a.publishDate).getTime()
+            );
 
-        postData.map((data, index) => {
+        chunkArray(postsSorted, PAGE_SIZE).map((data, index) => {
             fs.writeFile(
                 `public/api/posts/page-${index}.json`,
                 JSON.stringify(data),

@@ -1,15 +1,17 @@
 import React from "react";
+import { GetStaticProps, GetStaticPropsResult } from "next";
 
-import Layout, { KEYWORDS } from "../components/layout";
-import { getLatestPostsData, getAllTags } from "../lib/posts";
+import PageWrapper, { KEYWORDS } from "../components/site/PageWrapper";
+import { getLatestPostsData } from "../utils/posts";
 import { IPost } from "../types";
-import { Anchor } from "../components/anchor";
-import { PostList } from "../components/post-list";
-import { TitleHeader } from "../components/title-header";
+import { Anchor } from "../components/site/Anchor";
 import Head from "next/head";
-import { TagList } from "../components/tag-list";
+import { TagList } from "../components/tags/TagList";
 import { TWITTER } from "../constants/urls";
-import { SidebarLayout } from "../components/layout/sidebar-layout";
+import { SidebarLayout } from "../components/layouts/SidebarLayout";
+import { getAllTags } from "../utils/tags";
+import { TitleHeader } from "../components/site/TitleHeader";
+import { PostList } from "../components/posts";
 
 interface IProps {
     latestPosts: IPost[];
@@ -36,7 +38,7 @@ const Home: React.FC<IProps> = (props) => {
                     }`}
                 </script>
             </Head>
-            <Layout title="Ryan Maffey" description={description}>
+            <PageWrapper title="Ryan Maffey" description={description}>
                 <TitleHeader>
                     <h1>Hello, I'm Ryan!</h1>
                     <p>
@@ -103,20 +105,18 @@ const Home: React.FC<IProps> = (props) => {
                         !
                     </p>
                 </section>
-            </Layout>
+            </PageWrapper>
         </>
     );
 };
 
-export const getStaticProps = async (): Promise<{ props: IProps }> => {
-    const latestPosts = await getLatestPostsData(4);
-    const tags = await getAllTags();
-    return {
-        props: {
-            tags,
-            latestPosts,
-        },
-    };
-};
+export const getStaticProps: GetStaticProps<IProps> = async (): Promise<
+    GetStaticPropsResult<IProps>
+> => ({
+    props: {
+        tags: getAllTags(),
+        latestPosts: getLatestPostsData(4),
+    },
+});
 
 export default Home;

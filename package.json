@@ -3,33 +3,36 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "static": "node scripts/generate-api-data-for-posts.js && yarn build && next export && node ./scripts/sitemap.js",
-        "dev": "node scripts/generate-api-data-for-posts.js && next dev",
-        "build": "node scripts/generate-api-data-for-posts.js && next build",
-        "start": "yarn build && next start"
+        "static": "node build-scripts/generate-api-data-for-posts.js && yarn build && next export && node ./build-scripts/sitemap.js",
+        "dev": "node build-scripts/generate-api-data-for-posts.js && next dev",
+        "build": "node build-scripts/generate-api-data-for-posts.js && next build",
+        "start": "yarn build && next start",
+        "postinstall": "yarn get-content",
+        "get-content": "node build-scripts/get-content.js install"
     },
     "dependencies": {
-        "@types/jsdom": "^16.2.3",
-        "@types/prismjs": "^1.16.1",
-        "jsdom": "^16.3.0",
         "next": "^10.0.0",
         "react": "16.13.1",
-        "react-dom": "16.13.1",
-        "remark-prism": "^1.3.4",
-        "remark-slug": "^6.0.0",
-        "sitemap": "^6.2.0",
-        "tslib": "^2.1.0"
+        "react-dom": "16.13.1"
     },
     "devDependencies": {
+        "@types/jsdom": "^16.2.3",
         "@types/node": "^14.0.14",
+        "@types/prismjs": "^1.16.1",
         "@types/react": "^16.9.41",
-        "gray-matter": "^4.0.2",
+        "contentful": "^8.1.7",
+        "dotenv": "^8.2.0",
+        "jsdom": "^16.3.0",
         "postcss-preset-env": "^6.7.0",
         "prettier": "^2.2.1",
         "remark": "^12.0.0",
         "remark-html": "^11.0.2",
+        "remark-prism": "^1.3.4",
+        "remark-slug": "^6.0.0",
         "remark-toc": "^7.0.0",
+        "sitemap": "^6.2.0",
         "tailwindcss": "^1.4.6",
+        "tslib": "^2.1.0",
         "typescript": "^3.9.6"
     }
 }

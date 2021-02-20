@@ -1,6 +1,4 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import { JSDOM } from "jsdom";
 import remark from "remark";
 // @ts-ignore - no types available
 import remarkHtml from "remark-html";
@@ -9,25 +7,24 @@ import slug from "remark-slug";
 // @ts-ignore - no types available
 import prism from "remark-prism";
 
-export const getGrayMatter = (filePath: string, fileName: string) => {
-    const fullPath = path.join(filePath, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    return matter(fileContents);
-};
-
-export const getHtmlFromMarkdown = async (
-    filePath: string,
-    fileName: string
-) => {
-    const grayMatter = getGrayMatter(filePath, fileName);
-    const html = await remark()
+export const getHtmlFromMarkdown = async (md: string): Promise<string> => {
+    const htmlString = await remark()
         .use(slug)
         .use(prism)
         .use(remarkHtml)
-        .process(grayMatter.content);
+        // @ts-ignore
+        .process(md)
+        .then((res) => res.toString());
 
-    return {
-        grayMatter,
-        html,
-    };
+    const dom = new JSDOM(htmlString);
+
+    dom.window.document.querySelectorAll("a").forEach((a) => {
+        if (a.getAttribute("href")?.startsWith("http")) {
+            a.setAttribute("rel", "noopener");
+            a.setAttribute("target", "_blank");
+        }
+        a.classList.add("c-link");
+    });
+
+    return dom.serialize();
 };
