@@ -2,6 +2,7 @@ import { IPost } from "../types";
 import posts from "../data/blogPost.json";
 
 export const getPostBySlug = (slug: string): IPost =>
+    // @ts-ignore
     posts.find((p) => p.slug === slug);
 
 export const getAllPosts = (): IPost[] =>

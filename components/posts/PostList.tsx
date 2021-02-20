@@ -1,7 +1,7 @@
 import React from "react";
 
+import { IPost } from "../../types";
 import { PostLink } from "./PostLink";
-import { IPost } from "../types";
 
 interface IProps {
     posts: IPost[];
