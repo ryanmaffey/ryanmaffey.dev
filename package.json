@@ -11,7 +11,7 @@
         "get-content": "node build-scripts/get-content.js install"
     },
     "dependencies": {
-        "next": "^10.0.0",
+        "next": "^11.1.0",
         "react": "16.13.1",
         "react-dom": "16.13.1"
     },
